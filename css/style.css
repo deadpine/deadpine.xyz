@@ -1,11 +1,12 @@
 
 body {
-  text-align: center;
+  text-align: left;
   position: relative;
-  font-family: monospace;
-  color: #AF1C59;
-  background-image: url("../img/noise.png");
-  background-repeat: repeat;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+  background: black;
+  /* background-image: url("../img/noise.png");
+  background-repeat: repeat; */
 }
 
 .center {
@@ -15,25 +16,24 @@ body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-
-h1 { 
-  margin: 2rem auto 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p ,
 a:link ,
 a:visited {
-  color: #AF1C59;
+  color: white;
   font-size: 1rem;
-  margin: 0;
+  margin-top: 2rem;
 }
 
 a:active ,
 a:hover {
-  color: black;
+  color: #FC889C;
 }
 
-.logo img {
-  width: 7rem;
+img.logo  {
+  height: 4rem;
 }
