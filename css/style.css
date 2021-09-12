@@ -1,0 +1,39 @@
+
+body {
+  text-align: center;
+  position: relative;
+  font-family: monospace;
+  color: #AF1C59;
+  background-image: url("../img/noise.png");
+  background-repeat: repeat;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+h1 { 
+  margin: 2rem auto 1rem;
+}
+
+p ,
+a:link ,
+a:visited {
+  color: #AF1C59;
+  font-size: 1rem;
+  margin: 0;
+}
+
+a:active ,
+a:hover {
+  color: black;
+}
+
+.logo img {
+  width: 7rem;
+}
