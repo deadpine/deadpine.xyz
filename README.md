@@ -1,6 +1,6 @@
 ## Deadpine's Website
 
-[Website preview](https://deadpine.xyz/)
+https://deadpine.xyz/
 
 
 ### Run site locally:
