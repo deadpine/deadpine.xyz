@@ -48,6 +48,10 @@ a:hover {
 ::-moz-selection { background: #FFCCFF; }
 ::selection { background: #FFCCFF; }
 
+header {
+  display: contents;
+}
+
 img.logo  {
   height: 4rem;
   margin-left: auto;
