@@ -1,6 +1,6 @@
 ## Deadpine's Website
 
-👩‍💻 https://deadpine.xyz/
+[Website preview](https://deadpine.xyz/)
 
 
 ### Run site locally:
