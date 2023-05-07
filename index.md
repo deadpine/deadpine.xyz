@@ -12,5 +12,5 @@ layout: default
 
 <p>
     <a href="https://www.figma.com/file/mmbH1d55gxXUbLVRbcEq4o/Deadpine-Portfolio?node-id=0%3A1" target="_blank">→ Portfolio</a><br/>
-    <a href="mailto:hey@deadpine.xyz">→ hey@deadpine.xyz</a>
+    <a href="mailto:hey@deadpine.xyz">→ hey@deadpine.xyz</a> 
 </p>
