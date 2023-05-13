@@ -162,17 +162,3 @@ nav ul {
   top: 3rem;
   right: 0;
 }
-
-
-
-/* Mobile */
-@media only screen and (max-device-width: 736px) { 
-
-  body { padding: 1.5rem; }
-  h1 { font-size: 4.5rem; }
-  footer a, footer span { padding: .5rem 1rem; }
-  img.logo { top: .8rem; right: .8rem; }
-  .content { max-width: 100%; }
-  .uppercase { font-size: .7rem; }
-
-}
