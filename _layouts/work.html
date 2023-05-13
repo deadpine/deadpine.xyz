@@ -2,11 +2,11 @@
 <html lang="en">
   {% include head.html %}
   <body>
-
+    {% include nav.html %}
     <h1>Work <span>(all)</span></h1>
 
     <div>
-        {% for post in site.posts limit:20 %}
+        {% for post in site.posts %}
         <div class="project">
             <!-- <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
             <div class="info">
