@@ -104,7 +104,7 @@ footer {
 .project .info p:first-child,
 .project .info p:nth-child(2) {
   color: black;
-  width: 40%;
+  width: 30%;
 }
 
 .project .info:hover {
@@ -112,13 +112,33 @@ footer {
 }
 
 .project .cover {
+  /* display: flex; */
   display: none;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 3rem);
+  padding: 1rem;
+  z-index: 10;
   position: absolute;
-}
-.project:hover .cover {
-  display: block;
   width: 50%;
   top: 0;
+  right: 0;
+}
+.project .cover .cover-img {
+  display: block;
+  max-width: calc(100% - 2rem);
+  max-height: calc(100vh - 5rem);
+}
+.project:hover .cover {
+  display: flex;
+}
+
+.images-bg {
+  background: #101010;
+  height: calc(100vh - 3rem);
+  position: absolute;
+  width: 50%;
+  top: 3rem;
   right: 0;
 }
 

@@ -14,11 +14,12 @@
                 <p>{{ post.categories }}</p>
                 <p class="post-meta">{{ post.date | date: "%Y" }}</p>
             </div>
-            <div>
-                <img class="cover" src="{{ post.image }}" />
+            <div class="cover">
+                <img class="cover-img" src="{{ post.image }}" />
             </div>
         </div>
         {% endfor %}
+        <div class="images-bg"></div>
     </div>
   </body>
 </html>
