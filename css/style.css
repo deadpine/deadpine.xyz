@@ -16,8 +16,6 @@
 }
 
 body {
-  /* color: #536D99; */
-  /* background: #EDEAE8; */
   color: black;
   font-weight: 300;
   background: #F1F1F1;
@@ -28,7 +26,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* padding: 0 3rem; */
 }
 
 h1 {
@@ -67,23 +64,6 @@ a:hover {
 ::-moz-selection { background: #FFCCFF; }
 ::selection { background: #FFCCFF; }
 
-header {
-  display: contents;
-}
-
-img.logo  {
-  height: 4rem;
-  margin-left: auto;
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-}
-
-.content {
-  max-width: 36rem;
-  padding: 1.5rem 0;
-}
-
 .uppercase {
   text-transform: uppercase;
   font-size: .65em;
@@ -98,7 +78,26 @@ footer {
   padding: 1.5rem 0;
 }
 
-/* Work */
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px black;
+  height: 3rem;
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* WORK */
 .project div {
   display: flex;
   width: 50%;
