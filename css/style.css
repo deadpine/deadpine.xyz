@@ -28,9 +28,12 @@ body {
   justify-content: space-between;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: 'ITC Garamond Std', serif;
   font-style: normal;
+}
+
+h1 {
   font-size: 5rem;
   margin-bottom: 2rem;
   font-weight: 300;
@@ -73,9 +76,14 @@ a:hover {
 footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 1.5rem 0;
+  padding: .5rem 1rem;
+}
+
+.content {
+  padding: 1rem;
+  max-width: 50%;
 }
 
 /* NAV */
