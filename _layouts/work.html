@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+
+    <h1>Work <span>(all)</span></h1>
+
+    <div class="test">
+        {% for post in site.posts limit:20 %}
+        <div class="project">
+            <!-- <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
+            <p>{{ post.title }}</p>
+            <p>{{ post.categories }}</p>
+            <p class="post-meta">{{ post.date | date: "%Y" }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div>
+        hi
+    </div>
+  </body>
+</html>
