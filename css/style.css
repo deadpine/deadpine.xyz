@@ -54,14 +54,11 @@ a {
   color: black;
   text-decoration: none;
   font-weight: 500;
-  padding-bottom: .15rem;
-  border-bottom: 1px solid transparent;
 }
 
 a:active ,
 a:hover {
   color: #e84fff;
-  border-bottom: 1px solid #e84fff;
 }
 
 ::-moz-selection { background: #FFCCFF; }
@@ -121,14 +118,20 @@ nav ul {
   margin: 0;
   color: black;
 }
-.project .info p:first-child,
-.project .info p:nth-child(2) {
+.project .info .categories,
+.project .info .link {
   color: black;
   width: 30%;
 }
 
 .project .info:hover {
   background-color: #FFD6FF;
+}
+
+.project .info:hover a:active ,
+.project .info:hover a:hover {
+  /* color: #741374; */
+  cursor: pointer;
 }
 
 .project .cover {

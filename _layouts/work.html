@@ -7,15 +7,15 @@
     <div class="content">
       {{ content }}
     </div>
-    
+
     <div>
         {% for post in site.posts %}
         <div class="project">
             <!-- <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
             <div class="info">
-                <p>{{ post.title }}</p>
-                <p>{{ post.categories }}</p>
-                <p class="post-meta">{{ post.date | date: "%Y" }}</p>
+                <a class="link">{{ post.title }}</a>
+                <p class="categories">{{ post.categories }}</p>
+                <p class="date">{{ post.date | date: "%Y" }}</p>
             </div>
             <div class="cover">
                 <img class="cover-img" src="{{ post.image }}" />
