@@ -4,6 +4,10 @@
   font-weight: 300;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   /* color: #536D99; */
   /* background: #EDEAE8; */
