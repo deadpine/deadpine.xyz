@@ -5,19 +5,20 @@
 
     <h1>Work <span>(all)</span></h1>
 
-    <div class="test">
+    <div>
         {% for post in site.posts limit:20 %}
         <div class="project">
             <!-- <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
-            <p>{{ post.title }}</p>
-            <p>{{ post.categories }}</p>
-            <p class="post-meta">{{ post.date | date: "%Y" }}</p>
+            <div class="info">
+                <p>{{ post.title }}</p>
+                <p>{{ post.categories }}</p>
+                <p class="post-meta">{{ post.date | date: "%Y" }}</p>
+            </div>
+            <div>
+                <img class="cover" src="{{ post.image }}" />
+            </div>
         </div>
         {% endfor %}
-    </div>
-
-    <div>
-        hi
     </div>
   </body>
 </html>

@@ -82,26 +82,43 @@ footer {
 }
 
 /* Work */
-.project {
+.project div {
+  display: flex;
+  width: 50%;
+}
+
+.project .info {
   display: flex;
   justify-content: space-between;
   border-top: solid 1px black;
   padding: .5rem 1rem;
-  width: 50%;
 }
-.project p {
+.project .info p {
   margin: 0;
   color: black;
 }
-.project p:first-child,
-.project p:nth-child(2) {
-  margin: 0;
+.project .info p:first-child,
+.project .info p:nth-child(2) {
   color: black;
   width: 40%;
 }
-.project:hover {
+
+.project .info:hover {
   background-color: #FFD6FF;
 }
+
+.project .cover {
+  display: none;
+  position: absolute;
+}
+.project:hover .cover {
+  display: block;
+  width: 50%;
+  top: 0;
+  right: 0;
+}
+
+
 
 /* Mobile */
 @media only screen and (max-device-width: 736px) { 
