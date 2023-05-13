@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Home
+permalink: /
 ---
 
 <span class="uppercase">Hello world, I’m</span>
