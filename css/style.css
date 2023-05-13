@@ -5,9 +5,11 @@
 }
 
 body {
-  color: #536D99;
+  /* color: #536D99; */
+  /* background: #EDEAE8; */
+  color: black;
   font-weight: 300;
-  background: #EDEAE8;
+  background: #F1F1F1;
   font-family: 'Inter', Helvetica, sans-serif;
   line-height: 1.7;
   min-height: 100%;
@@ -15,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 3rem;
+  /* padding: 0 3rem; */
 }
 
 h1 {
@@ -32,7 +34,7 @@ p {
 }
 
 a {
-  color: #536D99;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   padding-bottom: .15rem;
@@ -77,6 +79,28 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1.5rem 0;
+}
+
+/* Work */
+.project {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px black;
+  padding: .5rem 1rem;
+  width: 50%;
+}
+.project p {
+  margin: 0;
+  color: black;
+}
+.project p:first-child,
+.project p:nth-child(2) {
+  margin: 0;
+  color: black;
+  width: 40%;
+}
+.project:hover {
+  background-color: #FFD6FF;
 }
 
 /* Mobile */
