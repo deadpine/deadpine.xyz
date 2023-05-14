@@ -31,23 +31,25 @@ body {
 h1, h2, h3, h4 {
   font-family: 'ITC Garamond Std', serif;
   font-style: normal;
+  padding: 0 1rem;
 }
 
 h1 {
   font-size: 5rem;
-  margin-bottom: 2rem;
-  font-weight: 300;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  font-weight: 300; 
 }
+
 h1 span {
   font-style: italic;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-weight: 300;
 }
 
 p {
   font-size: .92em;
-  margin-bottom: 1.2rem;
+  margin: 0;
+  padding: 0 1rem;
+  max-width: 50%;
 }
 
 a {
@@ -71,104 +73,17 @@ a:hover {
 }
 
 footer {
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: .5rem 1rem;
+  padding: .5rem;
 }
 
-.content {
-  padding: 1rem;
-  max-width: 50%;
-}
-
-/* NAV */
-nav {
+.section {
+  min-height: 90vh;
+  padding: 5rem 0 7rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: solid 1px black;
-  height: 3rem;
-  padding: 0 1rem;
-}
-
-nav ul {
-  display: flex;
-  list-style-type: none;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-
-/* WORK */
-.work {
-  max-height: 29rem;
-  overflow-y: auto;
-}
-
-.project div {
-  display: flex;
-  width: 50%;
-}
-
-.project .info {
-  display: flex;
-  justify-content: space-between;
-  border-top: solid 1px black;
-  padding: .5rem 1rem;
-}
-.project .info p {
-  margin: 0;
-  color: black;
-}
-.project .info .tags,
-.project .info .link {
-  color: black;
-  width: 30%;
-}
-
-.project .info:hover {
-  background-color: #FFD6FF;
-}
-
-.project .info:hover a:active ,
-.project .info:hover a:hover {
-  /* color: #741374; */
-  cursor: pointer;
-}
-
-.project .cover {
-  /* display: flex; */
-  display: none;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 3rem);
-  padding: 2rem;
-  z-index: 10;
-  position: absolute;
-  width: 50%;
-  top: 3rem;
-  right: 0;
-  background: #101010;
-}
-.project .cover .cover-img {
-  display: block;
-  max-width: calc(100% - 2rem);
-  max-height: calc(100vh - 7rem);
-}
-.project:hover .cover,
-.project:active .cover {
-  display: flex;
-}
-
-.images-bg {
-  display: none;
-  background: #101010;
-  height: calc(100vh - 3rem);
-  position: absolute;
-  width: 50%;
-  top: 3rem;
-  right: 0;
 }

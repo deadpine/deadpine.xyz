@@ -1,0 +1,22 @@
+/* NAV */
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: solid 1px black;
+	background: #F1F1F1;
+	height: 3rem;
+	width: 100%;
+	padding: 0 1rem;
+	position: fixed;
+	top: 0;
+	z-index: 20;
+}
+nav ul {
+	display: flex;
+	list-style-type: none;
+	gap: 1.5rem;
+	margin: 0;
+	padding: 0;
+}
