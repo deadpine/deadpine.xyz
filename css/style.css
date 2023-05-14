@@ -2,12 +2,22 @@
   font-family: 'ITC Garamond Std';
   src: url(../fonts/ITCGaramondStd-LtCond.otf);
   font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ITC Garamond Std';
+  src: url(../fonts/ITCGaramondStd-LtCondIta.otf);
+  font-weight: 300;
+  font-style: italic;
 }
 
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
 body {
-  color: #536D99;
+  color: black;
   font-weight: 300;
-  background: #EDEAE8;
+  background: #F1F1F1;
   font-family: 'Inter', Helvetica, sans-serif;
   line-height: 1.7;
   min-height: 100%;
@@ -15,55 +25,44 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 3rem;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'ITC Garamond Std', serif;
+  font-style: normal;
+  padding: 0 1rem;
 }
 
 h1 {
-  font-family: 'ITC Garamond Std', serif;
-  font-style: normal;
-  font-size: 6rem;
-  margin-bottom: 2rem;
-  font-weight: 300;
+  font-size: 5rem;
+  margin: 6rem 0 4rem;
+  font-weight: 300; 
+}
+
+h1 span {
+  font-style: italic;
 }
 
 p {
   font-size: .92em;
-  margin-bottom: 1.2rem;
+  margin: 0;
+  padding: 0 1rem;
+  max-width: 50%;
 }
 
 a {
-  color: #536D99;
+  color: black;
   text-decoration: none;
   font-weight: 500;
-  padding-bottom: .15rem;
-  border-bottom: 1px solid transparent;
 }
 
 a:active ,
 a:hover {
   color: #e84fff;
-  border-bottom: 1px solid #e84fff;
 }
 
 ::-moz-selection { background: #FFCCFF; }
 ::selection { background: #FFCCFF; }
-
-header {
-  display: contents;
-}
-
-img.logo  {
-  height: 4rem;
-  margin-left: auto;
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-}
-
-.content {
-  max-width: 36rem;
-  padding: 1.5rem 0;
-}
 
 .uppercase {
   text-transform: uppercase;
@@ -72,21 +71,20 @@ img.logo  {
 }
 
 footer {
-  width: 100%;
+  width: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 1.5rem 0;
+  padding: .5rem;
 }
 
-/* Mobile */
-@media only screen and (max-device-width: 736px) { 
+section {
+  padding: 10rem 0 16rem;
+  /* margin-bottom: 4rem; */
+}
 
-  body { padding: 1.5rem; }
-  h1 { font-size: 4.5rem; }
-  footer a, footer span { padding: .5rem 1rem; }
-  img.logo { top: .8rem; right: .8rem; }
-  .content { max-width: 100%; }
-  .uppercase { font-size: .7rem; }
-
+#about p {
+  font-size: 1rem;
+  padding-bottom: .75rem;
+  padding-right: 2rem;
 }

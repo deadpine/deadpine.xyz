@@ -1,0 +1,63 @@
+/* WORK */
+
+.project div {
+  display: flex;
+  z-index: 2;
+  width: 50%;
+}
+
+.project .info {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px black;
+  padding: .5rem 1rem;
+}
+
+.project .info p {
+  padding: 0;
+}
+
+.project .info .tags,
+.project .info .link {
+  color: black;
+  width: 30%;
+}
+
+.project .cover {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 3rem);
+  padding: 2rem;
+  z-index: 10;
+  width: 50%;
+	position: fixed;
+  top: 3rem;
+  right: 0;
+  background: #101010;
+}
+
+.project .cover .cover-img {
+  display: block;
+  max-width: calc(100% - 2rem);
+  max-height: calc(100vh - 7rem);
+}
+
+.project .info:hover {
+  background-color: #FFD6FF;
+  cursor: pointer;
+}
+
+.project:hover .cover,
+.project:active .cover {
+  display: flex;
+}
+
+.images-bg {
+  background: #101010;
+  height: calc(100vh - 3rem);
+  position: fixed;
+  width: 50%;
+  top: 3rem;
+  right: 0;
+}
