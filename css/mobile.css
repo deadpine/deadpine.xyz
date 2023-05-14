@@ -1,8 +1,6 @@
 @media only screen and (max-device-width: 736px) { 
 
   h1 { font-size: 4.5rem; }
-  footer a, footer span { padding: .5rem 1rem; }
-  .content { max-width: 100%; }
   .uppercase { font-size: .7rem; }
 
 }

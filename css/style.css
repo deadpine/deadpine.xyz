@@ -88,3 +88,91 @@ section {
   padding-bottom: .75rem;
   padding-right: 2rem;
 }
+
+/* NAV */
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: solid 1px black;
+	background: #F1F1F1;
+	height: 3rem;
+	width: 100%;
+	padding: 0 1rem;
+	position: fixed;
+	top: 0;
+	z-index: 20;
+}
+nav ul {
+	display: flex;
+	list-style-type: none;
+	gap: 1.5rem;
+	margin: 0;
+	padding: 0;
+}
+/* END NAV */
+
+
+/* WORK */
+.project div {
+  display: flex;
+  z-index: 2;
+  width: 50%;
+}
+
+.project .info {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px black;
+  padding: .5rem 1rem;
+}
+
+.project .info p {
+  padding: 0;
+}
+
+.project .info .tags,
+.project .info .link {
+  color: black;
+  width: 30%;
+}
+
+.project .cover {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 3rem);
+  padding: 2rem;
+  z-index: 10;
+  width: 50%;
+	position: fixed;
+  top: 3rem;
+  right: 0;
+  background: #101010;
+}
+
+.project .cover .cover-img {
+  display: block;
+  max-width: calc(100% - 2rem);
+  max-height: calc(100vh - 7rem);
+}
+
+.project .info:hover {
+  background-color: #FFD6FF;
+  cursor: pointer;
+}
+
+.project:hover .cover,
+.project:active .cover {
+  display: flex;
+}
+
+.images-bg {
+  background: #101010;
+  height: calc(100vh - 3rem);
+  position: fixed;
+  width: 50%;
+  top: 3rem;
+  right: 0;
+}
+/* END WORK */
