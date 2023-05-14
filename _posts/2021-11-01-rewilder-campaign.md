@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Rewilder Campaign
+title: Rewilder Fundraiser
 date: 2021-11-01 -0300
-categories: Branding, UX, UI, Frontend, Illustration
-image: /img/rewilder-app.png
+tags: Art Direction, UX, UI, Frontend
+image: /img/work/rewilder-fundraiser.png
+link: https://www.behance.net/gallery/128824539/Rewilder-Crypto-non-profit-website
 ---
