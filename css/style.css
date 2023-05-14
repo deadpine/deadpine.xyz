@@ -103,6 +103,11 @@ nav ul {
 
 
 /* WORK */
+.work {
+  max-height: 29rem;
+  overflow-y: auto;
+}
+
 .project div {
   display: flex;
   width: 50%;
@@ -118,7 +123,7 @@ nav ul {
   margin: 0;
   color: black;
 }
-.project .info .categories,
+.project .info .tags,
 .project .info .link {
   color: black;
   width: 30%;
@@ -140,17 +145,18 @@ nav ul {
   align-items: center;
   justify-content: center;
   height: calc(100vh - 3rem);
-  padding: 1rem;
+  padding: 2rem;
   z-index: 10;
   position: absolute;
   width: 50%;
   top: 3rem;
   right: 0;
+  background: #101010;
 }
 .project .cover .cover-img {
   display: block;
   max-width: calc(100% - 2rem);
-  max-height: calc(100vh - 5rem);
+  max-height: calc(100vh - 7rem);
 }
 .project:hover .cover,
 .project:active .cover {
@@ -158,6 +164,7 @@ nav ul {
 }
 
 .images-bg {
+  display: none;
   background: #101010;
   height: calc(100vh - 3rem);
   position: absolute;

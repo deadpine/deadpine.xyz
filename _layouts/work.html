@@ -8,13 +8,13 @@
       {{ content }}
     </div>
 
-    <div>
+    <div class="work">
         {% for post in site.posts %}
         <div class="project">
             <!-- <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
             <div class="info">
                 <a class="link">{{ post.title }}</a>
-                <p class="categories">{{ post.categories }}</p>
+                <p class="tags">{{ post.tags }}</p>
                 <p class="date">{{ post.date | date: "%Y" }}</p>
             </div>
             <div class="cover">
