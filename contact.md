@@ -12,14 +12,4 @@ layout: default
 <span> ✦ </span>
 <a href="https://dribbble.com/deadpine" target="_blank">dribbble</a>
 <span> ✦ </span>
-<a href="https://store.deadpine.xyz" target="_blank">swag(?)</a>
-
-<!-- [twitter](https://twitter.com/deadpine_xyz")
-•
-[github](https://github.com/deadpine")
-•
-[behance](https://www.behance.net/deadpine")
-•
-[dribbble](https://dribbble.com/deadpine")
-•
-[swag(?)](https://store.deadpine.xyz") -->
+<a href="https://goodreads.com/deadpine" target="_blank">goodreads</a>
