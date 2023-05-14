@@ -11,9 +11,8 @@
   font-style: italic;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
   color: black;
@@ -36,8 +35,7 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 5rem;
-  margin-top: 8rem;
-  margin-bottom: 4rem;
+  margin: 6rem 0 4rem;
   font-weight: 300; 
 }
 
@@ -80,11 +78,7 @@ footer {
   padding: .5rem;
 }
 
-.section {
-  /* min-height: calc(90vh - 12rem); */
-  height: auto;
-  margin: 5rem 0 7rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+section {
+  padding: 10rem 0 16rem;
+  /* margin-bottom: 4rem; */
 }
