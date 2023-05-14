@@ -81,8 +81,9 @@ footer {
 }
 
 .section {
-  min-height: 90vh;
-  padding: 5rem 0 7rem;
+  /* min-height: calc(90vh - 12rem); */
+  height: auto;
+  margin: 5rem 0 7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
