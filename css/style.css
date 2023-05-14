@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'ITC Garamond Std';
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
   font-display: swap;
   font-weight: 300;
   src: url(../fonts/ITCGaramondStd-LtCondIta.otf);
-}
+} */
 
 /* NORMALIZE */
 * { box-sizing: border-box; }
@@ -31,16 +31,25 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'ITC Garamond Std', Garamond, 'Times New Roman', serif;
-  font-weight: 300;
+  /* font-family: 'ITC Garamond Std', Garamond, 'Times New Roman', serif; */
+  /* font-family: 'Noto Serif Display', serif; */
+  /* font-family: 'Petrona', serif; */
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   padding: 0 1rem;
+  margin: 5rem 0;
 }
 
-h1 { font-size: 5rem; margin: 6rem 0 4rem; }
-h1 span { font-style: italic; }
+h1 {  font-size: 4rem; }
+h2 {  font-size: 3rem; }
+
+h1 span,
+h2 span { 
+  font-style: italic;
+}
 
 p {
-  font-size: .92em;
+  font-size: .9rem;
   margin: 0;
   padding: 0 1rem;
   max-width: 50%;
@@ -89,6 +98,9 @@ nav ul {
 }
 
 /* About */
+#about {
+  padding-top: 15rem;
+}
 #about p {
   font-size: 1rem;
   padding-bottom: .75rem;

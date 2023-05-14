@@ -32,7 +32,7 @@ permalink: /
 </section>
 
 <section id="contact">
-	<h1>hey<span>@deadpine.xyz</span></h1>
+	<h2>hey<span>@deadpine.xyz</span></h2>
 	<p><a href="https://twitter.com/deadpine_xyz" target="_blank">✦ twitter</a></p>
 	<p><a href="https://github.com/deadpine" target="_blank">✦ github</a></p>
 	<p><a href="https://goodreads.com/deadpine" target="_blank">✦ goodreads</a></p>
