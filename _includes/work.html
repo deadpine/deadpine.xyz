@@ -1,0 +1,20 @@
+
+<div class="section">
+	<h1>Work</h1>
+
+	{% for post in site.posts %}
+	<div class="project">
+		<!-- <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
+		<div class="info">
+			<a class="link">{{ post.title }}</a>
+			<p class="tags">{{ post.tags }}</p>
+			<p class="date">{{ post.date | date: "%Y" }}</p>
+		</div>
+
+		<div class="cover">
+			<img class="cover-img" src="{{ post.image }}" />
+		</div>
+	</div>
+	{% endfor %}
+	<div class="images-bg"></div>
+</div>
