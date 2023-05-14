@@ -11,9 +11,6 @@
   font-style: italic;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
 body {
   color: black;
   font-weight: 300;
