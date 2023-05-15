@@ -71,6 +71,9 @@ nav {
 	top: 0;
 	z-index: 20;
 }
+nav a {
+  line-height: 1;
+}
 nav ul {
 	display: flex;
 	list-style-type: none;
