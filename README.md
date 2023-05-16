@@ -3,7 +3,7 @@
 https://deadpine.xyz/
 
 
-### Run site locally:
+### Run locally:
 ```
 bundle exec jekyll serve
 ```
