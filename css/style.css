@@ -197,12 +197,27 @@ footer {
 .contact .social a {
   margin-right: -1.25rem;
 }
+
+/* Color svg */
 .contact a:hover { z-index: 10;}
 .contact a path {  fill: none; }
-.contact a.github:hover path { fill: #24292F; }
-.contact a.twitter:hover path { fill: #489BE9; }
-.contact a.goodreads:hover path { fill: #DBD6BD; }
-.contact a.dribbble:hover path { fill: #E74D89; }
+
+.contact a.github:hover path,
+.contact a.github:active path,
+.contact a.github:focus path { fill: #24292F; }
+
+.contact a.twitter:hover path,
+.contact a.twitter:active path,
+.contact a.twitter:focus path { fill: #489BE9; }
+
+.contact a.goodreads:hover path,
+.contact a.goodreads:active path,
+.contact a.goodreads:focus path { fill: #DBD6BD; }
+
+.contact a.dribbble:hover path,
+.contact a.dribbble:active path,
+.contact a.dribbble:focus path { fill: #E74D89; }
+
 
 /* footer */
 footer p {
