@@ -64,6 +64,7 @@ section#about p {
 }
 section#about img { 
   margin-left: auto;
+  margin-top: 6rem;
   pointer-events: none
 }
 section#work { 
@@ -209,10 +210,17 @@ footer p {
 }
 
 @media only screen and (max-device-width: 736px) { 
+  .images-bg {
+    display: none;
+  }
+  h2 {
+    font-size: 2rem;
+  }
   nav {
     padding: 0 .5rem;
     max-width: 100%;
     overflow-x: scroll;
+    justify-content: flex-start;
   }
   section {
     min-width: 100%;
@@ -226,27 +234,37 @@ footer p {
     line-height: 2.25rem;
     padding-right: 0;
   }
-  section#about img {
-    margin-right: auto;
-  }
   h1 { 
     font-size: 4.5rem;
   }
   .uppercase { 
     font-size: .7rem; 
   }
-
+  .project .info {
+    flex-direction: column;
+  }
+  .project .info .tags, 
+  .project .info .link {
+    width: fit-content;
+  }
   .project .cover {
     position: initial;
     padding: 1rem 0;
     width: 100%;
     height: auto;
   }
-
-  .images-bg {
-    display: none;
+  .project:hover .cover
+  .project:active .cover {
+    display: block;
   }
+  .project .cover .cover-img {
+    margin: auto;
+    max-height: none;
+  }  
   .contact .social a {
     margin-bottom: -1.25rem;
+  }
+  footer {
+    width: 100%;
   }
 }
