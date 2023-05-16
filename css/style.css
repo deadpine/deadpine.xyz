@@ -25,6 +25,7 @@ h1, h2, h3, h4 {
 h1 { 
   font-size: 4rem;
   margin-bottom: 7.5rem;
+  padding-left: 1rem;
 }
 
 h2 { 
@@ -215,6 +216,9 @@ footer p {
   h2 {
     font-size: 2.5rem;
   }
+  h1 {
+    padding-left: .5rem;
+  }
   nav {
     padding: 0 .5rem;
   }
@@ -235,10 +239,15 @@ footer p {
   }
   .project .info {
     flex-direction: column;
+    padding: .5rem;
   }
   .project .info .tags, 
   .project .info .link {
     width: fit-content;
+  }
+  .project .info .date {
+    position: absolute;
+    right: 0;
   }
   .project .cover {
     position: initial;
