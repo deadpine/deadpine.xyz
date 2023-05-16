@@ -30,14 +30,14 @@ p {
   font-size: .9rem;
   margin: 0;
   padding: 0;
-  max-width: 50%;
 }
 
 /* Links */
 a {
   color: black;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
+  /* font-style: italic; */
 }
 a:active , a:hover { color: #e84fff; }
 
@@ -46,11 +46,29 @@ a:active , a:hover { color: #e84fff; }
 ::selection { background: #FFCCFF; }
 
 section { 
-  padding: 7.5rem 1rem;
+  padding: 8rem 1rem;
   min-height: calc(100vh - 3rem);
+  max-width: 50%;
+}
+section#about { 
+  padding: 2rem 1rem 1rem;
+  min-height: calc(100vh - 3rem);
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section#about p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 200;
+}
+section#about img { 
+  margin-left: auto;
+  pointer-events: none
 }
 section#work { 
-  padding: 7.5rem 0;
+  padding: 8rem 0 1rem;
   min-height: none;
 }
 
@@ -99,7 +117,7 @@ nav ul {
 .project div {
   display: flex;
   z-index: 2;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .project .info {
