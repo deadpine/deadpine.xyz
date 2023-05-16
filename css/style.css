@@ -191,6 +191,7 @@ footer {
 }
 .contact .social {
   display: flex;
+  flex-wrap: wrap;
 }
 .contact .social a {
   margin-right: -1.25rem;
@@ -208,8 +209,44 @@ footer p {
 }
 
 @media only screen and (max-device-width: 736px) { 
+  nav {
+    padding: 0 .5rem;
+    max-width: 100%;
+    overflow-x: scroll;
+  }
+  section {
+    min-width: 100%;
+  }
+  section#about {
+    padding: 5rem .5rem .5rem;
+    min-height: 100vh;
+  }
+  section#about p {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    padding-right: 0;
+  }
+  section#about img {
+    margin-right: auto;
+  }
+  h1 { 
+    font-size: 4.5rem;
+  }
+  .uppercase { 
+    font-size: .7rem; 
+  }
 
-  h1 { font-size: 4.5rem; }
-  .uppercase { font-size: .7rem; }
+  .project .cover {
+    position: initial;
+    padding: 1rem 0;
+    width: 100%;
+    height: auto;
+  }
 
+  .images-bg {
+    display: none;
+  }
+  .contact .social a {
+    margin-bottom: -1.25rem;
+  }
 }
