@@ -233,6 +233,7 @@ footer p {
     font-size: 1.25rem;
     line-height: 2.25rem;
     padding-right: 0;
+    padding-bottom: 1rem;
   }
   .uppercase { 
     font-size: .7rem; 
@@ -247,7 +248,7 @@ footer p {
   }
   .project .info .date {
     position: absolute;
-    right: 0;
+    right: .5rem;
   }
   .project .cover {
     position: initial;
