@@ -20,11 +20,17 @@ h1, h2, h3, h4 {
   font-weight: 400;
   padding: 0;
   margin: 0;
+}
+
+h1 { 
+  font-size: 4rem;
   margin-bottom: 7.5rem;
 }
 
-h1 { font-size: 4rem; }
-h2 { font-size: 3rem; }
+h2 { 
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
 
 p {
   font-size: .9rem;
@@ -50,23 +56,7 @@ section {
   min-height: calc(100vh - 3rem);
   max-width: 50%;
 }
-section#about { 
-  padding: 5rem 1rem 1rem;
-  min-height: calc(100vh - 3rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-section#about p {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  font-weight: 200;
-}
-section#about img { 
-  margin-left: auto;
-  margin-top: 6rem;
-  pointer-events: none
-}
+
 section#work { 
   padding: 8rem 0 1rem;
   min-height: none;
@@ -104,13 +94,22 @@ nav ul {
 }
 
 /* About */
-#about {
-  padding-top: 15rem;
+section#about { 
+  padding: 5rem 1rem 1rem;
+  min-height: calc(100vh - 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-#about p {
-  font-size: 1rem;
-  padding-bottom: .75rem;
-  padding-right: 2rem;
+section#about p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 200;
+}
+section#about img { 
+  margin-left: auto;
+  margin-top: 3rem;
+  pointer-events: none
 }
 
 /* WORK */
@@ -214,13 +213,10 @@ footer p {
     display: none;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   nav {
     padding: 0 .5rem;
-    max-width: 100%;
-    overflow-x: scroll;
-    justify-content: flex-start;
   }
   section {
     min-width: 100%;
@@ -233,9 +229,6 @@ footer p {
     font-size: 1.25rem;
     line-height: 2.25rem;
     padding-right: 0;
-  }
-  h1 { 
-    font-size: 4.5rem;
   }
   .uppercase { 
     font-size: .7rem; 
