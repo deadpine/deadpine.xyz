@@ -2,7 +2,7 @@
 layout: default
 title: OpenZeppelin Defender
 date: 2021-10-01 -0300
-tags: UX, UI, Frontend
-image: /img/work/openzeppelin-defender.png
-link: 
+tags: UX UI Frontend
+image: /img/work/openzeppelin-defender.jpg
+link: https://www.openzeppelin.com/defender
 ---
