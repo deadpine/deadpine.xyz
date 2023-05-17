@@ -128,7 +128,7 @@ section#about p {
   font-size: 1.5rem;
   line-height: 2.5rem;
   font-weight: 200;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem 0;
 }
 section#about img { 
   margin-left: auto;
@@ -275,6 +275,9 @@ footer p {
 }
 
 @media only screen and (max-device-width: 736px) { 
+  body {
+    font-weight: 400;
+  }
   .images-bg {
     display: none;
   }
