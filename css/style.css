@@ -53,15 +53,15 @@ a:hover {
 
 a.external {
   display: inline-flex;
-    align-items: center;
+  align-items: center;
 }
 a.external::after {
   content: "";
   background-image: url('../img/ic-external.svg');
-  background-size: .7rem .7rem;
+  background-size: .6rem .6rem;
   margin-left: .25em;
-  height: .7rem;
-  width: .7rem;
+  height: .6rem;
+  width: .6rem;
   display: inline-block;
 }
 a.external:hover::after {
@@ -76,7 +76,6 @@ section {
   padding: 8rem 1rem;
   min-height: calc(100vh - 3rem);
   max-width: 50%;
-  
 }
 
 section#work { 
@@ -130,10 +129,13 @@ section#about p {
   font-weight: 200;
   padding: 0 1rem 1rem 0;
 }
-section#about img { 
+section#about svg { 
+  display: block;
   margin-left: auto;
   margin-top: 3rem;
-  pointer-events: none
+}
+section#about path.cone:hover {
+  fill: #FFD6FF;
 }
 
 /* WORK */
