@@ -6,7 +6,11 @@
 		<!-- <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
 		<div class="info">
 			<a class="link">{{ post.title }}</a>
-			<p class="tags">{{ post.tags }}</p>
+			<div class="tags">
+				{% for tag in post.tags %}
+					<p class="tag">{{ tag }}</p>
+				{% endfor %}
+			</div>
 			<p class="date">{{ post.date | date: "%Y" }}</p>
 		</div>
 
