@@ -3,13 +3,13 @@
   font-family: "Canela";
   src: local("Canela-Thin"), url("/fonts/Canela-Thin.otf") format("opentype");
   font-style: normal;
-  display: swap;
+  font-display: swap;
 }
 @font-face {
   font-family: "Canela";
   src: local("Canela-ThinItalic"), url("/fonts/Canela-ThinItalic.otf") format("opentype");
   font-style: italic;
-  display: swap;
+  font-display: swap;
 }
 
 /* NORMALIZE */
