@@ -55,7 +55,7 @@ p {
 
 /* Links */
 p.link,
-a {
+a.link {
   color: black;
   text-decoration: none;
   font-weight: 400;
