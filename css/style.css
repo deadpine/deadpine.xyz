@@ -54,10 +54,12 @@ p {
 }
 
 /* Links */
+p.link,
 a {
   color: black;
   text-decoration: none;
   font-weight: 400;
+  font-size: 1rem;
 }
 
 a:active,
@@ -71,15 +73,15 @@ a.external {
 }
 a.external::after {
   content: "";
-  background-image: url('../img/ic-external.svg');
-  background-size: .6rem .6rem;
-  margin-left: .25em;
-  height: .6rem;
-  width: .6rem;
-  display: inline-block;
-}
-a.external:hover::after {
   background-image: url('../img/ic-external-pink.svg');
+  background-size: .7rem .7rem;
+  margin-left: .3em;
+  height: .7rem;
+  width: .7rem;
+  display: none;
+}
+.project .info:hover a.external::after {
+  display: inline-block;
 }
 
 /* Custom selection */
