@@ -54,12 +54,10 @@ p {
 }
 
 /* Links */
-p.link,
-a.link {
+a {
   color: black;
   text-decoration: none;
   font-weight: 400;
-  font-size: 1rem;
 }
 
 a:active,
@@ -165,6 +163,14 @@ section#about path.cone:hover {
 
   border-top: solid 1px black;
   padding: .5rem 1rem;
+}
+
+p.link,
+a.link {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
 }
   
 .link { grid-area: 1 / 1 / 2 / 5; }
