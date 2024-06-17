@@ -1,0 +1,110 @@
+/* NORMALIZE */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+img { border-style: none; }
+
+/* Custom selection */
+::-moz-selection { background: #FFCCFF; }
+::selection { background: #FFCCFF; }
+
+/* Styles */
+
+body {
+  background: #F1F1F1;
+  color: #000;
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+p {
+  color: #24292F;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a:active,
+a:hover { 
+  color: #e84fff; 
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  width: 300px;
+  padding: 24px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  border-radius: 40px;
+  background: rgba(241, 241, 241, 0.40);
+  backdrop-filter: blur(16px);
+}
+
+
+/* WORK */
+
+.tags {
+  display: flex;
+  gap: .25rem;
+  min-width: fit-content;
+}
+.tag {
+  background: #E3E3E3;
+  border: solid 1px #E3E3E3;
+  border-radius: 1rem;
+  font-size: .9rem;
+  padding: 1px 9px;
+  display: flex;
+  align-items: baseline;
+  line-height: 1.5;
+  width: fit-content;
+}
+
+
+/* Contact */
+.contact {
+  display: flex;
+  gap: -1rem;
+}
+
+.contact a {
+  margin: 0 -.3rem;
+}
+
+.contact a:hover { z-index: 10;}
+.contact a path {  fill: none; }
+
+.contact a.github:hover path,
+.contact a.github:active path,
+.contact a.github:focus path { fill: #24292F; }
+
+.contact a.twitter:hover path,
+.contact a.twitter:active path,
+.contact a.twitter:focus path { fill: #000; }
+
+.contact a.goodreads:hover path,
+.contact a.goodreads:active path,
+.contact a.goodreads:focus path { fill: #DBD6BD; }
+
+.contact a.store:hover path,
+.contact a.store:active path,
+.contact a.store:focus path { fill: #FFD6FF; }
+
+
+
+@media only screen and (max-device-width: 960px) {
+
+}
+
+@media only screen and (max-device-width: 736px) { 
+
+}
