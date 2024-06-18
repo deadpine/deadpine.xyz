@@ -15,7 +15,13 @@ body {
   font-family: 'Inter', Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  margin: 0;
 }
+
 
 p {
   color: #24292F;
@@ -38,35 +44,69 @@ a:hover {
 /* Nav */
 .nav {
   display: flex;
-  width: 300px;
-  padding: 24px 16px;
+  width: fit-content;
+  padding: .75rem 1.5rem;
+  margin: .25rem auto;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-
-  border-radius: 40px;
+  gap: 1rem;
+  border-radius: 2rem;
   background: rgba(241, 241, 241, 0.40);
+  background: pink;
   backdrop-filter: blur(16px);
 }
+.nav a {
+  width: 4rem;
+  text-align: center;
+}
 
+#about {
+  max-width: 400px;
+}
+#about p {
+  margin-bottom: 1rem;
+}
 
 /* WORK */
-
 .tags {
   display: flex;
-  gap: .25rem;
-  min-width: fit-content;
+  gap: .5rem;
 }
+
 .tag {
-  background: #E3E3E3;
-  border: solid 1px #E3E3E3;
+  padding: 3px 12px 4px;
   border-radius: 1rem;
+  border: 1px solid #CBCBCB;
+  background: #E7E7E7;
+  color: #000;
+  text-align: center;
   font-size: .9rem;
-  padding: 1px 9px;
-  display: flex;
-  align-items: baseline;
-  line-height: 1.5;
-  width: fit-content;
+  line-height: normal;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 16px;
+  /* grid-row-gap: 16px;   */
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.card img {
+  border-radius: 1.5rem;
+  width: 30rem;
+  max-width: 100%;
+  height: 32rem;
+  /* height: 10rem; */
+  object-fit: cover;
+}
+
+.card:nth-of-type(3n-7) {
+  margin-top: -5rem;
 }
 
 
@@ -80,25 +120,29 @@ a:hover {
   margin: 0 -.3rem;
 }
 
-.contact a:hover { z-index: 10;}
-.contact a path {  fill: none; }
+.contact a:hover { 
+  z-index: 10; 
+}
 
-.contact a.github:hover path,
-.contact a.github:active path,
-.contact a.github:focus path { fill: #24292F; }
+.contact a path { 
+  fill: none; 
+}
 
-.contact a.twitter:hover path,
-.contact a.twitter:active path,
-.contact a.twitter:focus path { fill: #000; }
+.github:hover path,
+.github:active path,
+.github:focus path { fill: #24292F; }
 
-.contact a.goodreads:hover path,
-.contact a.goodreads:active path,
-.contact a.goodreads:focus path { fill: #DBD6BD; }
+.twitter:hover path,
+.twitter:active path,
+.twitter:focus path { fill: #000; }
 
-.contact a.store:hover path,
-.contact a.store:active path,
-.contact a.store:focus path { fill: #FFD6FF; }
+.goodreads:hover path,
+.goodreads:active path,
+.goodreads:focus path { fill: #DBD6BD; }
 
+.store:hover path,
+.store:active path,
+.store:focus path { fill: #FFD6FF; }
 
 
 @media only screen and (max-device-width: 960px) {
