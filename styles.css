@@ -18,10 +18,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 120px;
+  gap: 6rem;
   margin: 0;
 }
 
+.nav {
+
+}
+
+h1 {
+  max-width: 24rem;
+  color: #000;
+  text-align: center;
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6rem;
+}
 
 p {
   color: #24292F;
@@ -52,7 +67,7 @@ a:hover {
   gap: 1rem;
   border-radius: 2rem;
   background: rgba(241, 241, 241, 0.40);
-  background: pink;
+  /* background: pink; */
   backdrop-filter: blur(16px);
 }
 .nav a {
@@ -62,15 +77,27 @@ a:hover {
 
 #about {
   max-width: 400px;
+  display: none;
 }
+
 #about p {
   margin-bottom: 1rem;
 }
 
 /* WORK */
+#work {
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  padding: 1rem;
+}
+
 .tags {
   display: flex;
+  flex-wrap: wrap;
   gap: .5rem;
+  max-width: 20rem;
+  justify-content: center;
 }
 
 .tag {
@@ -85,10 +112,12 @@ a:hover {
 }
 
 .parent {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 16px;
-  /* grid-row-gap: 16px;   */
+  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -101,7 +130,11 @@ a:hover {
   width: 30rem;
   max-width: 100%;
   height: 32rem;
-  /* height: 10rem; */
+  background: #0d0d0d;
+  object-fit: contain;
+}
+
+.card img.cover {
   object-fit: cover;
 }
 
@@ -144,9 +177,15 @@ a:hover {
 .store:active path,
 .store:focus path { fill: #FFD6FF; }
 
+.substack:hover path,
+.substack:active path,
+.substack:focus path { fill: #ff7b3a; }
 
-@media only screen and (max-device-width: 960px) {
-
+@media only screen and (min-device-width: 1280px) {
+  body,
+  #work {
+    gap: 7.5rem;
+  }
 }
 
 @media only screen and (max-device-width: 736px) { 
