@@ -106,6 +106,7 @@ a:hover {
   gap: .5rem;
   max-width: 20rem;
   justify-content: center;
+  cursor: default;
 }
 
 .tag {
