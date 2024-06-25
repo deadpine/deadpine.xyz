@@ -63,10 +63,11 @@ a:hover {
   align-items: center;
   gap: 1rem;
   border-radius: 2rem;
-  background: rgba(241, 241, 241, 0.80);
+  background: rgba(241, 241, 241, 0.65);
   backdrop-filter: blur(12px);
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 
 .nav button {
