@@ -7,10 +7,11 @@
     <title>deadpine.xyz</title>
     <meta name="description" content="seeking beauty while striving to understand the complexities of this world">
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
     <!-- CSS styles -->
     <link rel="stylesheet" href="./styles.css">
     <!-- Favicon -->
@@ -42,6 +43,8 @@
       <p>
         For 10 years my journey has intertwined product design and brand identity with technology, mostly in crypto. 
         With Bitcoin and Ethereum I discovered an opportunity to work fostering an open economic system based on freedom and responsibility. 
+      </p>
+      <p>
         I've collaborated with projects like 
         <a href="https://openzeppelin.com/" target="_blank">OpenZeppelin</a>, 
         <a href="https://flashbots.net/" target="_blank">Flashbots</a>, 
@@ -54,11 +57,11 @@
         <a href="https://mint.ethernautdao.io/#about" target="_blank">Ethernaut DAO</a>
       </p>
       <p>
-        I enjoy bringing my designs to life through coding. 
+        I also enjoy bringing my designs to life through coding. 
         I have experience in frontend development, including HTML, CSS, React, and Svelte.
       </p>
       <p>
-        But not everything is about technology. 
+        However, not everything is about technology. 
         Beyond my professional pursuits, I am interested in anthropology, biology, behavioral science, color theory, architecture, scenography, and pottery. 
         I'm part of the Fuego Austral community, bringing art to life and cultivating meaningful offline connections.
       </p>
@@ -76,10 +79,10 @@
         <p class="tag">Data visualization</p>
       </div>
 
-      <div class="parent">
+      <div class="projects">
         <div class="card">
-          <img src="./img/work/fuegoaustral.jpg">
-          <p>Fuego Austral<span>2023</span></p>
+          <img class="cover" src="./img/work/flashbots-website.jpg">
+          <p>Flashbots website <span>2023</span></p>
         </div>
         <div class="card">
           <img src="./img/work/flashbots-swag.jpg">
@@ -93,9 +96,10 @@
           <img class="cover" src="./img/work/genesis.jpg">
           <p>Genesis city <span>2023</span></p>
         </div>
+        
         <div class="card">
-          <img class="cover" src="./img/work/flashbots-website.jpg">
-          <p>Flashbots website <span>2023</span></p>
+          <img src="./img/work/fuegoaustral.jpg">
+          <p>Fuego Austral<span>2023</span></p>
         </div>
         <div class="card">
           <img src="./img/work/rewilder-stamp.jpg">
@@ -126,14 +130,6 @@
           <img src="./img/work/forta-developers.jpg">
           <p>project name <span>2023</span></p>
         </div>
-        <div class="card">
-          <img src="./img/work/forta-marketplace.jpg">
-          <p>project name <span>2023</span></p>
-        </div>
-        <div class="card">
-          <img src="./img/work/forta-website-2.jpg">
-          <p>project name <span>2023</span></p>
-        </div>
       </div>
     </div>
     
@@ -159,11 +155,11 @@
           <path d="M83.4242 80.7129L51.3084 34.9202L80.8056 1.32992L81.5344 0.5H80.4299H73.3679H73.1416L72.9923 0.669978L47.5625 29.6128L27.2748 0.712722L27.1255 0.5H26.8656H3.06812H2.10651L2.65881 1.28718L33.6389 45.4424L2.69247 80.67L1.96335 81.5H3.06812H10.1301H10.3564L10.5058 81.3299L37.3745 50.7352L58.808 81.2872L58.9573 81.5H59.2173H83.0148H83.9762L83.4242 80.7129ZM62.7792 75.5433L13.633 6.69654H23.2504L72.3967 75.5433H62.7792Z" stroke="#4D4D4D"/>
         </svg>
       </a>
-      <a href="https://twitter.com/deadpine_xyz" target="_blank" class="substack">
+      <!-- <a href="https://twitter.com/deadpine_xyz" target="_blank" class="substack">
         <svg xmlns="http://www.w3.org/2000/svg" width="73" height="83" viewBox="0 0 73 83" fill="none">
           <path d="M1.01465 0.5H0.514648V1V10.8233V11.3233H1.01465H71.087H71.587V10.8233V1V0.5H71.087H1.01465ZM1.01465 36.3312H0.514648V36.8312V81V81.8539L1.25932 81.436L36.0437 61.9182L70.8425 81.4361L71.587 81.8537V81V36.8312V36.3312H71.087H1.01465ZM1.01465 18.4155H0.514648V18.9155V28.7388V29.2388H1.01465H71.087H71.587V28.7388V18.9155V18.4155H71.087H1.01465Z" stroke="#4D4D4D"/>
         </svg>
-      </a>
+      </a> -->
     </div>
 
     <!-- Footer -->
@@ -176,11 +172,13 @@
       function work() {
         document.getElementById('work').style.display = 'flex';
         document.getElementById('about').style.display = 'none';
+        window.scrollTo(0, 0);
       }
   
       function about() {
         document.getElementById('work').style.display = 'none';
         document.getElementById('about').style.display = 'block';
+        window.scrollTo(0, 0);
       }
     </script>
     <!-- Google tag (gtag.js) -->

@@ -22,20 +22,17 @@ body {
   margin: 0;
 }
 
-.nav {
-
-}
-
 h1 {
   max-width: 24rem;
   color: #000;
   text-align: center;
-  font-family: "Source Serif 4", serif;
-  font-optical-sizing: auto;
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-family: "Noto Serif", serif;
   font-style: italic;
-  line-height: 1.6rem;
+  font-weight: 300;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  margin-top: 10rem ;
 }
 
 p {
@@ -60,23 +57,34 @@ a:hover {
 .nav {
   display: flex;
   width: fit-content;
-  padding: .75rem 1.5rem;
+  padding: .5rem;
   margin: .25rem auto;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   border-radius: 2rem;
-  background: rgba(241, 241, 241, 0.40);
-  /* background: pink; */
-  backdrop-filter: blur(16px);
+  background: rgba(241, 241, 241, 0.80);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  top: 0;
 }
-.nav a {
-  width: 4rem;
+
+.nav button {
+  border: none;
   text-align: center;
+  min-width: 5rem;
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  background: none;
+}
+
+.nav button:hover {
+  background: #FFCCFF;
 }
 
 #about {
-  max-width: 400px;
+  max-width: 26rem;
   display: none;
 }
 
@@ -111,7 +119,7 @@ a:hover {
   line-height: normal;
 }
 
-.parent {
+.projects {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -149,17 +157,9 @@ a:hover {
   gap: -1rem;
 }
 
-.contact a {
-  margin: 0 -.3rem;
-}
-
-.contact a:hover { 
-  z-index: 10; 
-}
-
-.contact a path { 
-  fill: none; 
-}
+.contact a { margin: 0 -.3rem; }
+.contact a:hover {  z-index: 10;  }
+.contact a path {  fill: none;  }
 
 .github:hover path,
 .github:active path,
@@ -181,13 +181,24 @@ a:hover {
 .substack:active path,
 .substack:focus path { fill: #ff7b3a; }
 
-@media only screen and (min-device-width: 1280px) {
+
+@media only screen and (max-width: 960px) {
   body,
   #work {
     gap: 7.5rem;
+    background: #FFCCFF;
   }
+  .projects { grid-template-columns: repeat(2, 1fr); }
+  .card:nth-of-type(3n-7) { margin-top: 0; }
+  .card:nth-of-type(even) { margin-top: -5rem; }
 }
 
-@media only screen and (max-device-width: 736px) { 
-
+@media only screen and (max-width: 600px) { 
+  body,
+  #work {
+    background: #e84fff;
+  }
+  .projects { grid-template-columns: 1fr; }
+  .card:nth-of-type(3n-7) { margin-top: 0; }
+  .card:nth-of-type(even) { margin-top: 0; }
 }
