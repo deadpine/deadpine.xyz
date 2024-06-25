@@ -57,11 +57,11 @@ a:hover {
 .nav {
   display: flex;
   width: fit-content;
-  padding: .5rem;
+  padding: .25rem;
   margin: .25rem auto;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: .75rem;
   border-radius: 2rem;
   background: rgba(241, 241, 241, 0.65);
   backdrop-filter: blur(12px);
@@ -74,14 +74,16 @@ a:hover {
   border: none;
   text-align: center;
   min-width: 5rem;
-  padding: .5rem 1rem;
+  padding: .75rem 1rem;
   border-radius: 2rem;
   cursor: pointer;
   background: none;
 }
 
 .nav button:hover {
-  background: #FFCCFF;
+  background: white;
+  color: #e84fff;
+  font-weight: bold;
 }
 
 #about {
