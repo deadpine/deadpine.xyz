@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-  max-width: 24rem;
+  max-width: 23rem;
   color: #000;
   text-align: center;
   font-family: "Noto Serif", serif;
@@ -33,6 +33,7 @@ h1 {
   font-size: 1.15rem;
   line-height: 1.7rem;
   margin-top: 12rem ;
+  padding: 0 1rem;
 }
 
 p {
@@ -91,8 +92,9 @@ a:hover {
 }
 
 #about {
-  max-width: 26rem;
+  max-width: 28rem;
   display: none;
+  padding: 0 1rem;
 }
 
 #about p {
