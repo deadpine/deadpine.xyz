@@ -46,7 +46,7 @@ p {
 a {
   color: black;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 a:active,
@@ -92,7 +92,7 @@ a:hover {
 }
 
 #about {
-  max-width: 28rem;
+  max-width: 27.7rem;
   display: none;
   padding: 0 1rem;
 }
