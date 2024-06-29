@@ -56,7 +56,12 @@ a {
 
 a:active,
 a:hover { 
-  color: #e84fff; 
+  color: #EE33FF; 
+  text-decoration: underline !important;
+  text-decoration-style: wavy !important;
+  text-decoration-thickness: 0.2px !important;
+  text-underline-offset: 4px !important;
+  text-decoration-color: #EE33FF !important;
 }
 
 /* Nav */
@@ -213,17 +218,17 @@ a:hover {
 .github:active path,
 .github:focus path { fill: #24292F; }
 
-.twitter:hover path,
-.twitter:active path,
-.twitter:focus path { fill: #000; }
+.x:hover path,
+.x:active path,
+.x:focus path { fill: #000; }
 
 .goodreads:hover path,
 .goodreads:active path,
-.goodreads:focus path { fill: #DBD6BD; }
+.goodreads:focus path { fill: #e5debc; }
 
 .store:hover path,
 .store:active path,
-.store:focus path { fill: #FFD6FF; }
+.store:focus path { fill: #FAC2FF; }
 
 .substack:hover path,
 .substack:active path,
