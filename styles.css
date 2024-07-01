@@ -195,13 +195,13 @@ a:hover {
 .info-container p {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: .8rem;
-  color: #6B6B6B;
+  font-size: .9rem;
+  color: #5d5d5d;
 }
-.info-container p:last-of-type {
+/* .info-container p:last-of-type {
   color: #808080;
   font-weight: 400;
-}
+} */
 
 
 /* Contact */
