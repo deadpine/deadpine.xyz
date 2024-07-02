@@ -191,18 +191,22 @@ a:hover {
   display: flex;
   justify-content: space-between;
   padding: .3rem .75rem;
+  
 }
 
 .info-container p {
-  text-transform: uppercase;
-  font-weight: 550;
-  font-size: .9rem;
   color: #707070;
+  white-space: nowrap;
+  font-size: .75rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: default;
 }
-/* .info-container p:last-of-type {
-  color: #808080;
-  font-weight: 400;
-} */
+
+.info-container span {
+  display: none;
+}
 
 
 /* Contact */
@@ -256,15 +260,18 @@ footer p {
 
 .img-container {
   position: relative;
+  /* cursor: pointer; */
+}
+
+a.img-container {
   cursor: pointer;
 }
 
 .follow-div {
   /* color: #161316; */
   color: #000;
-  /* color: #EE33FF; */
   white-space: nowrap;
-  font-size: .75rem;
+  font-size: .7rem;
   letter-spacing: 1px;
   font-weight: 600;
   text-transform: uppercase;
@@ -272,17 +279,16 @@ footer p {
   width: fit-content;
   border-radius: 1rem;
   background-color: white;
-  background: rgba(252, 252, 252, 0.7);
+  background: rgba(253, 253, 253, 0.6);
   backdrop-filter: blur(8px);
-  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.20);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
   
   position: absolute;
   pointer-events: none;
   z-index: 100;
   display: none;
   margin-top: 40px;
-  /* margin-left: 3rem; */
-  padding: .2rem .8rem;
+  padding: .1rem .6rem;
 
   transition: transform 0.3s ease-out; /* Slower transition */
 
