@@ -17,20 +17,18 @@ const projects = document.querySelector('.projects');
 const followDiv = projects.querySelector('.follow-div');
 let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
 let velocityX = 0, velocityY = 0;
-const k = 0.2; // Spring constant
-const damping = 0.8; // Damping factor
+const k = 0.005; // Spring constant
+const beta = 0.1; // Damping factor
 
 const updatePosition = () => {
   const dx = targetX - currentX;
   const dy = targetY - currentY;
-  const ax = dx * k;
-  const ay = dy * k;
+
+  const ax = dx * k - beta * velocityX;
+  const ay = dy * k - beta * velocityY;
 
   velocityX += ax;
   velocityY += ay;
-
-  velocityX *= damping;
-  velocityY *= damping;
 
   currentX += velocityX;
   currentY += velocityY;
