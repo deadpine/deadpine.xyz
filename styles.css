@@ -294,12 +294,6 @@ a.img-container {
 
 }
 
-/* .ejemplo {
-  margin-top: 10rem;
-  display: block;
-  position: fixed;
-} */
-
 @media only screen and (max-width: 1024px) {
   /* body { background: #FFCCFF; } */
   body, #work { gap: 5rem; }
