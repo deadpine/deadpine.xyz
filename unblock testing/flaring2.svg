@@ -306,14 +306,14 @@
         antorchaGlow.forEach(el => el.style.display = "inline");
         antorchaFire.forEach(el => el.style.display = "inline");
 
-        setTimeout(toggleOpacity, 1700);
+        setTimeout(toggleOpacity, 2000);
       }
 
       toggle = !toggle;
     }
 
     // Start the toggle loop
-    setTimeout(toggleOpacity, 1700); // initial duration matches antorcha
+    setTimeout(toggleOpacity, 2000); // initial duration matches antorcha
   ]]></script>
 
 </svg>
