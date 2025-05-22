@@ -1,0 +1,48 @@
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+<script type="text/javascript">
+let p1 = document.getElementById('p1');
+let u1 = document.getElementById('u1');
+
+var u1Keyframes = new KeyframeEffect(
+  u1, [{
+      strokeDasharray: `100 ${p1.getTotalLength(p1)}`,
+      strokeDashoffset: "100"
+    },
+    {
+      strokeDasharray: `100 ${p1.getTotalLength(p1)}`,
+      strokeDashoffset: `-${p1.getTotalLength(p1) - 100}`
+    }
+  ], {
+    duration: 5000,
+    iterations: Infinity
+  }
+);
+
+var a1 = new Animation(u1Keyframes, document.timeline);
+a1.play();
+</script>
+  <defs>
+    <radialGradient id="g1">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="25%" stop-color="orange" />
+      <stop offset="95%" stop-opacity="0" stop-color="orange" />
+    </radialGradient>
+    <mask id="m1">
+      <use id="u1" href="#p1" 
+    stroke="white" stroke-width="4" fill="none"
+    stroke-dasharray="100 200" stroke-linecap="round" />
+    </mask>
+    <path id="p1" d="M 0 0 q 68 -78 84 -59 Q 116 -24 129 -59
+      Q 147 -113 162 -56 Q 174 -8 210 -60 Q 245 -111 300 -56 L 358 0" />
+  </defs>
+  <rect width="300" height="100" fill="black" />
+  <use href="#p1" transform="translate(0 100)" stroke="orange"
+    stroke-width=".3" fill="#222" opacity=".6" />
+  <g transform="translate(0 100)" mask="url(#m1)">
+    <circle r="50" fill="url(#g1)">
+      <animateMotion dur="5000ms" repeatCount="indefinite">
+        <mpath href="#p1" />
+      </animateMotion>
+    </circle>
+  </g>
+</svg>
