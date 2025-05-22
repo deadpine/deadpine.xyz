@@ -42,7 +42,7 @@
       }
       .fire-glow {
         fill: url(#radial-gradient);
-        animation: glow 1s ease-in-out infinite;
+        transition: opacity 1.5s ease-in-out;
       }
 
       <!-- lineas de gas -->
@@ -73,18 +73,15 @@
         animation: dashreverse 2s linear infinite;
       }
 
-      .energy, .gas {
+      #anforcha, #unblock {
         transition: opacity 0.5s ease;
+      }
+      .energy, .gas, .fire {
+        transition: opacity 0.25s ease;
       }
 
       @keyframes dash { to { stroke-dashoffset: -120; } }
       @keyframes dashreverse { to { stroke-dashoffset: 120; } }
-
-      @keyframes glow {
-        0% { opacity: 1; }
-        50% { opacity: .8; }
-        100% { opacity: .9; }
-      }
         
     </style>
     <radialGradient id="radial-gradient" cx="-138.9" cy="645.4" fx="-138.9" fy="645.4" r="1" gradientTransform="translate(-37501.8 8278.7) rotate(90) scale(58.5 -58.5)" gradientUnits="userSpaceOnUse">
@@ -258,62 +255,50 @@
     const unblock = document.getElementById('unblock');
     const antorcha = document.getElementById('anforcha');
 
-    const unblockEnergy = unblock.querySelectorAll('.energy');
-    const unblockGas = unblock.querySelectorAll('.gas');
+    const unblockEls = unblock.querySelectorAll('.energy, .gas');
+    const antorchaEls = antorcha.querySelectorAll('.gas, .fire, .fire-glow');
 
-    const antorchaGas = antorcha.querySelectorAll('.gas');
-    const antorchaGlow = antorcha.querySelectorAll('.fire-glow');
-    const antorchaFire = antorcha.querySelectorAll('.fire');
+    // Add transition to all animated elements
+    [...unblockEls, ...antorchaEls].forEach(el => {
+      el.style.transition = 'opacity 0.5s ease';
+    });
 
-    unblock.style.transition = "opacity 0.5s ease";
-    antorcha.style.transition = "opacity 0.5s ease";
-
-    unblock.style.opacity = "0.5";
-    antorcha.style.opacity = "1";
-
-    unblockEnergy.forEach(el => el.style.display = "none");
-    unblockGas.forEach(el => el.style.display = "none");
-
-    antorchaGas.forEach(el => el.style.display = "inline");
-    antorchaGlow.forEach(el => el.style.display = "inline");
-    antorchaFire.forEach(el => el.style.display = "inline");
-
-    let toggle = false;
-
-    function toggleOpacity() {
-      if (toggle) {
-        // Show unblock for 6s
-        unblock.style.opacity = "1";
-        antorcha.style.opacity = "0.5";
-
-        unblockEnergy.forEach(el => el.style.display = "inline");
-        unblockGas.forEach(el => el.style.display = "inline");
-
-        antorchaGas.forEach(el => el.style.display = "none");
-        antorchaGlow.forEach(el => el.style.display = "none");
-        antorchaFire.forEach(el => el.style.display = "none");
-
-        setTimeout(toggleOpacity, 3500);
-      } else {
-        // Show antorcha for 2s
-        unblock.style.opacity = "0.5";
-        antorcha.style.opacity = "1";
-
-        unblockEnergy.forEach(el => el.style.display = "none");
-        unblockGas.forEach(el => el.style.display = "none");
-
-        antorchaGas.forEach(el => el.style.display = "inline");
-        antorchaGlow.forEach(el => el.style.display = "inline");
-        antorchaFire.forEach(el => el.style.display = "inline");
-
-        setTimeout(toggleOpacity, 2000);
-      }
-
-      toggle = !toggle;
+    // Helper function to set visibility
+    function setVisibility(elements, visible) {
+      elements.forEach(el => {
+        el.style.opacity = visible ? '1' : '0';
+        el.style.visibility = visible ? 'visible' : 'hidden';
+      });
     }
 
-    // Start the toggle loop
-    setTimeout(toggleOpacity, 2000); // initial duration matches antorcha
-  ]]></script>
+    // Initial state: show antorcha
+    unblock.style.opacity = '0.5';
+    antorcha.style.opacity = '1';
+    setVisibility(unblockEls, false);
+    setVisibility(antorchaEls, true);
+
+    let showUnblock = true;
+
+    function toggle() {
+      if (showUnblock) {
+        unblock.style.opacity = '1';
+        antorcha.style.opacity = '0.5';
+        setVisibility(unblockEls, true);
+        setVisibility(antorchaEls, false);
+        setTimeout(toggle, 5500);
+      } else {
+        unblock.style.opacity = '0.5';
+        antorcha.style.opacity = '1';
+        setVisibility(unblockEls, false);
+        setVisibility(antorchaEls, true);
+        setTimeout(toggle, 3000);
+      }
+      showUnblock = !showUnblock;
+    }
+
+    setTimeout(toggle, 3000);
+  ]]>
+</script>
+
 
 </svg>
