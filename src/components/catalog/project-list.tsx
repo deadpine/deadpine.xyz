@@ -21,7 +21,7 @@ export function ProjectList({
     <nav
       ref={listRef}
       aria-label="Projects"
-      className="catalog-scroll h-full overflow-y-auto overscroll-contain px-4 py-4"
+      className="catalog-scroll h-full overflow-y-auto overscroll-contain px-2 py-2"
     >
       <ul className="list-none p-0 m-0">
         {projects.map((project) => {
@@ -35,26 +35,26 @@ export function ProjectList({
                 onClick={() => onSelect(project.slug)}
                 aria-current={isSelected ? "true" : undefined}
                 className={cn(
-                  "grid w-full grid-cols-[3rem_minmax(0,1.3fr)_minmax(0,1fr)_4.5rem] items-baseline gap-x-3 border-b border-black/10 px-2 py-2.5 text-left transition-colors",
+                  "grid w-full grid-cols-[2.5rem_minmax(0,1.3fr)_minmax(0,1fr)_3.75rem] items-baseline gap-x-2 border-b border-black/10 px-1.5 py-1.5 text-left transition-colors",
                   "hover:bg-black/[0.03]",
                   isSelected && "bg-black/[0.04]"
                 )}
               >
-                <span className="font-mono text-[0.72rem] tabular-nums text-black/50">
+                <span className="font-mono text-[0.62rem] tabular-nums text-black/50">
                   {project.number}
                 </span>
                 <span
                   className={cn(
-                    "truncate text-[0.78rem] font-medium uppercase tracking-[0.04em] text-black",
+                    "truncate text-[0.68rem] font-medium uppercase tracking-[0.03em] text-black",
                     isSelected && "text-black"
                   )}
                 >
                   {project.title}
                 </span>
-                <span className="truncate font-serif text-[0.8rem] italic text-black/55">
+                <span className="truncate font-serif text-[0.68rem] italic text-black/55">
                   {tagsLabel || "—"}
                 </span>
-                <span className="text-right font-mono text-[0.72rem] tabular-nums text-black/50">
+                <span className="text-right font-mono text-[0.62rem] tabular-nums text-black/50">
                   {project.dateLabel}
                 </span>
               </button>
