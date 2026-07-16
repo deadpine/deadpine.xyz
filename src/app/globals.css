@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfaf9;
+  --foreground: #0a0a0a;
+  --paper: #f3f1ee;
+  --muted: rgba(0, 0, 0, 0.55);
+  --line: rgba(0, 0, 0, 0.1);
+  --accent: #ee33ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-noto-serif), ui-serif, Georgia, "Times New Roman",
+    serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #ffccff;
+}
+
+/* Catalog scrollbars — quiet */
+.catalog-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.catalog-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.catalog-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+}
+
+.catalog-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.22);
+}
