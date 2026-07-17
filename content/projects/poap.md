@@ -1,6 +1,6 @@
 ---
 slug: poap
-title: "Poap ETH 2.0 contest"
+title: "POAP"
 date: "2020-10-01"
 tags: ["Illustration"]
 images:

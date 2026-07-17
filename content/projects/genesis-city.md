@@ -1,6 +1,6 @@
 ---
 slug: genesis-city
-title: "Genesis City UI"
+title: "Genesis City"
 date: "2022-07-01"
 tags: ["Frontend", "UI", "UX"]
 link: https://genesis.city/

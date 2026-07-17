@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import type { Project } from "@/lib/projects";
-import { cn } from "@/lib/utils";
 
 type ProjectImagesProps = {
   projects: Project[];
@@ -14,7 +13,6 @@ type ProjectImagesProps = {
 
 export function ProjectImages({
   projects,
-  selectedId,
   onSelect,
   scrollerRef,
   sectionRefs,
@@ -26,7 +24,6 @@ export function ProjectImages({
     >
       <div className="flex flex-col">
         {projects.map((project) => {
-          const isSelected = project.slug === selectedId;
           const hasImages = project.images.length > 0;
 
           return (
@@ -38,10 +35,6 @@ export function ProjectImages({
                 if (el) sectionRefs.current.set(project.slug, el);
                 else sectionRefs.current.delete(project.slug);
               }}
-              className={cn(
-                "transition-opacity duration-300",
-                isSelected ? "opacity-100" : "opacity-80"
-              )}
             >
               {hasImages ? (
                 project.images.map((src) => {
