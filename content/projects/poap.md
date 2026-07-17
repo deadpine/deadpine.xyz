@@ -2,6 +2,7 @@
 slug: poap
 title: "POAP"
 date: "2020-10-01"
+hidden: true
 tags: ["Illustration"]
 images:
   - /img/work/poap.jpg

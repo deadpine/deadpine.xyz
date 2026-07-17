@@ -7,6 +7,7 @@ export type Project = {
   number: string;
   title: string;
   date: string;
+  endDate?: string;
   dateLabel: string;
   tags: string[];
   link?: string;
@@ -16,30 +17,45 @@ export type Project = {
 
 const CONTENT_DIR = path.join(process.cwd(), "content/projects");
 
-function normalizeDate(value: unknown): string {
+function normalizeDate(value: unknown): string | undefined {
+  if (value == null || value === "") return undefined;
+
   if (value instanceof Date && !Number.isNaN(value.getTime())) {
-    // YAML dates often parse as UTC midnight — use UTC parts
     const y = value.getUTCFullYear();
     const m = String(value.getUTCMonth() + 1).padStart(2, "0");
     const d = String(value.getUTCDate()).padStart(2, "0");
     return `${y}-${m}-${d}`;
   }
 
-  const raw = String(value ?? "").trim();
+  const raw = String(value).trim();
   const iso = raw.match(/(\d{4}-\d{2}-\d{2})/);
   if (iso) return iso[1];
 
-  return "1970-01-01";
+  const yearOnly = raw.match(/^(\d{4})$/);
+  if (yearOnly) return `${yearOnly[1]}-01-01`;
+
+  return undefined;
 }
 
-function formatDateLabel(isoDate: string): string {
-  const [year, month] = isoDate.split("-");
-  if (!year || !month) return isoDate;
-  return `${month}-${year}`;
+function yearFrom(isoDate: string): string {
+  return isoDate.slice(0, 4);
+}
+
+/** Single year, or "YYYY-YYYY" when end year differs. */
+function formatDateLabel(startIso: string, endIso?: string): string {
+  const startYear = yearFrom(startIso);
+  if (!endIso) return startYear;
+  const endYear = yearFrom(endIso);
+  if (endYear === startYear) return startYear;
+  return `${startYear}-${endYear}`;
 }
 
 function padNumber(n: number): string {
-  return `p.${String(n).padStart(2, "0")}`;
+  return String(n).padStart(2, "0");
+}
+
+function isHidden(data: Record<string, unknown>): boolean {
+  return data.hidden === true || data.draft === true || data.published === false;
 }
 
 export function getProjects(): Project[] {
@@ -49,9 +65,13 @@ export function getProjects(): Project[] {
     .readdirSync(CONTENT_DIR)
     .filter((file) => file.endsWith(".md") || file.endsWith(".mdx"));
 
-  const projects = files.map((file) => {
+  const projects: Project[] = [];
+
+  for (const file of files) {
     const raw = fs.readFileSync(path.join(CONTENT_DIR, file), "utf8");
     const { data, content } = matter(raw);
+
+    if (isHidden(data as Record<string, unknown>)) continue;
 
     const slug =
       typeof data.slug === "string"
@@ -59,7 +79,8 @@ export function getProjects(): Project[] {
         : file.replace(/\.mdx?$/, "");
 
     const title = String(data.title ?? slug);
-    const date = normalizeDate(data.date);
+    const date = normalizeDate(data.date) ?? "1970-01-01";
+    const endDate = normalizeDate(data.endDate ?? data.end_date);
 
     let tags: string[] = [];
     if (Array.isArray(data.tags)) {
@@ -75,22 +96,22 @@ export function getProjects(): Project[] {
       images = [data.image];
     }
 
-    const description = content.trim();
-
-    return {
+    const project: Project = {
       slug,
       number: "",
       title,
       date,
-      dateLabel: formatDateLabel(date),
+      dateLabel: formatDateLabel(date, endDate),
       tags,
-      link: data.link ? String(data.link) : undefined,
       images,
-      description,
-    } satisfies Project;
-  });
+      description: content.trim(),
+    };
+    if (endDate) project.endDate = endDate;
+    if (data.link) project.link = String(data.link);
+    projects.push(project);
+  }
 
-  // Oldest → newest for numbering (p.01 = oldest)
+  // Oldest → newest for numbering (01 = oldest)
   projects.sort((a, b) => {
     if (a.date === b.date) return a.title.localeCompare(b.title);
     return a.date.localeCompare(b.date);
@@ -102,4 +123,47 @@ export function getProjects(): Project[] {
 
   // Newest first for display
   return projects.slice().reverse();
+}
+
+/** Full project including hidden (for future project pages). */
+export function getProjectBySlug(slug: string): Project | null {
+  if (!fs.existsSync(CONTENT_DIR)) return null;
+
+  const files = fs
+    .readdirSync(CONTENT_DIR)
+    .filter((file) => file.endsWith(".md") || file.endsWith(".mdx"));
+
+  for (const file of files) {
+    const raw = fs.readFileSync(path.join(CONTENT_DIR, file), "utf8");
+    const { data, content } = matter(raw);
+    const fileSlug =
+      typeof data.slug === "string" ? data.slug : file.replace(/\.mdx?$/, "");
+    if (fileSlug !== slug) continue;
+
+    const date = normalizeDate(data.date) ?? "1970-01-01";
+    const endDate = normalizeDate(data.endDate ?? data.end_date);
+    let tags: string[] = [];
+    if (Array.isArray(data.tags)) tags = data.tags.map(String);
+    else if (typeof data.tags === "string")
+      tags = data.tags.split(/\s+/).filter(Boolean);
+    let images: string[] = [];
+    if (Array.isArray(data.images)) images = data.images.map(String);
+    else if (typeof data.image === "string" && data.image)
+      images = [data.image];
+
+    return {
+      slug: fileSlug,
+      number: "",
+      title: String(data.title ?? fileSlug),
+      date,
+      endDate,
+      dateLabel: formatDateLabel(date, endDate),
+      tags,
+      link: data.link ? String(data.link) : undefined,
+      images,
+      description: content.trim(),
+    };
+  }
+
+  return null;
 }

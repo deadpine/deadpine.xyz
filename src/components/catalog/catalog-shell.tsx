@@ -1,10 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Project } from "@/lib/projects";
+import { AboutPanel } from "./about-panel";
+import { CursorLabel } from "./cursor-label";
+import { ProjectDetail } from "./project-detail";
 import { ProjectImages } from "./project-images";
 import { ProjectList } from "./project-list";
-import { SiteFooter } from "./site-footer";
+import { SiteFooter, type CatalogView } from "./site-footer";
 
 type CatalogShellProps = {
   projects: Project[];
@@ -12,12 +15,21 @@ type CatalogShellProps = {
 
 export function CatalogShell({ projects }: CatalogShellProps) {
   const [selectedId, setSelectedId] = useState(projects[0]?.slug ?? "");
+  const [view, setView] = useState<CatalogView>("work");
+  const [labelVisible, setLabelVisible] = useState(false);
+  const [animKey, setAnimKey] = useState(0);
+
   const isProgrammaticScroll = useRef(false);
   const programmaticTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const listRef = useRef<HTMLElement | null>(null);
   const imagesRef = useRef<HTMLElement | null>(null);
   const sectionRefs = useRef<Map<string, HTMLElement>>(new Map());
+
+  const activeProject = useMemo(
+    () => projects.find((p) => p.slug === selectedId) ?? projects[0],
+    [projects, selectedId]
+  );
 
   const markProgrammatic = useCallback((ms = 700) => {
     isProgrammaticScroll.current = true;
@@ -27,34 +39,53 @@ export function CatalogShell({ projects }: CatalogShellProps) {
     }, ms);
   }, []);
 
-  const selectProject = useCallback(
-    (slug: string, opts?: { scrollImages?: boolean; scrollList?: boolean }) => {
-      setSelectedId(slug);
-
-      if (opts?.scrollImages !== false) {
-        const section = sectionRefs.current.get(slug);
-        const scroller = imagesRef.current;
-        if (section && scroller) {
-          markProgrammatic();
-          const top =
-            section.getBoundingClientRect().top -
-            scroller.getBoundingClientRect().top +
-            scroller.scrollTop -
-            12;
-          scroller.scrollTo({ top, behavior: "smooth" });
-        }
-      }
-
-      if (opts?.scrollList) {
-        const row = document.getElementById(`list-${slug}`);
-        row?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }
+  const scrollToCover = useCallback(
+    (slug: string) => {
+      const section = sectionRefs.current.get(slug);
+      const scroller = imagesRef.current;
+      if (!section || !scroller) return;
+      markProgrammatic();
+      const top =
+        section.getBoundingClientRect().top -
+        scroller.getBoundingClientRect().top +
+        scroller.scrollTop -
+        12;
+      scroller.scrollTo({ top, behavior: "smooth" });
     },
     [markProgrammatic]
   );
 
-  // IntersectionObserver: right column scroll → selected project
+  const hoverProject = useCallback(
+    (slug: string) => {
+      if (view !== "work") return;
+      setSelectedId(slug);
+      scrollToCover(slug);
+    },
+    [scrollToCover, view]
+  );
+
+  const openProject = useCallback((slug: string) => {
+    setSelectedId(slug);
+    setLabelVisible(false);
+    setView("project");
+    setAnimKey((k) => k + 1);
+  }, []);
+
+  const showWork = useCallback(() => {
+    setView("work");
+    setLabelVisible(false);
+    setAnimKey((k) => k + 1);
+  }, []);
+
+  const showAbout = useCallback(() => {
+    setView("about");
+    setLabelVisible(false);
+    setAnimKey((k) => k + 1);
+  }, []);
+
+  // IntersectionObserver: right column scroll → selected project (landing only)
   useEffect(() => {
+    if (view !== "work") return;
     const root = imagesRef.current;
     if (!root || projects.length === 0) return;
 
@@ -89,20 +120,26 @@ export function CatalogShell({ projects }: CatalogShellProps) {
       sectionRefs.current.forEach((el) => observer?.observe(el));
     };
 
-    // Wait a frame so section refs from children are registered
     const raf = requestAnimationFrame(attach);
 
     return () => {
       cancelAnimationFrame(raf);
       observer?.disconnect();
     };
-  }, [projects]);
+  }, [projects, view, animKey]);
 
   useEffect(() => {
     return () => {
       if (programmaticTimer.current) clearTimeout(programmaticTimer.current);
     };
   }, []);
+
+  // Reset image scroller to top when opening a project gallery
+  useEffect(() => {
+    if (view !== "project") return;
+    const scroller = imagesRef.current;
+    if (scroller) scroller.scrollTop = 0;
+  }, [view, selectedId]);
 
   if (projects.length === 0) {
     return (
@@ -112,37 +149,69 @@ export function CatalogShell({ projects }: CatalogShellProps) {
     );
   }
 
+  const leftPanel =
+    view === "work" ? (
+      <ProjectList
+        projects={projects}
+        selectedId={selectedId}
+        onHover={hoverProject}
+        onOpen={openProject}
+        onHoverLabel={setLabelVisible}
+        listRef={listRef}
+      />
+    ) : view === "about" ? (
+      <AboutPanel />
+    ) : activeProject ? (
+      <ProjectDetail project={activeProject} />
+    ) : null;
+
+  const rightPanel =
+    view === "project" && activeProject ? (
+      <ProjectImages
+        projects={[activeProject]}
+        selectedId={selectedId}
+        mode="gallery"
+        scrollerRef={imagesRef}
+      />
+    ) : (
+      <ProjectImages
+        projects={projects}
+        selectedId={selectedId}
+        mode="covers"
+        onHover={hoverProject}
+        onOpen={openProject}
+        onHoverLabel={setLabelVisible}
+        scrollerRef={imagesRef}
+        sectionRefs={sectionRefs}
+      />
+    );
+
   return (
     <div className="flex h-screen min-w-[1200px] flex-col overflow-hidden bg-[#FBFAF9] text-black">
       <main className="grid min-h-0 flex-1 grid-cols-2 overflow-hidden">
-        {/* Left ~40% */}
         <div className="flex min-h-0 flex-col border-r border-black/10">
-          <div className="min-h-0 flex-1 overflow-hidden">
-            <ProjectList
-              projects={projects}
-              selectedId={selectedId}
-              onSelect={(slug) =>
-                selectProject(slug, { scrollImages: true, scrollList: false })
-              }
-              listRef={listRef}
-            />
+          <div
+            key={`left-${view}-${animKey}`}
+            className="catalog-view-enter min-h-0 flex-1 overflow-hidden"
+          >
+            {leftPanel}
           </div>
-          <SiteFooter />
-        </div>
-
-        {/* Right ~60% */}
-        <div className="min-h-0 overflow-hidden">
-          <ProjectImages
-            projects={projects}
-            selectedId={selectedId}
-            onSelect={(slug) =>
-              selectProject(slug, { scrollImages: false, scrollList: true })
-            }
-            scrollerRef={imagesRef}
-            sectionRefs={sectionRefs}
+          <SiteFooter
+            view={view}
+            onShowAbout={showAbout}
+            onShowWork={showWork}
           />
         </div>
+
+        <div
+          key={`right-${view}-${animKey}`}
+          className="catalog-view-enter min-h-0 overflow-hidden"
+        >
+          {rightPanel}
+        </div>
       </main>
+
+      <CursorLabel visible={labelVisible && view === "work"} />
     </div>
   );
 }

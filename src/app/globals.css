@@ -50,3 +50,29 @@ body {
   width: 0;
   height: 0;
 }
+
+/* Project name underline draws in on hover / selection */
+@keyframes catalog-underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Subtle work ↔ project / about transition */
+@keyframes catalog-view-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.catalog-view-enter {
+  animation: catalog-view-enter 0.4s ease-out both;
+}

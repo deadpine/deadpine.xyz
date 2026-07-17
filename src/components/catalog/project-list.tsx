@@ -2,19 +2,22 @@
 
 import type { Project } from "@/lib/projects";
 import { cn } from "@/lib/utils";
-import { ProjectDescription } from "./project-description";
 
 type ProjectListProps = {
   projects: Project[];
   selectedId: string;
-  onSelect: (slug: string) => void;
+  onHover: (slug: string) => void;
+  onOpen: (slug: string) => void;
+  onHoverLabel: (active: boolean) => void;
   listRef: React.RefObject<HTMLElement | null>;
 };
 
 export function ProjectList({
   projects,
   selectedId,
-  onSelect,
+  onHover,
+  onOpen,
+  onHoverLabel,
   listRef,
 }: ProjectListProps) {
   return (
@@ -23,7 +26,7 @@ export function ProjectList({
       aria-label="Projects"
       className="catalog-scroll h-full overflow-y-auto overscroll-contain px-2 py-2"
     >
-      <ul className="list-none p-0 m-0">
+      <ul className="m-0 list-none p-0">
         {projects.map((project) => {
           const isSelected = project.slug === selectedId;
           const tagsLabel = project.tags.join(" · ");
@@ -32,24 +35,32 @@ export function ProjectList({
             <li key={project.slug} id={`list-${project.slug}`}>
               <button
                 type="button"
-                onClick={() => onSelect(project.slug)}
+                onClick={() => onOpen(project.slug)}
+                onMouseEnter={() => {
+                  onHover(project.slug);
+                  onHoverLabel(true);
+                }}
+                onMouseLeave={() => onHoverLabel(false)}
                 aria-current={isSelected ? "true" : undefined}
                 className={cn(
-                  "grid w-full grid-cols-[2.5rem_minmax(0,1.3fr)_minmax(0,1fr)_3.75rem] items-baseline gap-x-2 border-b border-black/10 px-1.5 py-1.5 text-left transition-colors",
-                  "hover:bg-black/[0.03]",
-                  isSelected && "bg-black/[0.04]"
+                  "group grid w-full cursor-pointer grid-cols-[2.25rem_minmax(0,1.3fr)_minmax(0,1fr)_4.75rem] items-baseline gap-x-2 border-b border-black/10 px-1.5 py-1.5 text-left",
+                  "bg-transparent hover:bg-transparent"
                 )}
               >
                 <span className="font-mono text-[0.62rem] tabular-nums text-black/50">
                   {project.number}
                 </span>
-                <span
-                  className={cn(
-                    "truncate text-[0.68rem] font-medium uppercase tracking-[0.03em] text-black",
-                    isSelected && "text-black"
-                  )}
-                >
-                  {project.title}
+                <span className="min-w-0">
+                  <span
+                    className={cn(
+                      "relative inline-block max-w-full font-mono text-[0.68rem] font-normal normal-case tracking-normal text-black",
+                      "after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-black after:transition-transform after:duration-300 after:ease-out after:content-['']",
+                      "group-hover:after:scale-x-100",
+                      isSelected && "after:scale-x-100"
+                    )}
+                  >
+                    <span className="block truncate">{project.title}</span>
+                  </span>
                 </span>
                 <span className="truncate font-serif text-[0.68rem] italic text-black/55">
                   {tagsLabel || "—"}
@@ -58,8 +69,6 @@ export function ProjectList({
                   {project.dateLabel}
                 </span>
               </button>
-
-              {isSelected ? <ProjectDescription project={project} /> : null}
             </li>
           );
         })}

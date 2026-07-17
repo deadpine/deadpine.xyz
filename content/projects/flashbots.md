@@ -1,7 +1,8 @@
 ---
 slug: flashbots
 title: "Flashbots"
-date: "2023-09-01"
+date: "2022-05-01"
+endDate: "2023-09-01"
 tags: ["Branding", "Frontend", "UI", "UX", "Illustration", "Print"]
 link: https://www.flashbots.net/
 images:

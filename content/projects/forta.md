@@ -1,7 +1,8 @@
 ---
 slug: forta
 title: "Forta"
-date: "2023-07-01"
+date: "2021-06-01"
+endDate: "2023-07-01"
 tags: ["Branding", "Illustration", "UI"]
 link: https://forta.org/
 images:
