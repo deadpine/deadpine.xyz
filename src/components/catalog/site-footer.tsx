@@ -29,7 +29,7 @@ export function SiteFooter({ view, onShowAbout, onShowWork }: SiteFooterProps) {
             <button
               type="button"
               onClick={onShowAbout}
-              className="cursor-pointer bg-transparent text-black/55 transition-colors hover:text-[#EE33FF]"
+              className="cursor-pointer bg-transparent uppercase tracking-[0.08em] text-black/55 transition-colors hover:text-[#EE33FF]"
             >
               about
             </button>
@@ -37,7 +37,7 @@ export function SiteFooter({ view, onShowAbout, onShowWork }: SiteFooterProps) {
             <button
               type="button"
               onClick={onShowWork}
-              className="cursor-pointer bg-transparent text-black/55 transition-colors hover:text-[#EE33FF]"
+              className="cursor-pointer bg-transparent uppercase tracking-[0.08em] text-black/55 transition-colors hover:text-[#EE33FF]"
             >
               work
             </button>

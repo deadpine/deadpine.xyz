@@ -2,9 +2,10 @@ import type { Project } from "@/lib/projects";
 
 type ProjectDetailProps = {
   project: Project;
+  onBack: () => void;
 };
 
-export function ProjectDetail({ project }: ProjectDetailProps) {
+export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
   const paragraphs = project.description
     .split(/\n\n+/)
     .map((p) => p.trim())
@@ -12,6 +13,14 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
 
   return (
     <div className="catalog-scroll h-full overflow-y-auto overscroll-contain px-6 py-8">
+      <button
+        type="button"
+        onClick={onBack}
+        className="mb-6 cursor-pointer bg-transparent font-mono text-[0.68rem] tracking-wide text-black/50 transition-colors hover:text-[#EE33FF]"
+      >
+        ← Go back
+      </button>
+
       <header className="mb-8 space-y-2 border-b border-black/10 pb-6">
         <p className="font-mono text-[0.62rem] tabular-nums text-black/45">
           {project.number}

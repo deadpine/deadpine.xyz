@@ -24,7 +24,7 @@ export function ProjectList({
     <nav
       ref={listRef}
       aria-label="Projects"
-      className="catalog-scroll h-full overflow-y-auto overscroll-contain px-2 py-2"
+      className="catalog-scroll h-full overflow-y-auto overscroll-contain px-2 py-1.5"
     >
       <ul className="m-0 list-none p-0">
         {projects.map((project) => {
@@ -43,7 +43,7 @@ export function ProjectList({
                 onMouseLeave={() => onHoverLabel(false)}
                 aria-current={isSelected ? "true" : undefined}
                 className={cn(
-                  "group grid w-full cursor-pointer grid-cols-[2.25rem_minmax(0,1.3fr)_minmax(0,1fr)_4.75rem] items-baseline gap-x-2 border-b border-black/10 px-1.5 py-1.5 text-left",
+                  "group grid w-full cursor-pointer grid-cols-[2.25rem_minmax(0,1.3fr)_minmax(0,1fr)_4.75rem] items-baseline gap-x-2 px-1.5 py-1 text-left",
                   "bg-transparent hover:bg-transparent"
                 )}
               >

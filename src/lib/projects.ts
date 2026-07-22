@@ -125,45 +125,11 @@ export function getProjects(): Project[] {
   return projects.slice().reverse();
 }
 
-/** Full project including hidden (for future project pages). */
+/** Visible catalog project by slug (includes number). */
 export function getProjectBySlug(slug: string): Project | null {
-  if (!fs.existsSync(CONTENT_DIR)) return null;
+  return getProjects().find((project) => project.slug === slug) ?? null;
+}
 
-  const files = fs
-    .readdirSync(CONTENT_DIR)
-    .filter((file) => file.endsWith(".md") || file.endsWith(".mdx"));
-
-  for (const file of files) {
-    const raw = fs.readFileSync(path.join(CONTENT_DIR, file), "utf8");
-    const { data, content } = matter(raw);
-    const fileSlug =
-      typeof data.slug === "string" ? data.slug : file.replace(/\.mdx?$/, "");
-    if (fileSlug !== slug) continue;
-
-    const date = normalizeDate(data.date) ?? "1970-01-01";
-    const endDate = normalizeDate(data.endDate ?? data.end_date);
-    let tags: string[] = [];
-    if (Array.isArray(data.tags)) tags = data.tags.map(String);
-    else if (typeof data.tags === "string")
-      tags = data.tags.split(/\s+/).filter(Boolean);
-    let images: string[] = [];
-    if (Array.isArray(data.images)) images = data.images.map(String);
-    else if (typeof data.image === "string" && data.image)
-      images = [data.image];
-
-    return {
-      slug: fileSlug,
-      number: "",
-      title: String(data.title ?? fileSlug),
-      date,
-      endDate,
-      dateLabel: formatDateLabel(date, endDate),
-      tags,
-      link: data.link ? String(data.link) : undefined,
-      images,
-      description: content.trim(),
-    };
-  }
-
-  return null;
+export function getProjectSlugs(): string[] {
+  return getProjects().map((project) => project.slug);
 }

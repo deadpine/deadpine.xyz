@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Project } from "@/lib/projects";
 import { AboutPanel } from "./about-panel";
@@ -11,11 +12,22 @@ import { SiteFooter, type CatalogView } from "./site-footer";
 
 type CatalogShellProps = {
   projects: Project[];
+  initialView?: CatalogView;
+  initialSlug?: string;
 };
 
-export function CatalogShell({ projects }: CatalogShellProps) {
-  const [selectedId, setSelectedId] = useState(projects[0]?.slug ?? "");
-  const [view, setView] = useState<CatalogView>("work");
+export function CatalogShell({
+  projects,
+  initialView = "work",
+  initialSlug,
+}: CatalogShellProps) {
+  const router = useRouter();
+  const [selectedId, setSelectedId] = useState(
+    initialSlug && projects.some((p) => p.slug === initialSlug)
+      ? initialSlug
+      : (projects[0]?.slug ?? "")
+  );
+  const [view, setView] = useState<CatalogView>(initialView);
   const [labelVisible, setLabelVisible] = useState(false);
   const [animKey, setAnimKey] = useState(0);
 
@@ -31,7 +43,7 @@ export function CatalogShell({ projects }: CatalogShellProps) {
     [projects, selectedId]
   );
 
-  const markProgrammatic = useCallback((ms = 700) => {
+  const markProgrammatic = useCallback((ms = 100) => {
     isProgrammaticScroll.current = true;
     if (programmaticTimer.current) clearTimeout(programmaticTimer.current);
     programmaticTimer.current = setTimeout(() => {
@@ -50,7 +62,7 @@ export function CatalogShell({ projects }: CatalogShellProps) {
         scroller.getBoundingClientRect().top +
         scroller.scrollTop -
         12;
-      scroller.scrollTo({ top, behavior: "smooth" });
+      scroller.scrollTop = top;
     },
     [markProgrammatic]
   );
@@ -64,24 +76,39 @@ export function CatalogShell({ projects }: CatalogShellProps) {
     [scrollToCover, view]
   );
 
-  const openProject = useCallback((slug: string) => {
-    setSelectedId(slug);
-    setLabelVisible(false);
-    setView("project");
-    setAnimKey((k) => k + 1);
-  }, []);
+  const openProject = useCallback(
+    (slug: string) => {
+      setSelectedId(slug);
+      setLabelVisible(false);
+      setView("project");
+      setAnimKey((k) => k + 1);
+      router.push(`/work/${slug}`, { scroll: false });
+    },
+    [router]
+  );
 
   const showWork = useCallback(() => {
     setView("work");
     setLabelVisible(false);
     setAnimKey((k) => k + 1);
-  }, []);
+    router.push("/", { scroll: false });
+  }, [router]);
 
   const showAbout = useCallback(() => {
     setView("about");
     setLabelVisible(false);
     setAnimKey((k) => k + 1);
-  }, []);
+    router.push("/about", { scroll: false });
+  }, [router]);
+
+  // Sync from route props when navigating (back/forward, direct load)
+  useEffect(() => {
+    setView(initialView);
+    if (initialSlug && projects.some((p) => p.slug === initialSlug)) {
+      setSelectedId(initialSlug);
+    }
+    setAnimKey((k) => k + 1);
+  }, [initialView, initialSlug, projects]);
 
   // IntersectionObserver: right column scroll → selected project (landing only)
   useEffect(() => {
@@ -162,7 +189,7 @@ export function CatalogShell({ projects }: CatalogShellProps) {
     ) : view === "about" ? (
       <AboutPanel />
     ) : activeProject ? (
-      <ProjectDetail project={activeProject} />
+      <ProjectDetail project={activeProject} onBack={showWork} />
     ) : null;
 
   const rightPanel =

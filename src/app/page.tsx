@@ -3,5 +3,5 @@ import { getProjects } from "@/lib/projects";
 
 export default function HomePage() {
   const projects = getProjects();
-  return <CatalogShell projects={projects} />;
+  return <CatalogShell projects={projects} initialView="work" />;
 }
