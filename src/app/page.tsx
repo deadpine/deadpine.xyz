@@ -1,7 +1,7 @@
-import { CatalogShell } from "@/components/catalog/catalog-shell";
+import { ProjectGrid } from "@/components/home/project-grid";
 import { getProjects } from "@/lib/projects";
 
 export default function HomePage() {
   const projects = getProjects();
-  return <CatalogShell projects={projects} initialView="work" />;
+  return <ProjectGrid projects={projects} />;
 }

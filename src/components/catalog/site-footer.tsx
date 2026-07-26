@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export type CatalogView = "work" | "about" | "project";
 
@@ -26,13 +27,21 @@ export function SiteFooter({ view, onShowAbout, onShowWork }: SiteFooterProps) {
 
         <nav aria-label="Site" className="flex items-center gap-4">
           {view === "work" ? (
-            <button
-              type="button"
-              onClick={onShowAbout}
-              className="cursor-pointer bg-transparent uppercase tracking-[0.08em] text-black/55 transition-colors hover:text-[#EE33FF]"
-            >
-              about
-            </button>
+            <>
+              <button
+                type="button"
+                onClick={onShowAbout}
+                className="cursor-pointer bg-transparent uppercase tracking-[0.08em] text-black/55 transition-colors hover:text-[#EE33FF]"
+              >
+                about
+              </button>
+              <Link
+                href="/"
+                className="uppercase tracking-[0.08em] text-black/55 transition-colors hover:text-[#EE33FF]"
+              >
+                grid
+              </Link>
+            </>
           ) : (
             <button
               type="button"

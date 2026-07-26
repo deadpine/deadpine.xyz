@@ -14,12 +14,15 @@ type CatalogShellProps = {
   projects: Project[];
   initialView?: CatalogView;
   initialSlug?: string;
+  /** Path for the catalog list (default home; archive uses `/archive`). */
+  workPath?: string;
 };
 
 export function CatalogShell({
   projects,
   initialView = "work",
   initialSlug,
+  workPath = "/",
 }: CatalogShellProps) {
   const router = useRouter();
   const [selectedId, setSelectedId] = useState(
@@ -91,8 +94,8 @@ export function CatalogShell({
     setView("work");
     setLabelVisible(false);
     setAnimKey((k) => k + 1);
-    router.push("/", { scroll: false });
-  }, [router]);
+    router.push(workPath, { scroll: false });
+  }, [router, workPath]);
 
   const showAbout = useCallback(() => {
     setView("about");

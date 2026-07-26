@@ -3,14 +3,18 @@ import { CatalogShell } from "@/components/catalog/catalog-shell";
 import { getProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Archive",
   description:
-    "Product design and brand identity — deadpine.xyz",
+    "Project archive — numbered catalog index and covers · deadpine.xyz",
 };
 
-export default function AboutPage() {
+export default function ArchivePage() {
   const projects = getProjects();
   return (
-    <CatalogShell projects={projects} initialView="about" workPath="/" />
+    <CatalogShell
+      projects={projects}
+      initialView="work"
+      workPath="/archive"
+    />
   );
 }

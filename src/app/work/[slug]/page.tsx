@@ -40,6 +40,7 @@ export default async function ProjectPage({ params }: PageProps) {
       projects={projects}
       initialView="project"
       initialSlug={slug}
+      workPath="/"
     />
   );
 }
