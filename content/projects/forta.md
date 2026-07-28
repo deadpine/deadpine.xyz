@@ -13,6 +13,6 @@ images:
   - /img/work/forta-marketplace.jpg
 ---
 
-Brand, websites, developer resources, and marketplace UI for Forta — a decentralized security network for smart contracts and blockchain protocols.
+Brand, websites, developer resources, and marketplace UI for Forta — a decentralized security network for smart contracts and blockchain protocols. Longer placeholder description for layout testing.
 
-The visual system balances technical precision with approachable clarity, from early product storytelling through a second-generation site, builder-facing resources, and marketplace touchpoints for detection bots and network coverage.
+The visual system balances technical precision with approachable clarity, from early product storytelling through a second-generation site, builder-facing resources, and marketplace touchpoints for detection bots and network coverage. More detail forthcoming.

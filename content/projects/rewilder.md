@@ -11,6 +11,6 @@ images:
   - /img/work/rewilder-app.jpg
 ---
 
-Campaign, NFT, and app design for Rewilder — a crypto non-profit funding land conservation.
+Campaign, NFT, and app design for Rewilder — a crypto non-profit funding land conservation. Slightly longer placeholder narrative for the homepage.
 
-The fundraiser site made donation flows and impact storytelling feel tangible. Stamp-like NFT illustrations mark conservation support with craft and character. The app carries the same system into end-to-end on-chain giving toward protected land.
+The fundraiser site made donation flows and impact storytelling feel tangible. Stamp-like NFT illustrations mark conservation support with craft and character. The app carries the same system into end-to-end on-chain giving toward protected land. More detail forthcoming.

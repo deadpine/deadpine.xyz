@@ -8,6 +8,7 @@ export type Project = {
   title: string;
   date: string;
   endDate?: string;
+  ongoing?: boolean;
   dateLabel: string;
   tags: string[];
   link?: string;
@@ -41,13 +42,28 @@ function yearFrom(isoDate: string): string {
   return isoDate.slice(0, 4);
 }
 
-/** Single year, or "YYYY-YYYY" when end year differs. */
-function formatDateLabel(startIso: string, endIso?: string): string {
+/**
+ * Year-only labels:
+ * - single year: "2023"
+ * - finished range: "2021–2023"
+ * - ongoing: "2024–present" (set ongoing: true in frontmatter)
+ */
+function formatDateLabel(
+  startIso: string,
+  endIso?: string,
+  ongoing?: boolean
+): string {
   const startYear = yearFrom(startIso);
+
+  if (ongoing) {
+    return `${startYear} – PRESENT`;
+  }
+
   if (!endIso) return startYear;
+
   const endYear = yearFrom(endIso);
   if (endYear === startYear) return startYear;
-  return `${startYear}-${endYear}`;
+  return `${startYear} – ${endYear}`;
 }
 
 function padNumber(n: number): string {
@@ -81,6 +97,7 @@ export function getProjects(): Project[] {
     const title = String(data.title ?? slug);
     const date = normalizeDate(data.date) ?? "1970-01-01";
     const endDate = normalizeDate(data.endDate ?? data.end_date);
+    const ongoing = data.ongoing === true;
 
     let tags: string[] = [];
     if (Array.isArray(data.tags)) {
@@ -101,28 +118,45 @@ export function getProjects(): Project[] {
       number: "",
       title,
       date,
-      dateLabel: formatDateLabel(date, endDate),
+      dateLabel: formatDateLabel(date, endDate, ongoing),
       tags,
       images,
       description: content.trim(),
     };
     if (endDate) project.endDate = endDate;
+    if (ongoing) project.ongoing = true;
     if (data.link) project.link = String(data.link);
     projects.push(project);
   }
 
-  // Oldest → newest for numbering (01 = oldest)
+  /**
+   * Sort for display:
+   * 1. Ongoing projects first
+   * 2. Finished projects by end date (newest end first); fall back to start date
+   * 3. When still tied, alphabetical by title
+   */
   projects.sort((a, b) => {
-    if (a.date === b.date) return a.title.localeCompare(b.title);
-    return a.date.localeCompare(b.date);
+    const aOngoing = a.ongoing === true;
+    const bOngoing = b.ongoing === true;
+    if (aOngoing !== bOngoing) return aOngoing ? -1 : 1;
+
+    if (aOngoing && bOngoing) {
+      return a.title.localeCompare(b.title, undefined, { sensitivity: "base" });
+    }
+
+    const aEnd = a.endDate ?? a.date;
+    const bEnd = b.endDate ?? b.date;
+    if (aEnd !== bEnd) return bEnd.localeCompare(aEnd);
+
+    return a.title.localeCompare(b.title, undefined, { sensitivity: "base" });
   });
 
+  // Number in reverse chronological display order (01 = top of list)
   projects.forEach((project, index) => {
     project.number = padNumber(index + 1);
   });
 
-  // Newest first for display
-  return projects.slice().reverse();
+  return projects;
 }
 
 /** Visible catalog project by slug (includes number). */

@@ -2,8 +2,8 @@
 slug: flashbots
 title: "Flashbots"
 date: "2022-05-01"
-endDate: "2023-09-01"
-tags: ["Branding", "Frontend", "UI", "UX", "Illustration", "Print"]
+endDate: "2025-08-01"
+tags: ["Branding", "Frontend", "UI/UX", "Illustration", "Print"]
 link: https://www.flashbots.net/
 images:
   - /img/work/flashbots-website.jpg
@@ -14,6 +14,6 @@ images:
   - /img/work/flashbots-swag.jpg
 ---
 
-Website, forum theme, CTF, NFTs, and merch for Flashbots — research and product work around transparent MEV infrastructure.
+Website, forum theme, CTF, NFTs, and merch for Flashbots — research and product work around transparent MEV infrastructure. Placeholder expansion for a fuller project narrative.
 
-Public site and Discourse theme carry technical depth into clear product and community surfaces. CTF branding and reward illustrations, plus print and swag, extend the same research-culture identity into games and physical objects.
+Public site and Discourse theme carry technical depth into clear product and community surfaces. CTF branding and reward illustrations, plus print and swag, extend the same research-culture identity into games and physical objects. More detail forthcoming.

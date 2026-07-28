@@ -1,10 +1,13 @@
 ---
 slug: club-del-sur
 title: "Club del Sur"
-date: "2025-01-15"
-tags: ["Branding"]
+date: "2024"
+ongoing: true
+tags: ["Branding", "Editorial", "Print"]
 images:
   - /img/work/clubdelsur.png
 ---
 
-Club del Sur — brand and visual identity work.
+Club del Sur is a brand and visual identity exploration for a cultural community project. Placeholder copy for a slightly longer project description you can replace later.
+
+The work spans mark development, color, and applications across digital and print touchpoints. More detail forthcoming.

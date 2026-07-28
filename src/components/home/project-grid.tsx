@@ -1,47 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/projects";
+import { ProjectImageLoop } from "./project-image-loop";
 
 type ProjectGridProps = {
   projects: Project[];
 };
 
-function CoverImage({
-  src,
-  alt,
-  priority,
-}: {
-  src: string;
-  alt: string;
-  priority?: boolean;
-}) {
-  if (src.endsWith(".svg")) {
-    return (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        src={src}
-        alt={alt}
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-      />
-    );
-  }
-
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      fill
-      sizes="100vw"
-      priority={priority}
-      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-    />
-  );
-}
-
 export function ProjectGrid({ projects }: ProjectGridProps) {
   return (
     <div className="min-h-screen min-w-[1200px] bg-[#FBFAF9] text-black">
-      <header className="flex items-center justify-between border-b border-black/10 px-8 py-5">
+      <header className="flex items-center justify-between border-b border-black/10 px-10 py-5">
         <Link
           href="/"
           className="flex items-center gap-2.5 text-black transition-colors hover:text-[#EE33FF]"
@@ -77,92 +46,17 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
         </nav>
       </header>
 
-      <main className="px-6 pb-16">
+      <main className="px-10 pb-16">
         <section
           aria-label="About"
-          className="mx-auto max-w-2xl px-4 py-24 md:py-32"
+          className="max-w-2xl py-24 text-left md:py-32"
         >
-          <div className="space-y-6 font-serif text-[1.05rem] leading-[1.75] text-black/75">
+          <div className="space-y-2.5 font-sans text-[14px] leading-[1.4] text-black/45">
             <p>
               For 10 years my journey has intertwined product design and brand
               identity with technology, mostly in crypto. With Bitcoin and
               Ethereum I discovered an opportunity to work fostering an open
               economic system based on freedom and responsibility.
-            </p>
-            <p>
-              I&apos;ve collaborated with projects like{" "}
-              <a
-                href="https://openzeppelin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-              >
-                OpenZeppelin
-              </a>
-              ,{" "}
-              <a
-                href="https://flashbots.net/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-              >
-                Flashbots
-              </a>
-              ,{" "}
-              <a
-                href="https://decentraland.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-              >
-                Decentraland
-              </a>
-              ,{" "}
-              <a
-                href="https://ethlatam.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-              >
-                ETHLatam
-              </a>
-              ,{" "}
-              <a
-                href="https://forta.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-              >
-                Forta
-              </a>
-              ,{" "}
-              <a
-                href="https://app.exact.ly/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-              >
-                Exactly
-              </a>
-              ,{" "}
-              <a
-                href="https://mint.ethernautdao.io/#about"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-              >
-                Ethernaut DAO
-              </a>
-              , and{" "}
-              <a
-                href="https://app.rewilder.xyz/donation/27"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-              >
-                Rewilder
-              </a>
-              .
             </p>
             <p>
               I also enjoy bringing my designs to life through coding. I have
@@ -198,54 +92,62 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
           </div>
         </section>
 
-        <div className="grid grid-cols-1 p-32">
+        <div className="grid grid-cols-1">
           {projects.map((project, index) => {
-            const cover = project.images[0];
+            const description = project.description
+              .split(/\n\n+/)
+              .map((p) => p.trim())
+              .filter(Boolean);
 
             return (
-              <Link
+              <article
                 key={project.slug}
-                href={`/work/${project.slug}`}
-                className="group flex w-full cursor-pointer items-center justify-between gap-16 border-b border-black/10 py-6 last:border-b-0"
+                className="grid w-full grid-cols-2 items-stretch gap-[40px] border-b border-black/10 py-8 last:border-b-0"
               >
-                <div className="min-w-0 max-w-[16rem] shrink-0 text-left">
-                  <p className="font-mono text-[0.65rem] tabular-nums text-black/50">
-                    {project.number}
-                    <span className="mx-2 text-black/25">·</span>
-                    {project.dateLabel}
-                  </p>
-                  <h2 className="mt-1 font-mono text-lg font-normal tracking-tight text-black md:text-xl">
-                    {project.title}
-                  </h2>
-                  {project.tags.length > 0 ? (
-                    <p className="mt-0.5 font-serif text-[0.85rem] italic text-black/55">
-                      {project.tags.slice(0, 3).join(" · ")}
+                <div className="flex min-h-[440px] min-w-0 max-w-md flex-col justify-between text-left">
+                  <div>
+                    <h2 className="font-sans text-2xl font-normal tracking-tight text-black md:text-3xl">
+                      {project.title}
+                    </h2>
+                    <p className="mt-1 font-mono text-[0.65rem] tabular-nums text-black/50">
+                      {project.dateLabel}
                     </p>
+                    {description.length > 0 ? (
+                      <div className="mt-4 space-y-2.5 font-sans text-[14px] leading-[1.4] text-black/45">
+                        {description.map((paragraph) => (
+                          <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                  {project.tags.length > 0 ? (
+                    <ul className="mt-6 flex list-none flex-wrap gap-1.5 p-0">
+                      {project.tags.map((tag) => (
+                        <li
+                          key={tag}
+                          className="rounded-full bg-black/[0.05] px-3 py-1 font-sans text-[0.8rem] tracking-wide text-black/70"
+                        >
+                          {tag}
+                        </li>
+                      ))}
+                    </ul>
                   ) : null}
                 </div>
 
-                <div className="relative aspect-video h-[400px] w-auto max-w-full shrink-0 overflow-hidden rounded-[12px] bg-[#EBE8E4] transition-[border-radius] duration-500 ease-out group-hover:rounded-[200px]">
-                  {cover ? (
-                    <CoverImage
-                      src={cover}
-                      alt={`${project.title} cover`}
-                      priority={index < 2}
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-[#F3F1EE]">
-                      <span className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-black/35">
-                        Image forthcoming
-                      </span>
-                    </div>
-                  )}
+                <div className="relative min-h-[440px] w-full overflow-hidden rounded-[12px] bg-[#EBE8E4]">
+                  <ProjectImageLoop
+                    images={project.images}
+                    alt={`${project.title} artwork`}
+                    priority={index < 2}
+                  />
                 </div>
-              </Link>
+              </article>
             );
           })}
         </div>
       </main>
 
-      <footer className="border-t border-black/10 px-8 py-5">
+      <footer className="border-t border-black/10 px-10 py-5">
         <div className="flex items-center justify-between gap-3 font-mono text-[0.68rem] tracking-wide text-black/55">
           <div className="flex items-center gap-2 text-black/70">
             <Image

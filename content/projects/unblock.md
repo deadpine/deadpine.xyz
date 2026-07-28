@@ -8,4 +8,6 @@ images:
   - /img/work/unblock-wind.svg
 ---
 
-Unblock — illustration and brand motion studies, including flare and wind animated mark explorations.
+Unblock — illustration and brand motion studies, including flare and wind animated mark explorations. Placeholder paragraph written a bit longer for the grid.
+
+Focus on kinetic marks, energy, and how motion can carry brand personality without heavy UI chrome. More detail forthcoming.

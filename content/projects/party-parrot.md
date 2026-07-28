@@ -1,9 +1,11 @@
 ---
-slug: party-parrot
-title: "Party Parrot"
-date: "2024-01-01"
+slug: the-wolf
+title: "The Wolf"
+date: "2017"
 tags: ["Illustration"]
 images: []
 ---
 
-Party Parrot — illustration work.
+Party Parrot is an illustration project. Placeholder copy written a bit longer for layout and type testing on the homepage project cards.
+
+Work explores character, color, and playful motion-friendly forms you can replace with the real case study later. More detail forthcoming.

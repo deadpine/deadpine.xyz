@@ -49,3 +49,6 @@ next-env.d.ts
 # OS
 .vs/
 vendor/
+
+# Local large media (e.g. website recordings)
+/public/videos/

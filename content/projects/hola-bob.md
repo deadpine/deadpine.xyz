@@ -7,4 +7,6 @@ images:
   - /img/work/holabob.png
 ---
 
-Hola Bob — brand and visual identity work.
+Hola Bob is a brand and visual identity project. This is placeholder description text written a bit longer so the homepage layout can be reviewed with realistic copy length.
+
+Includes direction for mark, type, and application ideas across product and marketing surfaces. More detail forthcoming.
