@@ -3,6 +3,10 @@
 import Image from "next/image";
 import type { Project } from "@/lib/projects";
 import { cn } from "@/lib/utils";
+import {
+  isVideoSrc,
+  WebsiteVideoFrame,
+} from "@/components/home/website-video-frame";
 
 type ProjectImagesProps = {
   projects: Project[];
@@ -16,7 +20,14 @@ type ProjectImagesProps = {
   sectionRefs?: React.MutableRefObject<Map<string, HTMLElement>>;
 };
 
-function ProjectImage({
+/** Prefer a still for archive covers; fall back to first media item. */
+function coverMedia(images: string[]): string[] {
+  if (images.length === 0) return [];
+  const still = images.find((src) => !isVideoSrc(src));
+  return [still ?? images[0]];
+}
+
+function ProjectMedia({
   src,
   alt,
   priority,
@@ -25,13 +36,21 @@ function ProjectImage({
   alt: string;
   priority?: boolean;
 }) {
-  const isSvg = src.endsWith(".svg");
-  if (isSvg) {
+  if (isVideoSrc(src)) {
+    return (
+      <div className="relative min-h-[50vh] w-full">
+        <WebsiteVideoFrame src={src} title={alt} />
+      </div>
+    );
+  }
+
+  if (src.endsWith(".svg")) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img src={src} alt={alt} className="block h-auto w-full" />
     );
   }
+
   return (
     <Image
       src={src}
@@ -63,7 +82,7 @@ export function ProjectImages({
         {projects.map((project, projectIndex) => {
           const images =
             mode === "covers"
-              ? project.images.slice(0, 1)
+              ? coverMedia(project.images)
               : project.images;
           const hasImages = images.length > 0;
           const interactive = mode === "covers";
@@ -82,17 +101,19 @@ export function ProjectImages({
               {hasImages ? (
                 images.map((src, i) => {
                   const content = (
-                    <ProjectImage
+                    <ProjectMedia
                       src={src}
                       alt={`${project.title} artwork`}
-                      priority={mode === "covers" && projectIndex < 2 && i === 0}
+                      priority={
+                        mode === "covers" && projectIndex < 2 && i === 0
+                      }
                     />
                   );
 
                   if (!interactive) {
                     return (
                       <div
-                        key={src}
+                        key={`${project.slug}-${src}-${i}`}
                         className="relative block w-full overflow-hidden bg-[#EBE8E4]"
                       >
                         {content}
@@ -102,7 +123,7 @@ export function ProjectImages({
 
                   return (
                     <button
-                      key={src}
+                      key={`${project.slug}-${src}-${i}`}
                       type="button"
                       onClick={() => onOpen?.(project.slug)}
                       onMouseEnter={() => {

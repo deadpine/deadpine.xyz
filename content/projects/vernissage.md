@@ -4,11 +4,11 @@ title: "Vernissage"
 date: "2025-11-01"
 tags: ["Branding", "Frontend", "Print"]
 images:
-  - /videos/vernissage.mp4
+  - /img/work/vernissage-02.png
   - /img/work/vernissage-04.png
   - /img/work/vernissage-01.png
-  - /img/work/vernissage-02.png
   - /img/work/vernissage-03.png
+  - /videos/vernissage.mp4
 ---
 
 Vernissage is a brand and product design project. This longer placeholder description exists so the homepage can be reviewed with fuller text blocks.

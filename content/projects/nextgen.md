@@ -9,7 +9,6 @@ images:
   - /videos/nextgen.mp4
   - /img/work/nextgen-1.png
   - /img/work/nextgen-2.png
-  - /img/work/nextgen.png
 ---
 
 NextGen is a product and brand design engagement. Placeholder description expanded slightly for homepage rhythm and reading length.
