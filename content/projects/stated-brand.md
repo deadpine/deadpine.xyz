@@ -2,6 +2,7 @@
 slug: stated-brand
 title: "State D"
 date: "2022"
+hidden: true
 tags: ["Branding"]
 images: []
 ---

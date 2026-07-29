@@ -4,7 +4,8 @@ title: "Rollup Boost"
 date: "2025"
 tags: ["Branding", "UI"]
 link: https://writings.flashbots.net/
-images: []
+images:
+  - /img/work/rollupboost.jpg
 ---
 
 Design for Rollup Boost — product and brand work around faster, more expressive rollup block building. Placeholder text expanded for a fuller card description.

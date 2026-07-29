@@ -1,6 +1,6 @@
 ---
-slug: party-parrot
-title: "Party Parrot"
+slug: the-wolf
+title: "The Wolf"
 date: "2017"
 hidden: true
 tags: ["Illustration"]

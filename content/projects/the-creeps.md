@@ -2,6 +2,7 @@
 slug: the-creeps
 title: "The Creeps"
 date: "2020"
+hidden: true
 tags: ["Illustration"]
 link: https://soundcloud.com/catalanojuan/the-creeps
 images:

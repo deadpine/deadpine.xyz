@@ -2,10 +2,13 @@
 slug: nextgen
 title: "NextGen"
 date: "2025"
-ongoing: true
+endDate: "2026"
+# ongoing: true
 tags: ["Branding", "UI"]
 images:
-  - /videos/test.mp4
+  - /videos/nextgen.mp4
+  - /img/work/nextgen-1.png
+  - /img/work/nextgen-2.png
   - /img/work/nextgen.png
 ---
 

@@ -134,13 +134,11 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                   ) : null}
                 </div>
 
-                <div className="relative min-h-[440px] w-full overflow-hidden rounded-[12px] bg-[#EBE8E4]">
-                  <ProjectImageLoop
-                    images={project.images}
-                    alt={`${project.title} artwork`}
-                    priority={index < 2}
-                  />
-                </div>
+                <ProjectImageLoop
+                  images={project.images}
+                  alt={`${project.title} artwork`}
+                  priority={index < 2}
+                />
               </article>
             );
           })}

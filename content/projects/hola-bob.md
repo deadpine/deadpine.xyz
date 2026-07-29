@@ -4,6 +4,7 @@ title: "Hola Bob"
 date: "2024-02-01"
 tags: ["Branding"]
 images:
+  - /videos/holabob.mp4
   - /img/work/holabob.png
 ---
 
