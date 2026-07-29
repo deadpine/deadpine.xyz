@@ -4,7 +4,7 @@ title: "NextGen"
 date: "2025"
 endDate: "2026"
 # ongoing: true
-tags: ["Branding", "UI"]
+tags: ["Branding", "UI/UX", "Frontend"]
 images:
   - /videos/nextgen.mp4
   - /img/work/nextgen-1.png
