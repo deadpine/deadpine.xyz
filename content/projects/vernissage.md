@@ -4,6 +4,7 @@ title: "Vernissage"
 date: "2025-11-01"
 tags: ["Branding", "Frontend", "Print"]
 images:
+  - /videos/vernissage.mp4
   - /img/work/vernissage-04.png
   - /img/work/vernissage-01.png
   - /img/work/vernissage-02.png
