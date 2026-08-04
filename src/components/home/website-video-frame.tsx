@@ -2,7 +2,7 @@ type WebsiteVideoFrameProps = {
   src: string;
   poster?: string;
   title?: string;
-  /** Stage background; defaults to warm paper gray, cooler for Unblock. */
+  /** Stage background; defaults to warm paper gray. */
   stageClassName?: string;
   className?: string;
 };
@@ -13,12 +13,6 @@ export function isVideoSrc(src: string): boolean {
   return VIDEO_EXT.test(src);
 }
 
-function defaultStageClass(src: string): string {
-  // Cooler blue-gray for Unblock website recording
-  if (/unblock/i.test(src)) return "bg-[#E4E7E6]";
-  return "bg-[#E8E6E3]";
-}
-
 /**
  * Gray stage with a centered website-recording video at 82% width.
  * Muted, looping, autoplaying for portfolio display.
@@ -27,10 +21,10 @@ export function WebsiteVideoFrame({
   src,
   poster,
   title = "Website recording",
-  stageClassName,
+  stageClassName = "bg-[#E8E6E3]",
   className = "",
 }: WebsiteVideoFrameProps) {
-  const stage = stageClassName ?? defaultStageClass(src);
+  const stage = stageClassName;
 
   return (
     <div

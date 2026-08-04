@@ -9,118 +9,36 @@ const socials = [
 export function AboutPanel() {
   return (
     <div className="catalog-scroll h-full overflow-y-auto overscroll-contain px-6 py-8">
-      <div className="max-w-md space-y-5 font-serif text-[0.95rem] leading-[1.7] text-black/80">
-        <p>
-          For 10 years my journey has intertwined product design and brand
-          identity with technology, mostly in crypto. With Bitcoin and Ethereum
-          I discovered an opportunity to work fostering an open economic system
-          based on freedom and responsibility.
+      <div className="max-w-md space-y-2.5 font-sans text-[14px] leading-[1.4] text-black/45">
+        <p className="font-serif text-[0.95rem] italic text-black/70">
+          Seeking beauty & untangling complexity.
         </p>
         <p>
-          I&apos;ve collaborated with projects like{" "}
-          <a
-            href="https://openzeppelin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-          >
-            OpenZeppelin
-          </a>
-          ,{" "}
-          <a
-            href="https://flashbots.net/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-          >
-            Flashbots
-          </a>
-          ,{" "}
-          <a
-            href="https://decentraland.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-          >
-            Decentraland
-          </a>
-          ,{" "}
-          <a
-            href="https://ethlatam.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-          >
-            ETHLatam
-          </a>
-          ,{" "}
-          <a
-            href="https://forta.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-          >
-            Forta
-          </a>
-          ,{" "}
-          <a
-            href="https://app.exact.ly/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-          >
-            Exactly
-          </a>
-          ,{" "}
-          <a
-            href="https://mint.ethernautdao.io/#about"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-          >
-            Ethernaut DAO
-          </a>
-          , and{" "}
-          <a
-            href="https://app.rewilder.xyz/donation/27"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-          >
-            Rewilder
-          </a>
-          .
+          For 10+ years I&apos;ve worked at the intersection of product design,
+          brand identity, and technology— mostly in crypto, exploring open
+          economic systems built around freedom and personal responsibility.
         </p>
         <p>
-          I also enjoy bringing my designs to life through coding. I have
-          experience in frontend development, including HTML, CSS, React, and
-          Svelte.
-        </p>
-        <p>However, not everything is about technology.</p>
-        <p>
-          Beyond my professional pursuits, I am interested in biology,
-          anthropology, behavioral science, color theory, architecture,
-          scenography, and ceramics. I&apos;m part of the{" "}
-          <a
-            href="https://fuegoaustral.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-          >
-            Fuego Austral
-          </a>{" "}
-          community, bringing art to life and cultivating meaningful offline
-          connections.
+          I&apos;m drawn to curious people, unconventional ideas, and the messy
+          process of creation.
         </p>
         <p>
-          I invite you to email me at{" "}
+          I design and I code, and I like taking things all the way from concept
+          to working product.
+        </p>
+        <p>
+          Beyond technology, I&apos;m curious about biology, anthropology,
+          architecture, and ceramics. I also run Club del Sur, a social and
+          cultural club for the local community of José Ignacio, Uruguay.
+        </p>
+        <p>
+          Email me at{" "}
           <a
             href="mailto:hey@deadpine.xyz"
-            className="text-black underline decoration-black/25 underline-offset-3 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
+            className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
           >
             hey@deadpine.xyz
-          </a>{" "}
-          and discuss shared interests or potential collaborations.
+          </a>
         </p>
       </div>
 

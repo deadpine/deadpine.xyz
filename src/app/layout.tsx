@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
 
 const siteUrl = "https://deadpine.xyz";
 const description =
-  "seeking beauty while striving to understand the complexities of this world";
+  "Seeking beauty & untangling complexity.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

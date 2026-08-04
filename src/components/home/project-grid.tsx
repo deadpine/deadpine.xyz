@@ -9,7 +9,7 @@ type ProjectGridProps = {
 
 export function ProjectGrid({ projects }: ProjectGridProps) {
   return (
-    <div className="min-h-screen min-w-[1200px] bg-[#FBFAF9] text-black">
+    <div className="min-h-screen min-w-[1200px] bg-[#EFEDEB] text-black">
       <header className="flex items-center justify-between border-b border-black/10 px-10 py-5">
         <Link
           href="/"
@@ -29,8 +29,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
         </Link>
 
         <p className="max-w-md text-right font-serif text-[0.85rem] italic leading-snug text-black/70">
-          seeking beauty while striving to understand the complexities of this
-          world
+          Seeking beauty & untangling complexity.
         </p>
 
         <nav
@@ -53,41 +52,32 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
         >
           <div className="space-y-2.5 font-sans text-[14px] leading-[1.4] text-black/45">
             <p>
-              For 10 years my journey has intertwined product design and brand
-              identity with technology, mostly in crypto. With Bitcoin and
-              Ethereum I discovered an opportunity to work fostering an open
-              economic system based on freedom and responsibility.
+              For 10+ years I&apos;ve worked at the intersection of product
+              design, brand identity, and technology— mostly in crypto,
+              exploring open economic systems built around freedom and personal
+              responsibility.
             </p>
             <p>
-              I also enjoy bringing my designs to life through coding. I have
-              experience in frontend development, including HTML, CSS, React,
-              and Svelte.
-            </p>
-            <p>However, not everything is about technology.</p>
-            <p>
-              Beyond my professional pursuits, I am interested in biology,
-              anthropology, behavioral science, color theory, architecture,
-              scenography, and ceramics. I&apos;m part of the{" "}
-              <a
-                href="https://fuegoaustral.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
-              >
-                Fuego Austral
-              </a>{" "}
-              community, bringing art to life and cultivating meaningful offline
-              connections.
+              I&apos;m drawn to curious people, unconventional ideas, and the
+              messy process of creation.
             </p>
             <p>
-              I invite you to email me at{" "}
+              I design and I code, and I like taking things all the way from
+              concept to working product.
+            </p>
+            <p>
+              Beyond technology, I&apos;m curious about biology, anthropology,
+              architecture, and ceramics. I also run Club del Sur, a social and
+              cultural club for the local community of José Ignacio, Uruguay.
+            </p>
+            <p>
+              Email me at{" "}
               <a
                 href="mailto:hey@deadpine.xyz"
                 className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
               >
                 hey@deadpine.xyz
-              </a>{" "}
-              and discuss shared interests or potential collaborations.
+              </a>
             </p>
           </div>
         </section>
