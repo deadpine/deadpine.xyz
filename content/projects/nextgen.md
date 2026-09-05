@@ -11,6 +11,4 @@ images:
   - /img/work/nextgen-2.png
 ---
 
-NextGen is a product and brand design engagement. Placeholder description expanded slightly for homepage rhythm and reading length.
-
-Direction covers visual system, product framing, and how the brand shows up across digital touchpoints. More detail forthcoming.
+Brand identity, website, and learning platform for a family office building educational programs for the family's next generation. From visual identity to frontend implementation.

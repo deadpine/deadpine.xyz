@@ -3,6 +3,7 @@ slug: forta
 title: "Forta"
 date: "2021-06-01"
 endDate: "2023-07-01"
+hidden: true
 tags: ["Branding", "Illustration", "UI"]
 link: https://forta.org/
 images:
@@ -13,6 +14,4 @@ images:
   - /img/work/forta-marketplace.jpg
 ---
 
-Brand, websites, developer resources, and marketplace UI for Forta — a decentralized security network for smart contracts and blockchain protocols. Longer placeholder description for layout testing.
-
-The visual system balances technical precision with approachable clarity, from early product storytelling through a second-generation site, builder-facing resources, and marketplace touchpoints for detection bots and network coverage. More detail forthcoming.
+Brand identity and website for Forta, a decentralized blockchain security network incubated by OpenZeppelin.

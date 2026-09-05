@@ -11,6 +11,4 @@ images:
   - /videos/vernissage.mp4
 ---
 
-Vernissage is a brand and product design project. This longer placeholder description exists so the homepage can be reviewed with fuller text blocks.
-
-Includes room for product story, visual language, and interface direction you can rewrite when ready. More detail forthcoming.
+Brand identity and website for Vernissage, an independent theater company. A visual identity built around collage and composition, capturing the layered nature of performance across print and digital.

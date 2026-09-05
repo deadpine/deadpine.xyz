@@ -14,6 +14,4 @@ images:
   - /img/work/flashbots-swag.jpg
 ---
 
-Website, forum theme, CTF, NFTs, and merch for Flashbots — research and product work around transparent MEV infrastructure. Placeholder expansion for a fuller project narrative.
-
-Public site and Discourse theme carry technical depth into clear product and community surfaces. CTF branding and reward illustrations, plus print and swag, extend the same research-culture identity into games and physical objects. More detail forthcoming.
+Creative direction and design for Flashbots over three years, spanning websites, brand identity, community platforms, merchandise, and digital products. From concept to frontend implementation.

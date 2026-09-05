@@ -8,6 +8,4 @@ images:
   - /img/work/rollupboost.jpg
 ---
 
-Design for Rollup Boost — product and brand work around faster, more expressive rollup block building. Placeholder text expanded for a fuller card description.
-
-Covers messaging hierarchy, product visuals, and a technical-but-approachable identity direction. More detail forthcoming.
+Brand identity, illustrations, and website for Rollup Boost, an open-source Ethereum infrastructure project by Flashbots. From visual identity to frontend implementation.

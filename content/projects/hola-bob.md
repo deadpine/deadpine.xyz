@@ -9,6 +9,4 @@ images:
   - /img/work/holabob.png
 ---
 
-Hola Bob is a brand and visual identity project. This is placeholder description text written a bit longer so the homepage layout can be reviewed with realistic copy length.
-
-Includes direction for mark, type, and application ideas across product and marketing surfaces. More detail forthcoming.
+Brand identity and website for HolaBob, an AI chatbot that helps you remember birthdays. A cheerful identity built around the joy of celebration inspired by balloons and vibrant gradients.

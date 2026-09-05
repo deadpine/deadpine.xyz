@@ -2,6 +2,7 @@
 slug: ethernaut-dao
 title: "Ethernaut DAO"
 date: "2022-06-01"
+hidden: true
 tags: ["Illustration"]
 link: https://mint.ethernautdao.io/
 images:
