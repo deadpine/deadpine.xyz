@@ -14,7 +14,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
       <HomeHero projects={projects} />
 
       <main id="work" className="px-10 pb-16">
-        <div className="grid grid-cols-2 items-start gap-x-10 gap-y-16">
+        <div className="grid grid-cols-2 items-start gap-x-5 gap-y-16">
           {projects.map((project, index) => {
             const description = project.description
               .split(/\n\n+/)
