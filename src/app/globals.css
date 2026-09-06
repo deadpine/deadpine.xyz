@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #efedeb;
+  --background: #f3f1f0;
   --foreground: #0a0a0a;
   --paper: #f3f1ee;
   --muted: rgba(0, 0, 0, 0.55);
@@ -75,4 +75,48 @@ body {
 
 .catalog-view-enter {
   animation: catalog-view-enter 0.4s ease-out both;
+}
+
+/* UI experiments — infinite type marquee */
+@keyframes exp-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.exp-marquee {
+  animation: exp-marquee 42s linear infinite;
+}
+
+.exp-marquee-reverse {
+  animation: exp-marquee 55s linear infinite reverse;
+}
+
+.exp-marquee-track:hover .exp-marquee,
+.exp-marquee-track:hover .exp-marquee-reverse {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exp-marquee,
+  .exp-marquee-reverse {
+    animation: none;
+  }
+}
+
+/* UI experiments — clip project images to the pinecone */
+.pine-mask {
+  -webkit-mask-image: url("/img/logo-mask.svg");
+  mask-image: url("/img/logo-mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
 }

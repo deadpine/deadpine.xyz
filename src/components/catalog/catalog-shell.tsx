@@ -173,7 +173,7 @@ export function CatalogShell({
 
   if (projects.length === 0) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#EFEDEB] text-black/60">
+      <div className="flex min-h-screen items-center justify-center bg-[#F3F1F0] text-black/60">
         No projects found.
       </div>
     );
@@ -217,7 +217,7 @@ export function CatalogShell({
     );
 
   return (
-    <div className="flex h-screen min-w-[1200px] flex-col overflow-hidden bg-[#EFEDEB] text-black">
+    <div className="flex h-screen min-w-[1200px] flex-col overflow-hidden bg-[#F3F1F0] text-black">
       <main className="grid min-h-0 flex-1 grid-cols-2 overflow-hidden">
         <div className="flex min-h-0 flex-col border-r border-black/10">
           <div
