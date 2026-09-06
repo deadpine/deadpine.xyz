@@ -189,3 +189,23 @@ export function PineconeMask({
     </div>
   );
 }
+
+/** Empty pinecone silhouette — transparent fill, 1px medium-gray outline. */
+export function PineconeOutline({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 21 24"
+      className={cn("overflow-visible", className)}
+      aria-hidden
+    >
+      <path
+        d={PINE_PATH}
+        fill="none"
+        stroke="#888888"
+        strokeWidth="1"
+        strokeLinejoin="round"
+        vectorEffect="non-scaling-stroke"
+      />
+    </svg>
+  );
+}

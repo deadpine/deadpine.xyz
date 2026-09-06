@@ -1,8 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import type { Project } from "@/lib/projects";
 import { HomeHero } from "./home-hero";
 import { ProjectImageLoop } from "./project-image-loop";
+import { SiteFooter } from "./site-footer";
 
 type ProjectGridProps = {
   projects: Project[];
@@ -10,8 +9,8 @@ type ProjectGridProps = {
 
 export function ProjectGrid({ projects }: ProjectGridProps) {
   return (
-    <div className="min-h-screen min-w-[1200px] bg-[#F3F1F0] text-black">
-      <HomeHero projects={projects} />
+    <div className="flex min-h-screen min-w-[1200px] flex-col bg-[#F3F1F0] text-black">
+      <HomeHero />
 
       <main id="work" className="px-10 pb-16">
         <div className="grid grid-cols-2 items-start gap-x-5 gap-y-16">
@@ -30,12 +29,14 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                 />
 
                 <div className="mt-5">
-                  <h2 className="font-sans text-2xl font-normal tracking-tight text-black">
-                    {project.title}
-                  </h2>
-                  <p className="mt-1 font-mono text-[0.65rem] tabular-nums text-black/50">
-                    {project.dateLabel}
-                  </p>
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h2 className="font-sans text-2xl font-normal tracking-tight text-black">
+                      {project.title}
+                    </h2>
+                    <p className="shrink-0 font-mono text-[0.65rem] tabular-nums text-black/50">
+                      {project.dateLabel}
+                    </p>
+                  </div>
                   {description.length > 0 ? (
                     <div className="mt-4 space-y-2.5 font-sans text-[14px] leading-[1.4] text-black/45">
                       {description.map((paragraph) => (
@@ -62,29 +63,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
         </div>
       </main>
 
-      <footer className="border-t border-black/10 px-10 py-5">
-        <div className="flex items-center justify-between gap-3 font-mono text-[0.68rem] tracking-wide text-black/55">
-          <div className="flex items-center gap-2 text-black/70">
-            <Image
-              src="/img/logo.svg"
-              alt=""
-              width={14}
-              height={16}
-              className="block opacity-90"
-              aria-hidden
-            />
-            <span>Deadpine ✦ {new Date().getFullYear()}</span>
-          </div>
-          <nav className="flex gap-5 uppercase tracking-[0.08em]">
-            <Link
-              href="/about"
-              className="transition-colors hover:text-[#EE33FF]"
-            >
-              about
-            </Link>
-          </nav>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
