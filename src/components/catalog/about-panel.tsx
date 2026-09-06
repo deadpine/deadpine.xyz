@@ -1,17 +1,9 @@
-const socials = [
-  { href: "mailto:hey@deadpine.xyz", label: "hey@deadpine.xyz" },
-  { href: "https://github.com/deadpine", label: "GitHub" },
-  { href: "https://store.deadpine.xyz/", label: "Store" },
-  { href: "https://goodreads.com/deadpine", label: "Goodreads" },
-  { href: "https://x.com/deadpine_xyz", label: "X" },
-];
-
 export function AboutPanel() {
   return (
     <div className="catalog-scroll h-full overflow-y-auto overscroll-contain px-6 py-8">
       <div className="max-w-md space-y-2.5 font-sans text-[14px] leading-[1.4] text-black/45">
         <p className="font-serif text-[0.95rem] italic text-black/70">
-          Seeking beauty & untangling complexity.
+          Seeking beauty and untangling complexity.
         </p>
         <p>
           For 10+ years I&apos;ve worked at the intersection of product design,
@@ -33,35 +25,13 @@ export function AboutPanel() {
         </p>
         <p>
           Email me at{" "}
-          <a
-            href="mailto:hey@deadpine.xyz"
+          <span
             className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
           >
             hey@deadpine.xyz
-          </a>
+          </span>
         </p>
       </div>
-
-      <nav
-        aria-label="Social links"
-        className="mt-10 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.68rem] tracking-wide text-black/55"
-      >
-        {socials.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            target={link.href.startsWith("mailto:") ? undefined : "_blank"}
-            rel={
-              link.href.startsWith("mailto:")
-                ? undefined
-                : "noopener noreferrer"
-            }
-            className="transition-colors hover:text-[#EE33FF]"
-          >
-            {link.label}
-          </a>
-        ))}
-      </nav>
     </div>
   );
 }

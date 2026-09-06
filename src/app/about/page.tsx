@@ -19,7 +19,8 @@ export default function AboutPage() {
         <div className="mt-20">
           <AboutCopy
             className="max-w-lg space-y-4 text-[18px] leading-[1.5] text-black/70"
-            taglineClassName="text-[1.45rem] leading-snug text-black/85"
+            taglineClassName="text-[1.3rem] leading-snug text-black/85"
+            showSocials={false}
           />
         </div>
       </section>

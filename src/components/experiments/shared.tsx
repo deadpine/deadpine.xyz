@@ -96,7 +96,7 @@ export function AboutCopy({
             taglineClassName
           )}
         >
-          Seeking beauty &amp; untangling complexity.
+          Seeking beauty and untangling complexity.
         </p>
         <p>
           For 10+ years I&apos;ve worked at the intersection of product design,
@@ -118,12 +118,11 @@ export function AboutCopy({
         </p>
         <p>
           Email me at{" "}
-          <a
-            href="mailto:hey@deadpine.xyz"
+          <span
             className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
           >
             hey@deadpine.xyz
-          </a>
+          </span>
         </p>
       </div>
       {showSocials ? <AboutSocials /> : null}
@@ -201,7 +200,7 @@ export function PineconeOutline({ className }: { className?: string }) {
       <path
         d={PINE_PATH}
         fill="none"
-        stroke="#888888"
+        stroke="#a4a4a4"
         strokeWidth="1"
         strokeLinejoin="round"
         vectorEffect="non-scaling-stroke"
