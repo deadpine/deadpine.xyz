@@ -35,7 +35,7 @@ export function WebsiteVideoFrame({
           key={src}
           src={src}
           poster={poster}
-          title={title}
+          aria-label={title}
           className="block h-auto w-full"
           autoPlay
           muted
