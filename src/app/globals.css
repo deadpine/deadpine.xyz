@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3f1f0;
+  --foreground: #0a0a0a;
+  --paper: #f3f1ee;
+  --muted: rgba(0, 0, 0, 0.55);
+  --line: rgba(0, 0, 0, 0.1);
+  --accent: #ee33ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-noto-serif), ui-serif, Georgia, "Times New Roman",
+    serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #ffccff;
+}
+
+/* Catalog scrollbars — hidden, scroll still works */
+.catalog-scroll {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge legacy */
+}
+
+.catalog-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0;
+  height: 0;
+}
+
+/* Project name underline draws in on hover / selection */
+@keyframes catalog-underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Subtle work ↔ project / about transition */
+@keyframes catalog-view-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.catalog-view-enter {
+  animation: catalog-view-enter 0.4s ease-out both;
+}
+
+/* UI experiments — infinite type marquee */
+@keyframes exp-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.exp-marquee {
+  animation: exp-marquee 42s linear infinite;
+}
+
+.exp-marquee-reverse {
+  animation: exp-marquee 55s linear infinite reverse;
+}
+
+.exp-marquee-track:hover .exp-marquee,
+.exp-marquee-track:hover .exp-marquee-reverse {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exp-marquee,
+  .exp-marquee-reverse {
+    animation: none;
+  }
+}
+
+/* UI experiments — clip project images to the pinecone */
+.pine-mask {
+  -webkit-mask-image: url("/img/logo-mask.svg");
+  mask-image: url("/img/logo-mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+}

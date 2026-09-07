@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <!-- CONFIG BEGIN -->
+  <style>  
+    #background { fill: #7008FD; }
+    #star { fill: white; }
+    #text { font: 10px sans-serif; fill: gray; }
+    #up { fill: #10ff54; }
+    #down { fill: #ff2727; }
+  </style>
+  <defs>
+    <svg id="logo" y="62" x="110" width="172" height="120" viewBox="0 0 62 44">
+      <style>
+        .belly { animation: updown 0.30s linear infinite; }
+        .head { animation: updown 0.30s linear -0.15s infinite; }
+        .paws-1 { animation: hideshow 0.30s linear infinite; }
+        .paws-2 { animation: hideshow 0.30s linear -0.15s infinite; }
+        @keyframes updown {
+          0% {transform: translate(0, 0px);}
+          49.99% {transform: translate(0, 0px);}
+          50% {transform: translate(0, -1px);}
+          100% {transform: translate(0, -1px);}
+        }
+        @keyframes hideshow {
+          0% { opacity: 1; }
+          49.99% { opacity: 1; }
+          50% { opacity: 0; }
+          100% { opacity: 0; }
+        }
+      </style>
+      <g transform="scale(1.4)">
+        <g id="body">
+          <path d="M4 5H24V15H4V5Z" fill="#9C6023"/>
+          <rect x="5" y="6" width="18" height="9" fill="#E8AC43"/>
+        </g>
+        <g class="belly">
+          <rect x="4" y="15" width="20" height="4" fill="#9C6023"/>
+          <rect x="5" y="15" width="18" height="3" fill="#E8AC43"/>
+          <path d="M18 15H9V16H8V18H18V15Z" fill="#FBEECB"/>
+        </g>
+        <g class="paws-2">
+          <path d="M25 16H16V18H15V19H14V21H15V22H17V21H18V20H19V21H20V22H22V21H23V20H24V19H25V16Z" fill="#9C6023"/>
+          <path d="M23 17H24V19H23V20H22V21H20V19H21V18H23V17Z" fill="#FBEECB"/>
+          <path d="M16 18H17V17H19H20V18H19V19H18V20H17V21H15V19H16V18Z" fill="#E8AC43"/>
+          <path d="M8 16H4V19H5V20H6V21H7V22H9V21H10V22H12V21H13V19H12V18H9V17H8V16Z" fill="#9C6023"/>
+          <path d="M11 18H9V19H10V21H12V19H11V18Z" fill="#FBEECB"/>
+          <path d="M5 16H7V17H8V19H9V21H7V20H6V19H5V16Z" fill="#E8AC43"/>
+        </g>
+        <g class="paws-1">
+          <path d="M3 17V15H8V19H11V20H10V21H9V22H7V21H6V20H5V21H4V22H2V21H1V19H2V17H3Z" fill="#9C6023"/>
+          <path d="M5 14H8V17H7V18H6V19H5V20H4V21H2V19H3V17H4V15H5V14Z" fill="#E8AC43"/>
+          <path d="M7 19V21H9V20H10V19H7Z" fill="#FBEECB"/>
+          <path d="M26 17V15H16V17H17V18H18V19H19V20H20V21H21V22H23V21H24V20H25V21H27V20H28V18H27V17H26Z" fill="#9C6023"/>
+          <path d="M21 15H17V17H18V18H19V19H20V20H21V21H23V20V19H22V18H21V17V15Z" fill="#E8AC43"/>
+          <path d="M25 16H22V18H24V19H25V20H27V18H26V17H25V16Z" fill="#FBEECB"/>
+          <path d="M24 17H25V18H24V17Z" fill="#9C6023"/>
+        </g>
+        <g class="head">
+          <path d="M7 2V3H8V4H9V5H10V9H9V10H8V11H4V14H3V13H2V12H1V9H0V6H1V4H2V3H3V2H7Z" fill="#9C6023"/>
+          <path d="M7 3H3V4H2V6H1V9H5V10H8V9H9V5H8V4H7V3Z" fill="#FBEECB"/>
+          <path d="M6 8H5V7H6V8Z" fill="#9C6023"/>
+          <path d="M5 8H4V9H5V8Z" fill="#9C6023"/>
+          <path d="M3 6H5V8H4V13H3V12H2V7H3V6Z" fill="#E8AC43"/>
+          <path d="M17 2H19V3H20V4H25V3H26V2H27V3H28V4H29V5H30V10H31V15H28V18H17V17H16V16H15V15H14V8H15V6H16V3H17V2Z" fill="#9C6023"/>
+          <path d="M30 11H18V17H29V16H30V11Z" fill="#FBEECB"/>
+          <path d="M17 5H29V10H30V11H29V13H25V12H23V11H19V12H18V16H19V17H17V16H16V15H15V8H16V6H17V5Z" fill="#E8AC43"/>
+          <path d="M23 8H22V10H23V8Z" fill="#FBEECB"/>
+          <path d="M26 11H29V13H27V12H26V11Z" fill="#1A1A1A"/>
+          <path d="M23 13H24V14H28V15H24V14H23V13Z" fill="#9C6023"/>
+          <path d="M26 3H27V4H28V5H25V4H26V3Z" fill="#FBEECB"/>
+          <path d="M19 3H17V6H18V5H20V4H19V3Z" fill="#FBEECB"/>
+          <path d="M29 15H30V16H29V17H28V16H29V15Z" fill="#9C6023"/>
+          <path d="M22 8H20V10H22V8Z" fill="#1A1A1A"/>
+          <path d="M28 7H26V9H28V7Z" fill="#1A1A1A"/>
+          <path d="M29 7H28V9H29V7Z" fill="#FBEECB"/>
+        </g>
+      </g>
+    </svg>
+
+    <text id="text" x="60" y="50">
+      <tspan id="up"> 1INCH ▲ +0.90% </tspan> - 
+      <tspan id="down"> BTC ▼ -1.33% </tspan> - 
+      <tspan id="up"> ETH ▲ +0.90% </tspan> - 
+      <tspan id="up"> DOGE ▲ +0.90% </tspan> - 
+      <tspan id="down"> UNI ▼ -1.33% </tspan> - 
+      <tspan id="up"> AAVE ▲ +0.90% </tspan> - 
+      <tspan id="up"> LINK ▲ +0.90% </tspan> - 
+      <tspan id="down"> COMP ▼ +0.90% </tspan> - 
+      <tspan id="up"> SUSHI ▲ +0.90% </tspan> - 
+      <tspan id="up"> 1INCH ▲ +0.90% </tspan> - 
+    </text>
+  </defs>
+  <!-- CONFIG END -->
+
+  <defs>
+    <rect id="star" width="2" height="2"/>
+    <mask id="mask" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="300" height="200">
+      <rect width="300" height="200"/>
+    </mask>
+  </defs>
+  
+  <!-- Background -->
+  <rect id="background" width="100%" height="100%"/>
+
+  <!-- Text -->
+  <g viewBox="0 0 300 300" mask="url(#mask)">
+    <use href="#text"><animateMotion path="m-40 -32 -400 0" begin="0" dur="7s" repeatCount="indefinite"/></use>
+    <use href="#text"><animateMotion path="m-200 140 -400 0" begin="0" dur="7s" repeatCount="indefinite"/></use>
+    <use href="#text"><animateMotion path="m548 140 -400 0" begin="0" dur="7s" repeatCount="indefinite"/></use>
+  </g>
+
+  <!-- Rotating group -->
+  <g mask="url(#mask)">
+    <svg x="-30" y="-15" height="300" viewBox="0 0 280 280">
+      <g class="price-container" transform-origin="155 100">
+
+        <animateTransform attributeName="transform" calcMode="linear" attributeType="XML" type="rotate" 
+          repeatCount="indefinite"
+          values="0 ; 10 ; 10; 10; -20 ; -20; -20; 0; 0" dur="12s"
+        />
+
+        <!-- Stars -->
+        <g>
+          <use href="#star"><animateMotion path="m320 20 -240 0" begin="0" dur="1.3s" repeatCount="indefinite"/></use>
+          <use href="#star"><animateMotion path="m380 50 -240 0" begin="0.3s" dur="1.3s" repeatCount="indefinite"/></use>
+          <use href="#star"><animateMotion path="m240 80 -240 0" begin="0.15s" dur="13s" repeatCount="indefinite"/></use>
+          <use href="#star"><animateMotion path="m280 130 -240 0" begin="0.3s" dur="1.3s" repeatCount="indefinite"/></use>
+          <use href="#star"><animateMotion path="m380 160 -240 0" begin="0.15s" dur="1.3s" repeatCount="indefinite"/></use>
+          <use href="#star"><animateMotion path="m200 190 -240 0" begin="0" dur="1.3s" repeatCount="indefinite"/></use>
+        </g>
+
+        <!-- Rainbow -->
+        <svg id="rainbow" y="85">
+          <defs>
+            <linearGradient id="RainbowGradient" gradientTransform="rotate(90)">
+              <stop stop-color="#FF00FF" offset="0%" />
+              <stop stop-color="#FF00FF" offset="16.66%" />
+              <stop stop-color="#6960EC" offset="16.67%" />
+              <stop stop-color="#6960EC" offset="33.33%" />
+              <stop stop-color="#00FFFF" offset="33.34%" />
+              <stop stop-color="#00FFFF" offset="49.99%" />
+              <stop stop-color="#0DFF27" offset="50.00%" />
+              <stop stop-color="#0DFF27" offset="66.66%" />
+              <stop stop-color="#FFF20D" offset="66.67%" />
+              <stop stop-color="#FFF20D" offset="83.33%" />
+              <stop stop-color="#FF5F1F" offset="83.34%" />
+              <stop stop-color="#FF5F1F" offset="100%" />
+            </linearGradient>
+          </defs>
+          <style>
+            .rainbow-piece0 {animation: rainbow-updown 0.40s linear infinite;}
+            .rainbow-piece1 {animation: rainbow-updown 0.40s linear -0.20s infinite;}
+
+            @keyframes rainbow-updown {
+              0% {transform: translate(0, 0px);}
+              49.99% {transform: translate(0, 0px);}
+              50% {transform: translate(0, 2px);}
+              100% {transform: translate(0, 2px);}
+            }
+          </style>
+          <g>
+            <rect class="rainbow-piece rainbow-piece0" y="0" x="-60" width="30" height="40" fill="url('#RainbowGradient')" />      
+            <rect class="rainbow-piece rainbow-piece1" y="0" x="-30" width="30" height="40" fill="url('#RainbowGradient')"/>
+            <rect class="rainbow-piece rainbow-piece0" y="0" x="0" width="30" height="40" fill="url('#RainbowGradient')" />      
+            <rect class="rainbow-piece rainbow-piece1" y="0" x="30" width="30" height="40" fill="url('#RainbowGradient')"/>
+            <rect class="rainbow-piece rainbow-piece0" y="0" x="60" width="30" height="40" fill="url('#RainbowGradient')"/>
+            <rect class="rainbow-piece rainbow-piece1" y="0" x="90" width="30" height="40" fill="url('#RainbowGradient')"/>
+            <rect class="rainbow-piece rainbow-piece0" y="0" x="120" width="30" height="40" fill="url('#RainbowGradient')"/>
+          </g>
+        </svg>
+
+        <!-- Logo -->
+        <use href="#logo" />
+      </g>
+    </svg>
+  </g>
+</svg>
