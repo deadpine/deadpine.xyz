@@ -8,6 +8,4 @@ images:
   - /img/work/exactly.jpg
 ---
 
-Mobile app UI for Exactly, an on-chain fixed-rate lending protocol. Placeholder text describing product screens, hierarchy, and calm financial interfaces at a slightly longer length.
-
-Focus areas included rate clarity, progressive disclosure, and a restrained visual language for dense financial data. More detail forthcoming.
+App redesign for an on-chain fixed-rate lending app.

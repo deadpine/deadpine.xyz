@@ -3,6 +3,7 @@ slug: intergalactic-tokens
 title: "Intergalactic Tokens"
 date: "2022-04-01"
 tags: ["Illustration"]
+hidden: true
 link: https://intergalactictokens.netlify.app/
 images:
   - /img/work/doge.svg

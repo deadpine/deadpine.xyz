@@ -14,4 +14,4 @@ images:
   - /img/work/flashbots-swag.jpg
 ---
 
-Creative direction and design for Flashbots over three years, spanning websites, brand identity, community platforms, merchandise, and digital products. From concept to frontend implementation.
+Three years of creative direction across brand, sites, community tools, merch, and product UI.

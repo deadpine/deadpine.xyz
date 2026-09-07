@@ -11,4 +11,4 @@ images:
   - /videos/vernissage.mp4
 ---
 
-Brand identity and website for Vernissage, an independent theater company. A visual identity built around collage and composition, capturing the layered nature of performance across print and digital.
+Identity and site for an independent theater company, built around collage across print and digital.

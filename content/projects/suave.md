@@ -8,4 +8,4 @@ images:
   - /img/work/suave-cover.png
 ---
 
-Visual identity for SUAVE, a next-generation blockchain execution platform by Flashbots.
+Visual identity for SUAVE, Flashbots’ next-generation blockchain execution platform.

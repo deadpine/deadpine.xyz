@@ -9,4 +9,4 @@ images:
   - /img/work/unblock-wind.svg
 ---
 
-Website redesign for Unblock Energy, complemented by a set of custom SVG illustrations and animations. Designed to bring clarity and personality to a technical industry.
+Site and illustration system for Unblock Energy, giving a technical company a clearer face.

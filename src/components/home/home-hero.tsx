@@ -16,7 +16,7 @@ export function HomeHero() {
           </h1>
           <p className="mt-4 font-sans text-[18px] leading-[1.5] text-black/70">
             Designer with 10+ years of experience working at the intersection of
-            product design, brand identity, and technology.
+            brand identity, product design, and technology.
           </p>
         </div>
 

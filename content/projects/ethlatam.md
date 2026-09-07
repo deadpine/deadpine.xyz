@@ -10,4 +10,4 @@ images:
   - /img/work/ethlatam-website.jpg
 ---
 
-Brand identity and creative direction for ETHLatam, the largest Ethereum conference in Latin America. A flexible visual system designed to scale from digital to physical spaces, spanning the website, venue, signage, merchandise, and stage design.
+Identity and creative direction for Latin America’s largest Ethereum conference.

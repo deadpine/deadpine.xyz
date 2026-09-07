@@ -8,4 +8,4 @@ images:
   - /img/work/rollupboost.jpg
 ---
 
-Brand identity, illustrations, and website for Rollup Boost, an open-source Ethereum infrastructure project by Flashbots. From visual identity to frontend implementation.
+Identity, illustration, and site for Flashbots’ open-source Ethereum infrastructure.

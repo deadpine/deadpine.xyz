@@ -9,4 +9,4 @@ images:
   - /img/work/holabob.png
 ---
 
-Brand identity and website for HolaBob, an AI chatbot that helps you remember birthdays. A cheerful identity built around the joy of celebration inspired by balloons and vibrant gradients.
+Identity and site for an AI that reminds you of birthdays.

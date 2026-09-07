@@ -11,4 +11,4 @@ images:
   - /img/work/nextgen-2.png
 ---
 
-Brand identity, website, and learning platform for a family office building educational programs for the family's next generation. From visual identity to frontend implementation.
+Identity and learning platform for a family office’s next generation.

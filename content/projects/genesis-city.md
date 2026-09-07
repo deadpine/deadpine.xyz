@@ -10,6 +10,4 @@ images:
   
 ---
 
-Interface design for Genesis City, a Decentraland city project. Maps, spatial UI, and navigation patterns for exploring a virtual territory — plus placeholder lines for a slightly longer blurb.
-
-Work focused on wayfinding, density of information, and a cartographic feel that stays usable in-world. More detail forthcoming.
+UI controls for a top-down view map of Decentraland's world.

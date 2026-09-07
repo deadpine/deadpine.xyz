@@ -9,4 +9,4 @@ images:
   - /img/work/clubdelsur-2.png
 ---
 
-Brand identity, website, and editorial design for Club del Sur, a social and cultural club for the local community of José Ignacio, built around conversations, reading groups, and a printed magazine.
+A printed magazine and identity for a social and cultural club in José Ignacio.
