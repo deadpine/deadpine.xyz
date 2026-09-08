@@ -33,7 +33,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                     <h2 className="min-w-0 font-sans text-xl font-normal tracking-tight text-black md:text-2xl">
                       {project.title}
                     </h2>
-                    <p className="shrink-0 font-mono text-[0.65rem] tabular-nums text-black/50">
+                    <p className="shrink-0 font-mono text-[0.8rem] tabular-nums text-black/50">
                       {project.dateLabel}
                     </p>
                   </div>

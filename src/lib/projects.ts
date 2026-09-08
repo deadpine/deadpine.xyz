@@ -159,11 +159,4 @@ export function getProjects(): Project[] {
   return projects;
 }
 
-/** Visible catalog project by slug (includes number). */
-export function getProjectBySlug(slug: string): Project | null {
-  return getProjects().find((project) => project.slug === slug) ?? null;
-}
 
-export function getProjectSlugs(): string[] {
-  return getProjects().map((project) => project.slug);
-}

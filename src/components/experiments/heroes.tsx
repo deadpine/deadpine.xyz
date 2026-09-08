@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { CursorLabel } from "@/components/catalog/cursor-label";
+import { CursorLabel } from "@/components/experiments/cursor-label";
 import { isVideoSrc } from "@/components/home/website-video-frame";
 import { HeroNav, Mark } from "@/components/experiments/mark";
 import type { Project } from "@/lib/projects";
@@ -230,7 +230,7 @@ export function HeroCatalog({ projects }: HeroProps) {
             {listed.map((project, index) => (
               <li key={project.slug}>
                 <Link
-                  href={`/work/${project.slug}`}
+                  href="/#work"
                   className="group grid grid-cols-[2rem_minmax(0,1fr)_auto] items-baseline gap-3 py-1.5"
                 >
                   <span className="font-mono text-[0.62rem] tabular-nums text-black/40">
@@ -286,7 +286,7 @@ export function HeroMosaic({ projects }: HeroProps) {
           {covers.map((cover, index) => (
             <li key={cover.slug}>
               <Link
-                href={`/work/${cover.slug}`}
+                href="/#work"
                 className="relative block aspect-[4/3] overflow-hidden rounded-[12px] bg-[#EBE8E4]"
                 onMouseEnter={() => {
                   setLabel(cover.title);

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { CursorLabel } from "@/components/catalog/cursor-label";
+import { CursorLabel } from "@/components/experiments/cursor-label";
 import { HeroNav, Mark } from "@/components/experiments/mark";
 import {
   AboutCopy,
@@ -71,7 +71,7 @@ export function HeroStudio({ projects }: HeroProps) {
           {covers.map((cover, index) => (
             <li key={cover.slug}>
               <Link
-                href={`/work/${cover.slug}`}
+                href="/#work"
                 className="relative block aspect-[4/3] overflow-hidden rounded-[12px] bg-[#EBE8E4]"
                 onMouseEnter={() => {
                   setLabel(cover.title);
@@ -117,7 +117,7 @@ export function HeroCameo({ projects }: HeroProps) {
         <div className="flex justify-center">
           {cover ? (
             <Link
-              href={`/work/${cover.slug}`}
+              href="/#work"
               aria-label={cover.title}
               className="block"
             >
