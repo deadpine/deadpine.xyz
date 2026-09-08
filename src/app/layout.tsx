@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist_Mono, Inter, Noto_Serif } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -84,6 +85,7 @@ export default function RootLayout({
         className={`${inter.variable} ${notoSerif.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-3G7E5SVXS2"
           strategy="afterInteractive"
