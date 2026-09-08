@@ -217,12 +217,12 @@ export function CatalogShell({
     );
 
   return (
-    <div className="flex h-screen min-w-[1200px] flex-col overflow-hidden bg-[#F3F1F0] text-black">
-      <main className="grid min-h-0 flex-1 grid-cols-2 overflow-hidden">
-        <div className="flex min-h-0 flex-col border-r border-black/10">
+    <div className="flex min-h-dvh min-w-0 flex-col bg-[#F3F1F0] text-black lg:h-screen lg:overflow-hidden">
+      <main className="grid min-h-0 flex-1 grid-cols-1 overflow-auto lg:grid-cols-2 lg:overflow-hidden">
+        <div className="order-2 flex min-h-0 flex-col border-black/10 lg:order-1 lg:border-r">
           <div
             key={`left-${view}-${animKey}`}
-            className="catalog-view-enter min-h-0 flex-1 overflow-hidden"
+            className="catalog-view-enter min-h-0 flex-1 max-lg:overflow-visible lg:overflow-hidden"
           >
             {leftPanel}
           </div>
@@ -235,7 +235,7 @@ export function CatalogShell({
 
         <div
           key={`right-${view}-${animKey}`}
-          className="catalog-view-enter min-h-0 overflow-hidden"
+          className="catalog-view-enter order-1 min-h-[55svh] overflow-hidden lg:order-2 lg:min-h-0"
         >
           {rightPanel}
         </div>

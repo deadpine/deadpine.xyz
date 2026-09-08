@@ -38,7 +38,7 @@ export function ProjectImageLoop({
 
   if (images.length === 0) {
     return (
-      <div className="relative min-h-[440px] w-full overflow-hidden rounded-[12px] bg-[#F3F1EE]">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[12px] bg-[#F3F1EE] md:aspect-auto md:min-h-[360px] lg:min-h-[440px]">
         <div className="absolute inset-0 flex items-center justify-center">
           <span className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-black/35">
             Image forthcoming
@@ -50,7 +50,7 @@ export function ProjectImageLoop({
 
   return (
     <div className="w-full">
-      <div className="relative min-h-[440px] w-full overflow-hidden rounded-[12px] bg-[#EBE8E4]">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[12px] bg-[#EBE8E4] md:aspect-auto md:min-h-[360px] lg:min-h-[440px]">
         {isVideoSrc(src) ? (
           <WebsiteVideoFrame key={src} src={src} poster={poster} title={alt} />
         ) : src.endsWith(".svg") ? (
@@ -66,7 +66,7 @@ export function ProjectImageLoop({
             src={src}
             alt={alt}
             fill
-            sizes="(min-width: 1200px) 50vw, 100vw"
+            sizes="(min-width: 768px) 50vw, 100vw"
             priority={priority && index === 0}
             className="object-cover"
           />

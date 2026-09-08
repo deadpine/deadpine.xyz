@@ -24,7 +24,7 @@ export function ProjectList({
     <nav
       ref={listRef}
       aria-label="Projects"
-      className="catalog-scroll h-full overflow-y-auto overscroll-contain px-2 py-1.5"
+      className="catalog-scroll h-auto overflow-visible px-2 py-1.5 lg:h-full lg:overflow-y-auto lg:overscroll-contain"
     >
       <ul className="m-0 list-none p-0">
         {projects.map((project) => {
@@ -43,7 +43,7 @@ export function ProjectList({
                 onMouseLeave={() => onHoverLabel(false)}
                 aria-current={isSelected ? "true" : undefined}
                 className={cn(
-                  "group grid w-full cursor-pointer grid-cols-[2.25rem_minmax(0,1.3fr)_minmax(0,1fr)_4.75rem] items-baseline gap-x-2 px-1.5 py-1 text-left",
+                  "group grid w-full cursor-pointer grid-cols-[2rem_minmax(0,1fr)_auto] items-baseline gap-x-2 px-1.5 py-1 text-left lg:grid-cols-[2.25rem_minmax(0,1.3fr)_minmax(0,1fr)_4.75rem]",
                   "bg-transparent hover:bg-transparent"
                 )}
               >
@@ -62,7 +62,7 @@ export function ProjectList({
                     <span className="block truncate">{project.title}</span>
                   </span>
                 </span>
-                <span className="truncate font-serif text-[0.68rem] italic text-black/55">
+                <span className="hidden truncate font-serif text-[0.68rem] italic text-black/55 lg:block">
                   {tagsLabel || "—"}
                 </span>
                 <span className="text-right font-mono text-[0.62rem] tabular-nums text-black/50">

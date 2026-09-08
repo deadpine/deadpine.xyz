@@ -5,7 +5,7 @@ import type { Project } from "@/lib/projects";
 import { cn } from "@/lib/utils";
 
 export const HERO_MIN =
-  "flex min-h-[calc(100svh-3rem)] min-w-[1200px] scroll-mt-12 flex-col";
+  "flex min-h-[calc(100svh-3rem)] min-w-0 scroll-mt-12 flex-col";
 
 export type Cover = {
   title: string;

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-auto px-10 py-5">
+    <footer className="mt-auto px-5 py-5 md:px-10">
       <div className="flex items-center gap-2 font-mono text-[0.68rem] tracking-wide text-black/70">
         <Image
           src="/img/logo.svg"

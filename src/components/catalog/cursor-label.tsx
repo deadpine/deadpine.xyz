@@ -26,7 +26,7 @@ export function CursorLabel({
     <div
       aria-hidden
       className={cn(
-        "pointer-events-none fixed z-[200] -translate-x-1/2 whitespace-nowrap rounded-full bg-white/85 px-2.5 py-1 font-mono text-[0.62rem] tracking-wide text-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] backdrop-blur-md transition-opacity duration-150",
+        "pointer-events-none fixed z-[200] hidden -translate-x-1/2 whitespace-nowrap rounded-full bg-white/85 px-2.5 py-1 font-mono text-[0.62rem] tracking-wide text-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] backdrop-blur-md transition-opacity duration-150 lg:block",
         visible ? "opacity-100" : "opacity-0"
       )}
       style={{

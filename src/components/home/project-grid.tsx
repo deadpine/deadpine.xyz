@@ -9,11 +9,11 @@ type ProjectGridProps = {
 
 export function ProjectGrid({ projects }: ProjectGridProps) {
   return (
-    <div className="flex min-h-screen min-w-[1200px] flex-col bg-[#F3F1F0] text-black">
+    <div className="flex min-h-screen min-w-0 flex-col bg-[#F3F1F0] text-black">
       <HomeHero />
 
-      <main id="work" className="px-10 pb-16">
-        <div className="grid grid-cols-2 items-start gap-x-5 gap-y-16">
+      <main id="work" className="px-5 pb-12 md:px-10 md:pb-16">
+        <div className="grid grid-cols-1 items-start gap-x-5 gap-y-12 md:grid-cols-2 md:gap-y-16">
           {projects.map((project, index) => {
             const description = project.description
               .split(/\n\n+/)
@@ -29,8 +29,8 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                 />
 
                 <div className="mt-5">
-                  <div className="flex items-baseline justify-between gap-3">
-                    <h2 className="font-sans text-2xl font-normal tracking-tight text-black">
+                  <div className="flex items-baseline justify-between gap-x-3 gap-y-1">
+                    <h2 className="min-w-0 font-sans text-xl font-normal tracking-tight text-black md:text-2xl">
                       {project.title}
                     </h2>
                     <p className="shrink-0 font-mono text-[0.65rem] tabular-nums text-black/50">

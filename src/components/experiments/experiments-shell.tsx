@@ -61,7 +61,7 @@ export function ExperimentsShell({ projects }: ExperimentsShellProps) {
   }, []);
 
   return (
-    <div className="min-h-screen min-w-[1200px] bg-[#F3F1F0] text-black">
+    <div className="min-h-screen min-w-0 bg-[#F3F1F0] text-black">
       <header className="sticky top-0 z-50 flex h-12 items-center justify-between gap-8 border-b border-black/10 bg-[#F3F1F0]/92 px-6 backdrop-blur-md">
         <div className="flex min-w-0 items-center gap-3">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.12em] text-black/45">

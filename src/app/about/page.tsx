@@ -10,16 +10,16 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="flex min-h-screen min-w-[1200px] flex-col bg-[#F3F1F0] text-black">
+    <div className="flex min-h-screen min-w-0 flex-col bg-[#F3F1F0] text-black">
       <section
         aria-label="About"
-        className="flex min-h-[calc(100svh*2/3)] flex-col px-10 pb-12 pt-7"
+        className="flex min-h-[calc(100svh*2/3)] flex-col px-5 pb-12 pt-6 md:px-10 md:pt-7"
       >
         <SiteHeader />
-        <div className="mt-20">
+        <div className="mt-12 md:mt-20">
           <AboutCopy
-            className="max-w-lg space-y-4 text-[18px] leading-[1.5] text-black/70"
-            taglineClassName="text-[1.3rem] leading-snug text-black/85"
+            className="max-w-lg space-y-4 text-[16px] leading-[1.5] text-black/70 md:text-[18px]"
+            taglineClassName="text-[1.2rem] leading-snug text-black/85 md:text-[1.3rem]"
             showSocials={false}
           />
         </div>

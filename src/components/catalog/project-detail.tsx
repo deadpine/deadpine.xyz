@@ -12,7 +12,7 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
     .filter(Boolean);
 
   return (
-    <div className="catalog-scroll h-full overflow-y-auto overscroll-contain px-6 py-8">
+    <div className="catalog-scroll h-auto overflow-visible px-5 py-8 lg:h-full lg:overflow-y-auto lg:overscroll-contain lg:px-6">
       <button
         type="button"
         onClick={onBack}

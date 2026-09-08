@@ -14,7 +14,7 @@ type HeroProps = {
 };
 
 const HERO_MIN =
-  "flex min-h-[calc(100svh-3rem)] min-w-[1200px] scroll-mt-12 flex-col";
+  "flex min-h-[calc(100svh-3rem)] min-w-0 scroll-mt-12 flex-col";
 
 function firstCovers(projects: Project[], count: number) {
   const covers: { title: string; src: string; slug: string }[] = [];
