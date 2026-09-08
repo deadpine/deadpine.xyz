@@ -2,7 +2,7 @@
 slug: suave
 title: "SUAVE"
 date: "2025"
-tags: ["Branding", "UI"]
+tags: ["Branding"]
 link: https://writings.flashbots.net/suave-the-vision
 images:
   - /img/work/suave-cover.png

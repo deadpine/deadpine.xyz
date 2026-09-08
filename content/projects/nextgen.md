@@ -3,7 +3,6 @@ slug: nextgen
 title: "NextGen"
 date: "2025"
 endDate: "2026"
-# ongoing: true
 tags: ["Branding", "UI/UX", "Frontend"]
 images:
   - /videos/nextgen.mp4

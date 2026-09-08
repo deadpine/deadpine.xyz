@@ -2,7 +2,7 @@
 slug: hola-bob
 title: "Hola Bob"
 date: "2024-02-01"
-tags: ["Branding"]
+tags: ["Branding", "Frontend"]
 images:
   - /img/work/holabob-02.png
   - /videos/holabob.mp4

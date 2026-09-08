@@ -2,7 +2,7 @@
 slug: genesis-city
 title: "Genesis City"
 date: "2022"
-tags: ["Frontend", "UI", "UX"]
+tags: ["UI/UX", "Frontend"]
 link: https://genesis.city/
 images:
   - /img/work/genesis.jpg

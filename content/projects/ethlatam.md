@@ -2,7 +2,7 @@
 slug: ethlatam
 title: "ETHLatam"
 date: "2022-08-11"
-tags: ["Branding", "Print", "UX", "Frontend", "UI"]
+tags: ["Branding", "Illustration", "Print"]
 link: https://ethlatam.org/
 images:
   - /img/work/ethlatam-brand.jpg

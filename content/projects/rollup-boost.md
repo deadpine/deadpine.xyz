@@ -2,7 +2,7 @@
 slug: rollup-boost
 title: "Rollup Boost"
 date: "2025"
-tags: ["Branding", "UI"]
+tags: ["Branding", "Illustration"]
 link: https://writings.flashbots.net/
 images:
   - /img/work/rollupboost.jpg

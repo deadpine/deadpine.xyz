@@ -3,7 +3,7 @@ slug: rewilder
 title: "Rewilder"
 date: "2021-11-01"
 endDate: "2023-05-15"
-tags: ["Frontend", "UI", "UX", "Illustration"]
+tags: ["Branding", "UI/UX", "Frontend"]
 link: https://app.rewilder.xyz/donation/1
 images:
   - /img/work/rewilder-fundraiser.jpg

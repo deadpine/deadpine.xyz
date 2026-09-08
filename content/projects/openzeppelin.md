@@ -3,7 +3,7 @@ slug: openzeppelin
 title: "OpenZeppelin"
 date: "2019"
 endDate: "2021"
-tags: ["Frontend", "UI", "UX"]
+tags: ["Branding", "UI/UX", "Frontend", "Illustration", "Print"]
 link: https://www.openzeppelin.com/
 images:
   - /img/work/openzeppelin-wizard.jpg
