@@ -31,15 +31,17 @@ function ProjectMedia({
   src,
   alt,
   priority,
+  poster,
 }: {
   src: string;
   alt: string;
   priority?: boolean;
+  poster?: string;
 }) {
   if (isVideoSrc(src)) {
     return (
       <div className="relative min-h-[50vh] w-full">
-        <WebsiteVideoFrame src={src} title={alt} />
+        <WebsiteVideoFrame src={src} poster={poster} title={alt} />
       </div>
     );
   }
@@ -86,6 +88,7 @@ export function ProjectImages({
               : project.images;
           const hasImages = images.length > 0;
           const interactive = mode === "covers";
+          const poster = project.images.find((image) => !isVideoSrc(image));
 
           return (
             <section
@@ -104,6 +107,7 @@ export function ProjectImages({
                     <ProjectMedia
                       src={src}
                       alt={`${project.title} artwork`}
+                      poster={poster}
                       priority={
                         mode === "covers" && projectIndex < 2 && i === 0
                       }

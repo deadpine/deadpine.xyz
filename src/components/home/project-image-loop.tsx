@@ -21,6 +21,9 @@ export function ProjectImageLoop({
   const [index, setIndex] = useState(0);
   const hasMultiple = images.length > 1;
   const src = images[index];
+  const poster = isVideoSrc(src)
+    ? images.find((image) => !isVideoSrc(image))
+    : undefined;
 
   // Toggle to show carousel controls (dots + arrows) under the image
   const showControls = false;
@@ -49,7 +52,7 @@ export function ProjectImageLoop({
     <div className="w-full">
       <div className="relative min-h-[440px] w-full overflow-hidden rounded-[12px] bg-[#EBE8E4]">
         {isVideoSrc(src) ? (
-          <WebsiteVideoFrame key={src} src={src} title={alt} />
+          <WebsiteVideoFrame key={src} src={src} poster={poster} title={alt} />
         ) : src.endsWith(".svg") ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
