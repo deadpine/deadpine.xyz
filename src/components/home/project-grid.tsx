@@ -49,7 +49,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                       {project.tags.map((tag) => (
                         <li
                           key={tag}
-                          className="rounded-full border border-stone-300 px-3 py-1 font-sans text-xs tracking-wide text-stone-500 transition-colors duration-300 ease-out hover:border-stone-400 hover:text-stone-700"
+                          className="rounded-full border border-stone-300 px-3 py-1 font-sans text-xs tracking-wide text-stone-500 transition-colors duration-200 ease-out hover:border-stone-400 hover:text-stone-700"
                         >
                           {tag}
                         </li>

@@ -5,6 +5,7 @@ date: "2025"
 tags: ["Branding", "Illustration"]
 link: https://writings.flashbots.net/
 images:
+  - /img/work/rollupboost-3.png
   - /img/work/rollupboost.jpg
 ---
 

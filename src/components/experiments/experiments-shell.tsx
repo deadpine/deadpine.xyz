@@ -82,7 +82,7 @@ export function ExperimentsShell({ projects }: ExperimentsShellProps) {
               href={`#${variant.id}`}
               title={`${variant.number} ${variant.name} — ${variant.blurb}`}
               className={cn(
-                "px-1.5 py-1 font-mono text-xs tabular-nums tracking-widest transition-colors duration-300 ease-out",
+                "px-1.5 py-1 font-mono text-xs tabular-nums tracking-widest transition-colors duration-200 ease-out",
                 active === variant.id
                   ? "text-[#EE33FF]"
                   : "text-stone-400 hover:text-black"
@@ -95,7 +95,7 @@ export function ExperimentsShell({ projects }: ExperimentsShellProps) {
 
         <Link
           href="/"
-          className="shrink-0 font-mono text-xs uppercase tracking-widest text-stone-500 transition-colors duration-300 ease-out hover:text-[#EE33FF]"
+          className="shrink-0 font-mono text-xs uppercase tracking-widest text-stone-500 transition-colors duration-200 ease-out hover:text-[#EE33FF]"
         >
           ← site
         </Link>

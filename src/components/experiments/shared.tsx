@@ -123,7 +123,7 @@ export function AboutCopy({
         <p>
           Email me at{" "}
           <span
-            className="text-black underline decoration-stone-300 underline-offset-4 transition-colors duration-300 ease-out hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
+            className="text-black underline decoration-stone-300 underline-offset-4 transition-colors duration-200 ease-out hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
           >
             hey@deadpine.xyz
           </span>
@@ -151,7 +151,7 @@ export function AboutSocials({ className }: { className?: string }) {
           rel={
             link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"
           }
-          className="transition-colors duration-300 ease-out hover:text-[#EE33FF]"
+          className="transition-colors duration-200 ease-out hover:text-[#EE33FF]"
         >
           {link.label}
         </a>

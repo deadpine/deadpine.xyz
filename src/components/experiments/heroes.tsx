@@ -85,7 +85,7 @@ export function HeroEditorial() {
           </p>
           <a
             href="mailto:hey@deadpine.xyz"
-            className="font-mono text-xs tracking-tight text-black underline decoration-stone-300 underline-offset-4 transition-colors duration-300 ease-out hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
+            className="font-mono text-xs tracking-tight text-black underline decoration-stone-300 underline-offset-4 transition-colors duration-200 ease-out hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
           >
             hey@deadpine.xyz
           </a>
@@ -184,7 +184,7 @@ export function HeroSplit() {
             </p>
             <a
               href="mailto:hey@deadpine.xyz"
-              className="mt-6 w-fit font-mono text-xs tracking-tight text-black underline decoration-stone-300 underline-offset-4 transition-colors duration-300 ease-out hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
+              className="mt-6 w-fit font-mono text-xs tracking-tight text-black underline decoration-stone-300 underline-offset-4 transition-colors duration-200 ease-out hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
             >
               hey@deadpine.xyz
             </a>
@@ -236,7 +236,7 @@ export function HeroCatalog({ projects }: HeroProps) {
                   <span className="font-mono text-xs tabular-nums text-stone-400">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="truncate font-mono text-xs text-black transition-colors duration-300 ease-out group-hover:text-[#EE33FF]">
+                  <span className="truncate font-mono text-xs text-black transition-colors duration-200 ease-out group-hover:text-[#EE33FF]">
                     {project.title}
                   </span>
                   <span className="font-mono text-xs tabular-nums text-stone-400">
@@ -276,7 +276,7 @@ export function HeroMosaic({ projects }: HeroProps) {
           </p>
           <a
             href="mailto:hey@deadpine.xyz"
-            className="mt-8 inline-block font-mono text-xs tracking-tight text-black underline decoration-stone-300 underline-offset-4 transition-colors duration-300 ease-out hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
+            className="mt-8 inline-block font-mono text-xs tracking-tight text-black underline decoration-stone-300 underline-offset-4 transition-colors duration-200 ease-out hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
           >
             hey@deadpine.xyz
           </a>
@@ -349,7 +349,7 @@ export function HeroMagenta() {
           </p>
           <a
             href="mailto:hey@deadpine.xyz"
-            className="border border-stone-700 px-4 py-2 font-mono text-xs uppercase tracking-widest text-black transition-colors duration-300 ease-out hover:bg-black hover:text-[#EE33FF]"
+            className="border border-stone-700 px-4 py-2 font-mono text-xs uppercase tracking-widest text-black transition-colors duration-200 ease-out hover:bg-black hover:text-[#EE33FF]"
           >
             hey@deadpine.xyz
           </a>
@@ -419,18 +419,18 @@ export function HeroMarquee({ projects }: HeroProps) {
             Seeking beauty &amp; untangling complexity.
           </p>
           <div className="mt-8 flex justify-center gap-6 font-mono text-xs uppercase tracking-widest text-stone-500">
-            <Link href="/" className="transition-colors duration-300 ease-out hover:text-[#EE33FF]">
+            <Link href="/" className="transition-colors duration-200 ease-out hover:text-[#EE33FF]">
               work
             </Link>
             <Link
               href="/about"
-              className="transition-colors duration-300 ease-out hover:text-[#EE33FF]"
+              className="transition-colors duration-200 ease-out hover:text-[#EE33FF]"
             >
               about
             </Link>
             <a
               href="mailto:hey@deadpine.xyz"
-              className="transition-colors duration-300 ease-out hover:text-[#EE33FF]"
+              className="transition-colors duration-200 ease-out hover:text-[#EE33FF]"
             >
               email
             </a>
@@ -485,7 +485,7 @@ export function HeroPoster() {
         <span>José Ignacio, UY</span>
         <a
           href="mailto:hey@deadpine.xyz"
-          className="normal-case tracking-tight text-black transition-colors duration-300 ease-out hover:text-[#EE33FF]"
+          className="normal-case tracking-tight text-black transition-colors duration-200 ease-out hover:text-[#EE33FF]"
         >
           hey@deadpine.xyz
         </a>
