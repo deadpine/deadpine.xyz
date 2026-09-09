@@ -50,7 +50,7 @@ export function ProjectImageLoop({
 
   return (
     <div className="w-full">
-      <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-[#EBE8E4] motion-safe:transition-[border-radius] motion-safe:duration-500 motion-safe:ease-out hover:rounded-[7rem] md:aspect-auto md:min-h-90 lg:min-h-110">
+      <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-[#EBE8E4] md:aspect-auto md:min-h-90 lg:min-h-110">
         {isVideoSrc(src) ? (
           <WebsiteVideoFrame
             key={src}
