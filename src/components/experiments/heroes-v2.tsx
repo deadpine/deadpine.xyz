@@ -23,9 +23,9 @@ type HeroProps = {
 export function HeroFolio() {
   return (
     <section id="folio" className={cn(HERO_MIN, "bg-[#F3F1F0] p-4 text-black")}>
-      <div className="flex min-h-0 flex-1 flex-col border border-black/15 p-3">
-        <div className="flex min-h-0 flex-1 flex-col border border-black/15 px-10 py-7">
-          <header className="flex items-baseline justify-between font-mono text-xs uppercase tracking-widest text-black/50">
+      <div className="flex min-h-0 flex-1 flex-col border border-stone-300 p-3">
+        <div className="flex min-h-0 flex-1 flex-col border border-stone-300 px-10 py-7">
+          <header className="flex items-baseline justify-between font-mono text-xs uppercase tracking-widest text-stone-500">
             <span>Catalog</span>
             <span>deadpine.xyz</span>
             <span>2016—present</span>
@@ -42,7 +42,7 @@ export function HeroFolio() {
             />
           </div>
 
-          <div className="border-t border-black/10 pt-8">
+          <div className="border-t border-stone-200 pt-8">
             <AboutCopy />
           </div>
         </div>
@@ -101,7 +101,7 @@ export function HeroCameo({ projects }: HeroProps) {
 
   return (
     <section id="cameo" className={cn(HERO_MIN, "bg-[#F5F4F0] px-10 py-7 text-black")}>
-      <header className="flex items-baseline justify-between font-mono text-xs uppercase tracking-widest text-black/50">
+      <header className="flex items-baseline justify-between font-mono text-xs uppercase tracking-widest text-stone-500">
         <span>deadpine.xyz</span>
         <span>Selected work</span>
         <span>2016—present</span>
@@ -110,8 +110,8 @@ export function HeroCameo({ projects }: HeroProps) {
       <div className="grid min-h-0 flex-1 grid-cols-2 items-center gap-24">
         <AboutCopy
           showSocials={false}
-          className="max-w-lg text-base leading-normal text-black/70"
-          taglineClassName="text-lg text-black/85"
+          className="max-w-lg text-base leading-normal text-stone-600"
+          taglineClassName="text-lg text-stone-800"
         />
 
         <div className="flex justify-center">

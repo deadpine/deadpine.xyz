@@ -18,7 +18,7 @@ export default function AboutPage() {
         <SiteHeader />
         <div className="mt-12 md:mt-20">
           <AboutCopy
-            className="max-w-xl space-y-4 text-base leading-normal text-black/70 md:text-lg"
+            className="max-w-xl space-y-4 text-base leading-normal text-stone-600 md:text-lg"
             showSocials={false}
             showTagline={false}
           />

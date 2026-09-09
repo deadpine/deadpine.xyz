@@ -19,7 +19,7 @@ export function Mark({
     <Link
       href={href}
       className={cn(
-        "flex items-center gap-2.5 text-black transition-colors hover:text-[#EE33FF]",
+        "flex items-center gap-2.5 text-black transition-colors duration-300 ease-out hover:text-[#EE33FF]",
         className
       )}
     >
@@ -51,7 +51,7 @@ export function HeroNav({
   linkClassName?: string;
 }) {
   const link = cn(
-    "transition-colors hover:text-[#EE33FF]",
+    "transition-colors duration-300 ease-out hover:text-[#EE33FF]",
     linkClassName
   );
 
@@ -59,7 +59,7 @@ export function HeroNav({
     <nav
       aria-label="Site"
       className={cn(
-        "flex items-center gap-5 font-mono text-xs uppercase tracking-widest text-black/55",
+        "flex items-center gap-5 font-mono text-xs uppercase tracking-widest text-stone-500",
         className
       )}
     >

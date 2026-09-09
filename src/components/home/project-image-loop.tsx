@@ -40,7 +40,7 @@ export function ProjectImageLoop({
     return (
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-[#F3F1EE] md:aspect-auto md:min-h-90 lg:min-h-110">
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="font-mono text-xs uppercase tracking-widest text-black/35">
+          <span className="font-mono text-xs uppercase tracking-widest text-stone-400">
             Image forthcoming
           </span>
         </div>
@@ -50,15 +50,21 @@ export function ProjectImageLoop({
 
   return (
     <div className="w-full">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-[#EBE8E4] md:aspect-auto md:min-h-90 lg:min-h-110">
+      <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-[#EBE8E4] motion-safe:transition-all motion-safe:duration-700 motion-safe:ease-out group-hover:rounded-3xl md:aspect-auto md:min-h-90 lg:min-h-110">
         {isVideoSrc(src) ? (
-          <WebsiteVideoFrame key={src} src={src} poster={poster} title={alt} />
+          <WebsiteVideoFrame
+            key={src}
+            src={src}
+            poster={poster}
+            title={alt}
+            className="motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out motion-safe:group-hover:scale-105"
+          />
         ) : src.endsWith(".svg") ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={src}
             alt={alt}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out motion-safe:group-hover:scale-105"
           />
         ) : (
           <Image
@@ -68,7 +74,7 @@ export function ProjectImageLoop({
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             priority={priority && index === 0}
-            className="object-cover"
+            className="object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out motion-safe:group-hover:scale-105"
           />
         )}
       </div>
@@ -90,8 +96,8 @@ export function ProjectImageLoop({
                 onClick={() => setIndex(i)}
                 className={`h-1.5 cursor-pointer rounded-full transition-all ${
                   i === index
-                    ? "w-4 bg-black/55"
-                    : "w-1.5 bg-black/20 hover:bg-black/35"
+                    ? "w-4 bg-stone-500"
+                    : "w-1.5 bg-stone-300 hover:bg-stone-400"
                 }`}
               />
             ))}
@@ -102,7 +108,7 @@ export function ProjectImageLoop({
               type="button"
               onClick={goPrev}
               aria-label="Previous image"
-              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-black/5 font-sans text-lg leading-none text-black/60 transition-colors hover:bg-black/[0.1] hover:text-black"
+              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-100 font-sans text-lg leading-none text-stone-500 transition-colors duration-300 ease-out hover:bg-stone-200 hover:text-black"
             >
               ‹
             </button>
@@ -110,7 +116,7 @@ export function ProjectImageLoop({
               type="button"
               onClick={goNext}
               aria-label="Next image"
-              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-black/5 font-sans text-lg leading-none text-black/60 transition-colors hover:bg-black/[0.1] hover:text-black"
+              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-100 font-sans text-lg leading-none text-stone-500 transition-colors duration-300 ease-out hover:bg-stone-200 hover:text-black"
             >
               ›
             </button>

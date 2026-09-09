@@ -33,12 +33,12 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                     <h2 className="min-w-0 font-sans text-xl font-normal tracking-tight text-black md:text-2xl">
                       {project.title}
                     </h2>
-                    <p className="shrink-0 font-mono text-xs tabular-nums text-black/35">
+                    <p className="shrink-0 font-mono text-xs tabular-nums text-stone-400">
                       {project.dateLabel}
                     </p>
                   </div>
                   {description.length > 0 ? (
-                    <div className="mt-2 space-y-2.5 font-sans text-sm leading-snug text-black/45">
+                    <div className="py-1 font-sans text-sm leading-snug text-stone-500">
                       {description.map((paragraph) => (
                         <p key={paragraph.slice(0, 48)}>{paragraph}</p>
                       ))}
@@ -49,7 +49,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                       {project.tags.map((tag) => (
                         <li
                           key={tag}
-                          className="rounded-full border border-black/15 px-3 py-1 font-sans text-xs tracking-wide text-black/70"
+                          className="rounded-full border border-stone-300 px-3 py-1 font-sans text-xs tracking-wide text-stone-500 transition-colors duration-300 ease-out hover:border-stone-400 hover:text-stone-700"
                         >
                           {tag}
                         </li>

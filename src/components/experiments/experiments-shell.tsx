@@ -62,15 +62,15 @@ export function ExperimentsShell({ projects }: ExperimentsShellProps) {
 
   return (
     <div className="min-h-screen min-w-0 bg-[#F3F1F0] text-black">
-      <header className="sticky top-0 z-50 flex h-12 items-center justify-between gap-8 border-b border-black/10 bg-[#F3F1F0]/92 px-6 backdrop-blur-md">
+      <header className="sticky top-0 z-50 flex h-12 items-center justify-between gap-8 border-b border-stone-200 bg-[#F3F1F0]/92 px-6 backdrop-blur-md">
         <div className="flex min-w-0 items-center gap-3">
-          <p className="font-mono text-xs uppercase tracking-widest text-black/45">
+          <p className="font-mono text-xs uppercase tracking-widest text-stone-400">
             UI experiments
           </p>
-          <span className="text-black/20" aria-hidden>
+          <span className="text-stone-300" aria-hidden>
             /
           </span>
-          <p className="truncate font-serif text-xs italic text-black/55">
+          <p className="truncate font-serif text-xs italic text-stone-500">
             {activeVariant.number} {activeVariant.name} — {activeVariant.blurb}
           </p>
         </div>
@@ -82,10 +82,10 @@ export function ExperimentsShell({ projects }: ExperimentsShellProps) {
               href={`#${variant.id}`}
               title={`${variant.number} ${variant.name} — ${variant.blurb}`}
               className={cn(
-                "px-1.5 py-1 font-mono text-xs tabular-nums tracking-widest transition-colors",
+                "px-1.5 py-1 font-mono text-xs tabular-nums tracking-widest transition-colors duration-300 ease-out",
                 active === variant.id
                   ? "text-[#EE33FF]"
-                  : "text-black/35 hover:text-black"
+                  : "text-stone-400 hover:text-black"
               )}
             >
               {variant.number}
@@ -95,7 +95,7 @@ export function ExperimentsShell({ projects }: ExperimentsShellProps) {
 
         <Link
           href="/"
-          className="shrink-0 font-mono text-xs uppercase tracking-widest text-black/50 transition-colors hover:text-[#EE33FF]"
+          className="shrink-0 font-mono text-xs uppercase tracking-widest text-stone-500 transition-colors duration-300 ease-out hover:text-[#EE33FF]"
         >
           ← site
         </Link>

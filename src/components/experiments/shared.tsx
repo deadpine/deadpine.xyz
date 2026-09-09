@@ -88,14 +88,14 @@ export function AboutCopy({
     <div>
       <div
         className={cn(
-          "max-w-md space-y-2.5 font-sans text-sm leading-snug text-black/45",
+          "max-w-md space-y-2.5 font-sans text-sm leading-snug text-stone-400",
           className
         )}
       >
         {showTagline ? (
           <p
             className={cn(
-              "font-serif text-base italic text-black/70",
+              "font-serif text-base italic text-stone-600",
               taglineClassName
             )}
           >
@@ -123,7 +123,7 @@ export function AboutCopy({
         <p>
           Email me at{" "}
           <span
-            className="text-black underline decoration-black/25 underline-offset-4 transition-colors hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
+            className="text-black underline decoration-stone-300 underline-offset-4 transition-colors duration-300 ease-out hover:text-[#EE33FF] hover:decoration-[#EE33FF]"
           >
             hey@deadpine.xyz
           </span>
@@ -139,7 +139,7 @@ export function AboutSocials({ className }: { className?: string }) {
     <nav
       aria-label="Social links"
       className={cn(
-        "mt-8 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs tracking-wide text-black/55",
+        "mt-8 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs tracking-wide text-stone-500",
         className
       )}
     >
@@ -151,7 +151,7 @@ export function AboutSocials({ className }: { className?: string }) {
           rel={
             link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"
           }
-          className="transition-colors hover:text-[#EE33FF]"
+          className="transition-colors duration-300 ease-out hover:text-[#EE33FF]"
         >
           {link.label}
         </a>

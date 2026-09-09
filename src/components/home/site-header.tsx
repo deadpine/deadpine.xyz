@@ -8,7 +8,7 @@ export function SiteHeader() {
     <header className="flex items-center justify-between">
       <Link
         href="/"
-        className="text-black transition-colors hover:text-[#F480FF]"
+        className="text-black transition-colors duration-300 ease-out hover:text-[#F480FF]"
         aria-label="deadpine.xyz"
       >
         <svg
@@ -23,12 +23,18 @@ export function SiteHeader() {
       </Link>
       <nav
         aria-label="Site"
-        className="flex items-center gap-5 font-mono text-xs uppercase tracking-widest text-black/55"
+        className="flex items-center gap-5 font-mono text-xs uppercase tracking-widest text-stone-500"
       >
-        <Link href="/#work" className="transition-colors hover:text-[#EE33FF]">
+        <Link
+          href="/#work"
+          className="transition-colors duration-300 ease-out hover:text-[#EE33FF]"
+        >
           work
         </Link>
-        <Link href="/about" className="transition-colors hover:text-[#EE33FF]">
+        <Link
+          href="/about"
+          className="transition-colors duration-300 ease-out hover:text-[#EE33FF]"
+        >
           about
         </Link>
       </nav>
