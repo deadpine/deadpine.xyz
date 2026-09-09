@@ -33,7 +33,7 @@ export function Mark({
       />
       <span
         className={cn(
-          "font-mono text-[0.8rem] tracking-tight",
+          "font-mono text-xs tracking-tight",
           wordmarkClassName
         )}
       >
@@ -59,7 +59,7 @@ export function HeroNav({
     <nav
       aria-label="Site"
       className={cn(
-        "flex items-center gap-5 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-black/55",
+        "flex items-center gap-5 font-mono text-xs uppercase tracking-widest text-black/55",
         className
       )}
     >

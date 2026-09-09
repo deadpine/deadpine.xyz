@@ -38,9 +38,9 @@ export function ProjectImageLoop({
 
   if (images.length === 0) {
     return (
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[12px] bg-[#F3F1EE] md:aspect-auto md:min-h-[360px] lg:min-h-[440px]">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-[#F3F1EE] md:aspect-auto md:min-h-90 lg:min-h-110">
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-black/35">
+          <span className="font-mono text-xs uppercase tracking-widest text-black/35">
             Image forthcoming
           </span>
         </div>
@@ -50,7 +50,7 @@ export function ProjectImageLoop({
 
   return (
     <div className="w-full">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[12px] bg-[#EBE8E4] md:aspect-auto md:min-h-[360px] lg:min-h-[440px]">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-[#EBE8E4] md:aspect-auto md:min-h-90 lg:min-h-110">
         {isVideoSrc(src) ? (
           <WebsiteVideoFrame key={src} src={src} poster={poster} title={alt} />
         ) : src.endsWith(".svg") ? (
@@ -102,7 +102,7 @@ export function ProjectImageLoop({
               type="button"
               onClick={goPrev}
               aria-label="Previous image"
-              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-black/[0.06] font-sans text-lg leading-none text-black/60 transition-colors hover:bg-black/[0.1] hover:text-black"
+              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-black/5 font-sans text-lg leading-none text-black/60 transition-colors hover:bg-black/[0.1] hover:text-black"
             >
               ‹
             </button>
@@ -110,7 +110,7 @@ export function ProjectImageLoop({
               type="button"
               onClick={goNext}
               aria-label="Next image"
-              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-black/[0.06] font-sans text-lg leading-none text-black/60 transition-colors hover:bg-black/[0.1] hover:text-black"
+              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-black/5 font-sans text-lg leading-none text-black/60 transition-colors hover:bg-black/[0.1] hover:text-black"
             >
               ›
             </button>

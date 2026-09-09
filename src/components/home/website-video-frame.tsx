@@ -62,7 +62,7 @@ export function WebsiteVideoFrame({
     <div
       className={`absolute inset-0 flex items-center justify-center ${stage} ${className}`}
     >
-      <div className="w-[82%] overflow-hidden rounded-[12px] bg-black shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
+      <div className="w-[82%] overflow-hidden rounded-xl bg-black shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
         <video
           ref={videoRef}
           poster={poster}

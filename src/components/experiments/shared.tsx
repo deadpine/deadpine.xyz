@@ -77,27 +77,31 @@ export function AboutCopy({
   className,
   taglineClassName,
   showSocials = true,
+  showTagline = true,
 }: {
   className?: string;
   taglineClassName?: string;
   showSocials?: boolean;
+  showTagline?: boolean;
 }) {
   return (
     <div>
       <div
         className={cn(
-          "max-w-md space-y-2.5 font-sans text-[14px] leading-[1.4] text-black/45",
+          "max-w-md space-y-2.5 font-sans text-sm leading-snug text-black/45",
           className
         )}
       >
-        <p
-          className={cn(
-            "font-serif text-[0.95rem] italic text-black/70",
-            taglineClassName
-          )}
-        >
-          Seeking beauty and untangling complexity.
-        </p>
+        {showTagline ? (
+          <p
+            className={cn(
+              "font-serif text-base italic text-black/70",
+              taglineClassName
+            )}
+          >
+            Seeking beauty and untangling complexity.
+          </p>
+        ) : null}
         <p>
           For 10+ years I&apos;ve worked at the intersection of product design,
           brand identity, and technology— mostly in crypto, exploring open
@@ -135,7 +139,7 @@ export function AboutSocials({ className }: { className?: string }) {
     <nav
       aria-label="Social links"
       className={cn(
-        "mt-8 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.68rem] tracking-wide text-black/55",
+        "mt-8 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs tracking-wide text-black/55",
         className
       )}
     >

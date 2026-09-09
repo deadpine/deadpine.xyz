@@ -25,7 +25,7 @@ export function HeroFolio() {
     <section id="folio" className={cn(HERO_MIN, "bg-[#F3F1F0] p-4 text-black")}>
       <div className="flex min-h-0 flex-1 flex-col border border-black/15 p-3">
         <div className="flex min-h-0 flex-1 flex-col border border-black/15 px-10 py-7">
-          <header className="flex items-baseline justify-between font-mono text-[0.68rem] uppercase tracking-[0.14em] text-black/50">
+          <header className="flex items-baseline justify-between font-mono text-xs uppercase tracking-widest text-black/50">
             <span>Catalog</span>
             <span>deadpine.xyz</span>
             <span>2016—present</span>
@@ -72,7 +72,7 @@ export function HeroStudio({ projects }: HeroProps) {
             <li key={cover.slug}>
               <Link
                 href="/#work"
-                className="relative block aspect-[4/3] overflow-hidden rounded-[12px] bg-[#EBE8E4]"
+                className="relative block aspect-[4/3] overflow-hidden rounded-xl bg-[#EBE8E4]"
                 onMouseEnter={() => {
                   setLabel(cover.title);
                   setHovering(true);
@@ -101,7 +101,7 @@ export function HeroCameo({ projects }: HeroProps) {
 
   return (
     <section id="cameo" className={cn(HERO_MIN, "bg-[#F5F4F0] px-10 py-7 text-black")}>
-      <header className="flex items-baseline justify-between font-mono text-[0.68rem] uppercase tracking-[0.14em] text-black/50">
+      <header className="flex items-baseline justify-between font-mono text-xs uppercase tracking-widest text-black/50">
         <span>deadpine.xyz</span>
         <span>Selected work</span>
         <span>2016—present</span>
@@ -110,8 +110,8 @@ export function HeroCameo({ projects }: HeroProps) {
       <div className="grid min-h-0 flex-1 grid-cols-2 items-center gap-24">
         <AboutCopy
           showSocials={false}
-          className="max-w-lg text-[16px] leading-[1.5] text-black/70"
-          taglineClassName="text-[1.1rem] text-black/85"
+          className="max-w-lg text-base leading-normal text-black/70"
+          taglineClassName="text-lg text-black/85"
         />
 
         <div className="flex justify-center">
@@ -121,7 +121,7 @@ export function HeroCameo({ projects }: HeroProps) {
               aria-label={cover.title}
               className="block"
             >
-              <PineconeMask className="h-[16rem] w-[14rem]">
+              <PineconeMask className="h-64 w-56">
                 <CoverImg
                   src={cover.src}
                   alt={cover.title}
