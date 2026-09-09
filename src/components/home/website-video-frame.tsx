@@ -62,17 +62,17 @@ export function WebsiteVideoFrame({
     <div
       className={`absolute inset-0 flex items-center justify-center ${stage} ${className}`}
     >
-      <div className="w-[82%] overflow-hidden rounded-xl bg-black shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
+      <div className="relative aspect-video w-[82%] overflow-hidden rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
         <video
           ref={videoRef}
           poster={poster}
           aria-label={title}
-          className="block h-auto w-full"
+          className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
         >
           <source src={url} type="video/mp4" />
         </video>
